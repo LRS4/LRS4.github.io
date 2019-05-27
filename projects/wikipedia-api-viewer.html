@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+	<!-- Font -->
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous">
+	</script>
+	
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	
+	<style>
+	body {
+		padding-top: 30px;
+		background-color: white;
+		background-attachment: fixed;
+		font-family: 'Lato', sans-serif;
+	}
+	
+	.heading {
+		background-color: black;
+		display: inline-block;
+		border-radius: 25px;
+		
+	}
+	
+	input  {
+		text-align:center;
+	
+	}
+	
+	button {
+		margin: 1%;
+		font-family: 'Lato', sans-serif;
+	}
+	
+	a {
+		font-size: 20px;
+		font-color: blue;
+	}
+	
+	.back {
+		width: 300px;
+		margin: 10px auto 10px auto;
+		padding:5px;
+		background-color: #e0e2e5;
+	}
+	
+	.back:hover {
+		background-color: #D3D3D3;
+		cursor: pointer;
+	}
+	
+	</style>
+	
+  <title>Wikipedia API Viewer</title>
+  
+  </head>
+  
+  <body>
+	
+    <div class="container">
+	
+		<div class="text-center">
+		
+			<div class="heading">
+			
+			<!-- Image with random Wikipedia page link -->
+			<a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank"><img src="https://images-eu.ssl-images-amazon.com/images/I/317AjDc9CYL.png" alt="Random Article" height="200" width="200" ></a>
+			</div>
+			
+			</br>
+			</br>
+			
+			<!-- User input -->
+			<input class="from-control" id="searchTerm" placeholder="  Search Wikipedia" onclick="this.placeholder = ''">
+			
+			</br></br>
+			
+		</div>
+		
+		<!-- Output results -->
+		<p id ="output"></p>
+		
+	</div>
+	
+    <script>
+	
+	// On key-up, get results
+	$(document).ready(function(){
+	
+		$('#searchTerm').keyup(function(){
+			var searchTerm = $('#searchTerm').val();
+			var url = "https://en.wikipedia.org/w/api.php?action=opensearch&search="+ searchTerm + "&format=json&callback=?&limit=5";
+			
+			$.ajax({
+				type:"GET",
+				url:url,
+				async:false,
+				dataType: "json",
+				success: function(data){
+				
+				// Wipe previous search results
+				$('#output').html('');
+				
+				// Console log API results
+				console.log(data);
+				
+				// Loop through array
+				for(var i = 0; i < data[1].length; i++){
+				
+					$("#output").append("<div class=back onclick=window.open(\'" + data[3][i] + "\','mywindow');><h5>" + data[1][i] + "</h5>" + "<p>" + data[2][i] + "</p></div>");
+					
+				}
+					
+				},
+				error: function(errorMessage){
+					alert("Error");
+				}
+			});
+		});
+		
+	});
+
+	</script>
+    
+	
+	
+   
+  </body>
+</html>
