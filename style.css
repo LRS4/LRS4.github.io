@@ -1,0 +1,298 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: white;
+	padding: 20px;
+	font-family: 'Roboto', sans-serif;
+}
+
+/* Hide contents while loading */
+#loadingSection {
+	text-align: center;
+	margin-top: 80px;
+}
+
+#loading {
+	height: 15%;
+	width: 15%;
+}
+
+.row {
+	display: none;
+}
+
+/* Center website */
+.main {
+	max-width: 1200px;
+	margin: auto;
+}
+
+h1 {
+	font-size: 50px;
+	word-break: break-all;
+}
+
+a:active {
+	color: black;
+	background-color: orange;
+}
+
+.row {
+	margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+	padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+	float: left;
+	width: 33.33%;
+	display: none; /* Hide all elements by default */
+}
+
+/* With medium screen, change to two columns */
+@media screen and (max-width: 1100px) {
+	.column {
+	width: 50%;
+	}
+
+	#loading {
+		height: 20%;
+		width: 20%;
+	}
+}
+
+/* With smaller screen, change to one column */
+@media screen and (max-width: 600px) {
+	.column {
+	width: 100%;
+	}
+}
+
+/* Clear floats after rows */ 
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Content */
+.content {
+	background-color: white;
+	padding: 10px;
+	position: relative;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+	display: block;
+}
+
+/* Style the buttons */
+.btn {
+	border: none;
+	outline: none;
+	padding: 12px 16px;
+	background-color: white;
+	cursor: pointer;
+}
+
+.constant_button {
+	border: none;
+	outline: none;
+	padding: 12px 16px;
+	background-color: white;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background-color: #ddd;
+}
+
+.btn.active {
+	background-color: #666;
+	color: white;
+}
+
+@media screen and (max-width: 650px) {
+	.btn {
+		display: none !important;
+	}
+}
+
+	/* TEXT-IMAGE OVERLAY */
+
+.overlay {
+	position: absolute;
+	text-align: left;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: white;
+}
+
+.overlay h4 {
+	text-align: center;
+}
+
+.content:hover .overlay {
+	opacity: 1;
+}
+
+	/* ABOUT ME MODEL POP UP */
+	
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+	position: relative;
+	background-color: #fefefe;
+	margin: auto;
+	padding: 0;
+	border: 1px solid #888;
+	width: 70%;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	-webkit-animation-name: animatetop;
+	-webkit-animation-duration: 0.4s;
+	animation-name: animatetop;
+	animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+	from {top:-300px; opacity:0} 
+	to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+	from {top:-300px; opacity:0}
+	to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+	color: white;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.modal-header {
+	padding: 2px 16px;
+	background-color: #808080;
+	color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+	padding: 2px 16px;
+	background-color: #808080;
+	color: white;
+}
+
+/* Navigation Bar */
+
+/* Add a black background color to the top navigation */
+.topnav {
+	background-color: white;
+	overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+	float: left;
+	display: block;
+	color: black;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+/* Add an active class to highlight the current page */
+.active {
+	background-color: #4CAF50;
+	color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+	display: none;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+	.topnav a:not(:first-child) {display: none;}
+	.topnav a.icon {
+	float: right;
+	display: block;
+	}
+}
+
+/* The "responsive" class is added to the top-nav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+	.topnav.responsive {position: relative;}
+	.topnav.responsive a.icon {
+	position: absolute;
+	right: 0;
+	top: 0;
+	}
+	.topnav.responsive a {
+	float: none;
+	display: block;
+	text-align: left;
+	}
+
+	#loading {
+		height: 35%;
+		width: 35%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	p {
+	font-size: 12px;
+	}
+	
+	li {
+	font-size: 12px;
+	}
+}
