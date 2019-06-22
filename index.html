@@ -20,6 +20,10 @@
 	
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<!-- Intro.js -->
+	<link rel="stylesheet", type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.9.3/introjs.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.9.3/intro.js"></script>
 	
 </head>
 
@@ -32,11 +36,12 @@
 				<a href="https://www.kaggle.com/lspencer" target="_blank"><i class="fab fa-fw fa-kaggle"></i>  Kaggle</a>
 				<a href="https://www.dropbox.com/s/0fwuqsx5ni0zs1g/Online%20CV.docx?dl=0" target="_blank"><i class="fa fa-fw fa-file"></i>  CV</a>
 			  <a href="mailto:lrspencer@hotmail.co.uk?subject=Re:%20Your%20portfolio"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+			  <a href="#" id="help"><i class="fa fa-fw fa-question"></i> Help</a>
 			  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
 				<i class="fa fa-bars"></i>
 			  </a>
 			</div>
-			<h1>Portfolio</h1>
+			<h1 id="title">Portfolio</h1>
 			<hr>
 
 			<h2>Skills and Experience</h2>
@@ -84,7 +89,7 @@
 					</div>
 			  </div>
 			  <div class="column data">
-					<div class="content">
+					<div class="content" id="sql">
 						<img src="assets/database.png" alt="Databases" style="width:100%">
 						<div class="overlay">
 							<h4>Querying SQL Databases</h4>
@@ -532,6 +537,7 @@
 
 	<!-- Custom JS -->
 	<script src="script.js"></script>
+	<script src="intro.js"></script>
 
 </body>
 
