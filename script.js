@@ -10,6 +10,15 @@ let d = new Date();
 let year = d.getFullYear();
 $("footer").html("Copyright &copy; " + year + " Lewis Spencer");
 
+// on click of content class, display overlay class
+$(".content").click(function(event) {
+	// reset all the others to hide
+	$(".overlay").css("opacity", "0");
+
+	// closest overlay class to target change opacity to 1
+	$(event.target).closest('.overlay').css("opacity", "1");
+});
+
 // script for grid image tiles
 filterSelection("all");
 function filterSelection(c) {
