@@ -29,498 +29,499 @@
 
 <body>
 	<div class="main">
-			<!-- Navigation bar -->
-			<div class="topnav" id="myTopnav">
-			  <a href="#home" id="myBtn"><i class="fa fa-fw fa-user"></i> About Me</a>
-			  <a href="https://github.com/LRS4" target="_blank"><i class="fab fa-fw fa-github"></i> GitHub</a>
-				<a href="https://www.kaggle.com/lspencer" target="_blank"><i class="fab fa-fw fa-kaggle"></i>  Kaggle</a>
-				<a href="https://www.dropbox.com/s/0fwuqsx5ni0zs1g/Online%20CV.docx?dl=0" target="_blank"><i class="fa fa-fw fa-file"></i>  CV</a>
-			  <a href="mailto:lrspencer@hotmail.co.uk?subject=Re:%20Your%20portfolio"><i class="fa fa-fw fa-envelope"></i> Contact</a>
-			  <a href="#" id="help"><i class="fa fa-fw fa-question"></i> Help</a>
-			  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-				<i class="fa fa-bars"></i>
-			  </a>
-			</div>
-			<h1 id="title">Portfolio</h1>
-			<hr>
+		<!-- Navigation bar -->
+		<div class="topnav" id="myTopnav">
+			<a href="#home" id="myBtn"><i class="fa fa-fw fa-user"></i> About Me</a>
+			<a href="https://github.com/LRS4" target="_blank"><i class="fab fa-fw fa-github"></i> GitHub</a>
+			<a href="https://www.kaggle.com/lspencer" target="_blank"><i class="fab fa-fw fa-kaggle"></i>  Kaggle</a>
+			<a href="https://www.dropbox.com/s/0fwuqsx5ni0zs1g/Online%20CV.docx?dl=0" target="_blank"><i class="fa fa-fw fa-file"></i>  CV</a>
+			<a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRnOITxz7TxgQMaOq2U8iQJV52jiLt3Z_MBjOLLRibe2whFpcvE5l77BY5kMEAoSfzyPYi1dsYD4B7X/pubhtml?gid=239084754&single=true" target="_blank"><i class="fa fa-fw fa-university"></i>  PDP</a>
+			<a href="mailto:lrspencer@hotmail.co.uk?subject=Re:%20Your%20portfolio"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+			<a href="#" id="help"><i class="fa fa-fw fa-question"></i> Help</a>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			<i class="fa fa-bars"></i>
+			</a>
+		</div>
+		<h1 id="title">Portfolio</h1>
+		<hr>
 
-			<h2>Skills and Experience</h2>
+		<h2>Skills and Experience</h2>
+		
+		<!-- Filter buttons -->
+		<div id="myBtncontent">
+			<button class="btn active" onclick="filterSelection('all')"> Show all</button>
+			<button id="test" class="btn" onclick="filterSelection('data')"> Data Science</button>
+			<button class="btn" onclick="filterSelection('web')"> Software Development</button>
+			<button class="btn" onclick="filterSelection('business')"> Business Analysis</button>
+			<button class="btn" onclick="filterSelection('qualifications')"> Qualifications</button>
+			<button class="btn" onclick="filterSelection('projects')"> Projects</button>
+		</div>
+
+		<!-- Loading section -->
+		<div id="loadingSection">
+			<img id="loading" alt="loading-gif" src="assets/loading.gif">
+		</div>
 			
-			<!-- Filter buttons -->
-			<div id="myBtncontent">
-			  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-			  <button id="test" class="btn" onclick="filterSelection('data')"> Data Science</button>
-			  <button class="btn" onclick="filterSelection('web')"> Software Development</button>
-			  <button class="btn" onclick="filterSelection('business')"> Business Analysis</button>
-			  <button class="btn" onclick="filterSelection('qualifications')"> Qualifications</button>
-			  <button class="btn" onclick="filterSelection('projects')"> Projects</button>
-			</div>
 
-			<!-- Loading section -->
-			<div id="loadingSection">
-				<img id="loading" alt="loading-gif" src="assets/loading.gif">
-			</div>
-				
-
-			<!-- Portfolio Gallery Grid -->
-			<!-- Images should be 300x300 pixels -->
-			<div class="row">
-				<!-- Data Science -->
-			  <div class="column data">
-					<div class="content">
-						<img src="assets/python-logo.png" alt="Python" style="width:100%">
-						<div class="overlay">
-							<h4>Python for Data Analysis</h4>
-							<ul>
-								<li>Explored Python basic syntax and data types</li>
-								<li>Created and manipulated regular Python lists</li>
-								<li>Used functions and imported packages</li>
-								<li>Applied variables, loops, and control flows</li>
-								<li>Built Numpy arrays, and performed calculations</li>
-								<li>Created and customized plots on real data</li>
-								<li>Utilized the Pandas DataFrame</li>
-								<li>Explored Matplotlib and Seaborn visualizations</li>
-							</ul>
-							<br>
-							<a href="https://www.edx.org/course/introduction-to-python-for-data-science" target="_blank">Course Overview</a>
-							<br>
-							<a href="https://courses.edx.org/certificates/b7fe1ea6b0cd44958aae53eddb6a71a7" target="_blank">Certificate</a>
-						</div>
-					</div>
-			  </div>
-			  <div class="column data">
-					<div class="content" id="sql">
-						<img src="assets/database.png" alt="Databases" style="width:100%">
-						<div class="overlay">
-							<h4>Querying SQL Databases</h4>
-							<ul>
-								<li>Created Transact-SQL SELECT queries</li>
-								<li>Worked with data types and NULL</li>
-								<li>Queried multiple tables with JOIN</li>
-								<li>Used functions and aggregated data</li>
-								<li>Worked with sub-queries and APPLY</li>
-								<li>Grouped sets and pivot data</li>
-								<li>Implemented error handling and transactions</li>
-							</ul>
-							<br>
-								<a href="https://www.edx.org/course/querying-data-with-transact-sql-0" target="_blank">Course Overview</a>
-								<br>
-								<a href="https://courses.edx.org/certificates/e6608793a0984dab947902ea2a860a00" target="_blank">Certificate</a>
-						</div>
-					</div>
-			  </div>
-			  <div class="column data">
-					<div class="content">
-					<img src="assets/excel.png" alt="Excel" style="width:100%">
-						<div class="overlay">
-							<h4>Excel Data Analysis</h4>
-							<ul>
-								<li>Developed databases using DAX and PowerPivot</li>
-								<li>Modelled business information</li>
-								<li>Built interactive dashboards using pivot tables</li>
-								<li>Utilized PowerQuery to ETL data from SQL Server</li>
-								<li>Automated tasks using Macros and VBA</li>
-								<li>Carried out What-If Analysis and Simulations</li>
-								<li>Used the Analysis ToolPak for statistics</li>
-								<li>Dealt with a wide range of formulas</li>
-							</ul>
-							<br>
-							<a href="https://www.edx.org/course/analyzing-and-visualizing-data-with-excel-0" target="_blank">Course Overview</a>
-							<br>
-							<a href="https://courses.edx.org/certificates/2dbb458e36f4455d91341249d38f5f43" target="_blank">Certificate</a>
-						</div>
-					</div>
-			  </div>
-			  <div class="column data">
-					<div class="content">
-						<img src="assets/spark-logo.png" alt="Spark" style="width:100%">
-						<div class="overlay">
-							<h4>Implementing Predictive Analytics with Spark</h4>
-							<ul>
-								<li>Used Spark to explore big data</li>
-								<li>Deployed models using the Spark ML library</li>
-								<li>Built and modeled recommendation systems</li>
-								<li>Explored data using Python, Scala and SQL</li>
-							</ul>
-							<br>
-							<a href="https://www.edx.org/course/implementing-predictive-analytics-with-spark-in-azure-hdinsight-2" target="_blank">Course Overview</a>
-							<br>
-							<a href="https://courses.edx.org/certificates/bd7d2edbc48541118637b8a7a8b9b219" target="_blank">Certificate</a>
-						</div>
-					</div>
-				</div>
-				<div class="column data">
-						<div class="content">
-						<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Scaled_chi_squared_cdf.svg/300px-Scaled_chi_squared_cdf.svg.png" alt="Nature" style="width:100%">
-							<div class="overlay">
-								<h4>Statistical Analysis</h4>
-								<ul>
-									<li>Sampling</li>
-									<li>Correlation</li>
-									<li>Distribution</li>
-									<li>Probability</li>
-									<li>Equations and Algebra</li>
-									<li>Vectors and Matrices</li>
-									<li>Hypothesis testing</li>
-								</ul>
-								<br>
-								<a href="https://www.edx.org/course/essential-math-for-machine-learning-python-edition" target="_blank">Course Overview</a>
-								<br>
-								<a href="https://courses.edx.org/certificates/63d3161c23cf4d97b4f25d459f733799" target="_blank">Certificate</a>
-							</div>
-						</div>
-				</div>
-			  <div class="column data">
-					<div class="content">
-					<img src="assets/sklearn-icon.jpg" alt="Nature" style="width:100%">
-						<div class="overlay">
-							<h4>Machine Learning with Scikit Learn</h4>
-							<ul>   
-								<li>Supervised and Unsupervised.</li>
-								<li>Linear regression, logistic regression,</li>
-								<li>random forests, naive Bayes,</li>
-								<li>decision trees, K-means clustering</li>	
-							</ul>
-							<br>
-							<a href="https://www.edx.org/course/python-principles-machine-learning-3" target="_blank">Course Overview</a>
-							<br>
-							<a href="https://courses.edx.org/certificates/ea9902ae8b8d4085bbc6d99eafa7acb4" target="_blank">Certificate</a>
-							<br>
-							<a href="https://github.com/LRS4/Python-Projects" target="_blank">Projects</a>
-						</div>
-					</div>
-				</div>
-				<div class="column data">
-					<div class="content">
-						<img src="assets/R-logo.png" alt="Mountains" style="width:100%">
-						<div class="overlay">
-							<h4>R for Data Science</h4>
-							<ul>	
-								<li>Basic R syntax</li>
-								<li>R programming; data types, vectors, factors</li>
-								<li>R operations; sorting, wrangling and plotting</li>
-								<li>Used lists and DataFrames to explore data</li>
-								<li>Created visualisations using ggplot2</li>
-								<li>Created web dashboards using Shiny</li>
-								<li>Explored RStudio IDE</li>
-							</ul>
-							<br>
-							<a href="https://www.edx.org/course/r-basics-2" target="_blank">Course Overview</a>
-							<br>
-							<a href="https://www.datacamp.com/statement-of-accomplishment/course/1aee6f1e7c10722f68a23cb737d8725b9db697ed?share=true" target="_blank">Certificate</a>
-							<br>
-							<a href="https://github.com/LRS4/r-data-science" target="_blank">Projects</a>
-						</div>
-					</div>
-				</div>
-				<!-- Software Development -->
-			  <div class="column web">
-					<div class="content">
-						<img src="https://winnonapartners.files.wordpress.com/2016/12/html-css-js-winnona-partners.png?w=300" alt="Mountains" style="width:100%">
-						<div class="overlay">
-							<h4>CS50 Web Programming</h4>
-							<ul>
-								<li>HTTP IP/TCP, APIs</li>
-								<li><a href="https://www.sololearn.com/Certificate/1014-7327354/pdf/" target="_blank">HTML</a>, CSS, <a href="https://www.sololearn.com/Certificate/1024-7327354/pdf/" target="_blank">JavaScript</a> and <a href="https://www.sololearn.com/Certificate/1082-7327354/pdf/" target="_blank">jQuery</a></li>
-								<li>PHP, Apache, MySQL</li>
-								<li>Flask, Django and Git</li>
-								<li>Security and Scalability</li>
-							</ul>
-							<br>
-								<a href="https://online-learning.harvard.edu/course/cs50s-web-programming-python-and-javascript" target="_blank">Course Overview</a>
-								<br>
-								<a href="http://cs75.tv/2012/summer/" target="_blank">CS75 Website</a>
-						</div>
-					</div>
-			  </div>
-			  <div class="column web">
-					<div class="content">
-					<img src="http://adurdesign.co.uk/wp-content/uploads/2016/11/ux.jpg" alt="Lights" style="width:100%">
-						<div class="overlay">
-							<h4>User Experience Design</h4>
-							<ul>
-									<li>User inquiry</li>
-									<li>Rapid prototyping</li>
-									<li>Understanding user tasks</li>
-									<li>Interface design</li>
-									<li>Principles of visual design</li>
-							</ul>
-							<a href="https://www.edx.org/course/design-thinking-advanced-topics" target="_blank">Course Overview</a>
-						</div>
-					</div>
-			  </div>
-			  <div class="column web">
-					<div class="content">
-					<img src="http://hplinc.com/wp-content/uploads/agile-project-management-cycle.png" alt="Nature" style="width:100%">
-						<div class="overlay">
-							<h4>Agile Software Development</h4>
-							<ul>
-								<li>The key agile ideas</li>
-								<li>Agile principles, roles, practices, and artifacts</li>
-								<li>Pros and cons of the most popular agile methods</li>
-								<li>How to benefit from agile methods in general</li>
-							</ul>
-							<br>
-							<a href="https://www.edx.org/course/agile-software-development-2" target="_blank">Course Overview</a>
-						</div>
-					</div>
-				</div>
-				<div class="column web">
-					<div class="content">
-					<img src="assets/mit.svg" alt="Nature" style="width:100%">
-						<div class="overlay">
-							<h4>Computer Science and Programming using Python</h4>
-							<ul>
-								<li>Understanding computation</li>
-								<li>Deep understanding of Python programming</li>
-								<li>Algorithms</li>
-								<li>Data Structures</li>
-								<li>Testing and debugging</li>
-							</ul>
-							<br>
-							<a href="https://www.edx.org/course/introduction-to-computer-science-and-programming-using-python-2" target="_blank">Course Overview</a>
-						</div>
-					</div>
-				</div>
-				<!-- Business Analysis -->
-			  <div class="column business">
-					<div class="content">
-						<img src="http://www.energisezone.com/wp-content/uploads/2014/05/groupmeet-300x300.png" alt="Mountains" style="width:100%">
-						<div class="overlay">
-							<h4>Business Analytics</h4>
-							<ul>
-								<li>Basic data types, sampling methods, surveys, and data visualization</li>
-								<li>Popular descriptive statistics and basic probability concepts</li>
-								<li>Inferential statistics such as confidence intervals and hypothesis testing</li>
-								<li>Basic Excel modeling building for revenue, cost, and profit</li>
-								<li>How to apply fundamental analytics to common business decisions</li>
-							</ul>
-							<a href="https://www.edx.org/course/business-analytics-fundamentals" target="_blank">Course Overview</a>
-						</div>
-					</div>
-			  </div>
-			  <div class="column business">
-					<div class="content">
-					<img src="http://www.logansimpson.com/wp-content/uploads/2014/05/process-mapping-300x300.png" alt="Lights" style="width:100%">
-						<div class="overlay">
-							<h4>UML Class Diagrams for Software Engineering</h4>
-							<ul>	
-								<li>In-depth understanding of UML</li>
-								<li>Applied UML to model business processes</li>
-								<li>Engineered software design maps to specification</li>
-							</ul>
-							<br>
-							<a href="https://www.edx.org/course/uml-class-diagrams-for-software-engineering-0" target="_blank">Course Overview</a>
-						</div>
-					</div>
-			  </div>
-				<!-- Qualifications -->
-			  <div class="column qualifications">
-					<div class="content">
-						<img src="assets/microsoft.png" alt="Mountains" style="width:100%">
-						<div class="overlay">
-							<h4>Microsoft Professional Program in Data Science</h4>
-							<ul>	
-								<li>Used Microsoft Excel to explore data</li>
-								<li>Used SQL to query relational databases</li>
-								<li>Created data models using Excel & Power BI</li>
-								<li>Applied statistical methods to data</li>
-								<li>Used Python to explore and transform data</li>
-								<li>Applied a data science methodology</li>
-								<li>Created and validated machine learning models</li>
-								<li>Applied data science techniques</li>
-								<li>Implemented machine learning solutions</li>
-							</ul>
-							<br>
-							<a href="https://academy.microsoft.com/en-us/professional-program/tracks/data-science/" target="_blank">Course Overview</a>
-							<br>
-							<a href="https://academy.microsoft.com/en-us/certificates/0201dc3c-9899-4a5d-97f0-3f436d2625e1/" target="_blank">Certification</a>
-							<br>
-							<a href="https://github.com/LRS4/python-projects" target="_blank">Projects</a>
-						</div>
-					</div>
-			  </div>
-			  <div class="column qualifications">
-					<div class="content">
-					<img src="assets/hallam.png" alt="Lights" style="width:100%">
-						<div class="overlay">
-							<h4>2:1 BA Criminology and Sociology</h4>
-							<p>
-							Joint Honours Undergraduate Degree over 3 years involving multidisciplinary learning across criminal justice, politics, economics, philosophy, research methods, statistics, history, psychology and industrial relations.
-							<br><br>
-							Final year dissertation focused on statistical and theoretical review of effect on prisoners leaving the criminal justice system and policy research on positive indicators in desisting from criminality.
-							<br/><br/>
-							This has led to positions in business and later a career in the Public Sector alongside a voluntary position of mentoring former offenders to encourage re-integration into the community.
-							</p>
-						</div>
-					</div>
-			  </div>
-			  <div class="column qualifications">
-					<div class="content">
-						<img src="https://camo.githubusercontent.com/ddb9cc057ff100e7eae6caa7d7cfc8223b8fb13c/68747470733a2f2f676f6f2e676c2f6d4a774e5543" alt="Mountains" style="width:100%">
-						<div class="overlay">
-							<h4>Introduction to Computer Science CS50</h4>
-							<ul>	
-								<li>Built a broad understanding of programming</li>
-								<li>Applied algorithms to problem solving</li>
-								<li>Programmed in C, Python, SQL, JS</li>
-								<li>Applied variables, loops, and control flows</li>
-								<li>Explored data structures; arrays, linked lists, tries</li>
-								<li>Explored security, networks and AI</li>
-								<li>Software engineering - MVC, MDE, FDD</li>
-								<li>Used JS, jQ and Ajax for web development</li>
-								<li>Earned 90% on 9 programming assignments</li> 
-							</ul>
-							<br>
-							<a href="https://www.edx.org/course/cs50s-introduction-computer-science-harvardx-cs50x" target="_blank">Course Overview</a>
-							<br>
-							<a href="https://www.edx.org/course/cs50s-introduction-computer-science-harvardx-cs50x" target="_blank">Certificate</a>
-							<br>
-							<a href="https://github.com/LRS4/cs50-computer-science" target="_blank">Projects (Psets)</a>
-						</div>
-					</div>
-			  </div>
-			  <div class="column qualifications">
-					<div class="content">
-					<img src="https://globalmanagementacademy.com/australia/wp-content/uploads/sites/5/2017/07/ILM-Endorsed-Program-300x300.jpg" alt="Nature" style="width:100%">
-						<div class="overlay">
-							<h4>Award in Leadership and Management Level 2</h4>
-							<ul>   
-								<li>Core skills to lead successfully</li>
-								<li>Motivation techniques to lead others</li>
-								<li>Confidence in tackling difficult issues</li>
-								<li>Tools to further develop as a leader</li>
-								<li>Frameworks to assess and improve performance</li>	
-							</ul>
-							<br>
-							<a href="https://www.i-l-m.com/learning-and-development/management/team-leading/8002-level-2-certificate-in-team-leading" target="_blank">Course Overview</a>
-						</div>
-					</div>
-			  </div>
-			  <!-- Projects -->
-			  <div class="column projects">
-					<div class="content">
-					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQC4BtCrxFJyXLEx0UYS8s2cGQvWB3usVjxEr0bQwpSDCktrrpug" alt="CS50-flask-app" style="width:100%">
-						<div class="overlay">
-							<h4>CS50 Final Project - ML Flask App</h4>
-							<p>The project was to create a machine learning web application which predicts the probability of surviving the famous titanic ship-wreck based upon user input variables and the training dataset from Kaggle. This combined both CS and machine learning skills to deploy a Flask app to Heroku.
-							<br><br>
-							In addition, I built an <a href="https://github.com/LRS4/python-automation/tree/master/auto_web_tester" target="_blank">automated web driver</a> script to speed up testing.
-							<br/><br/>
-							<a href="https://ml-titanic-app.herokuapp.com/" target="_blank">Launch app</a>
-							<br>
-							<a href="https://github.com/LRS4/cs50-final-project" target="_blank">View code</a>
-							</p>
-						</div>
-					</div>
-			  </div>
-			  <div class="column projects">
-					<div class="content">
-					<img src="https://cdn.pixabay.com/photo/2015/08/26/18/20/computer-908893_960_720.png" alt="CS50-website" style="width:100%">
-						<div class="overlay">
-							<h4>Hello, World! Travel Website</h4>
-							<p>A website to present my hobby of traveling, built for CS50 Pset 5. I used mostly HTML, CSS and Bootstrap4 to build this simple mobile-optimised site with a function for the I'm Feeling Lucky random page button using JS and jQuery.<br><br> I used the W3C Markup Validation Service to error check the code as per the <a href="https://docs.cs50.net/2018/fall/psets/5/homepage/homepage.html" target="_blank">specification.</a>
-							<br/><br/>
-							<a href="https://lrs4.cs50.site/" target="_blank" >Launch website</a>
-							</p>
-						</div>
-					</div>
-			  </div>
-			  <div class="column projects">
-					<div class="content">
-					<img src="assets/house.png" alt="House-prices-project" style="width:100%">
-						<div class="overlay">
-							<h4>House Prices Machine Learning</h4>
-							<p>A project completed on Kaggle whilst completing the Microsoft Professional Certificate in Data Science. I built a ML regression model to predict house prices in Aymes, Iowa. I demonstrated CRISP-DM (cross-industry standard practice in data mining) to explore, model and evaluate the solution which scored highly upon submission.
-							<br><br>
-							<a href="https://github.com/LRS4/Python-Projects/blob/master/Housing%20Prices%20Prediction%20Project/Predicting%20House%20Prices.ipynb" target="_blank" >Launch notebook</a>
-							</p>
-						</div>
-					</div>
-			  </div>
-			  <div class="column projects">
+		<!-- Portfolio Gallery Grid -->
+		<!-- Images should be 300x300 pixels -->
+		<div class="row">
+			<!-- Data Science -->
+			<div class="column data">
 				<div class="content">
-				<img src="assets/pi-small.png" alt="Assessment-app" style="width:100%">
+					<img src="assets/python-logo.png" alt="Python" style="width:100%">
 					<div class="overlay">
-						<h4>Numerical Assessment App</h4>
-						<p>The project was to create a numerical assessment test from printed PDF materials I purchased from Assessment Day a few years ago. This project is for personal use for the purposes of learning.<br/><br/>
-						<a href="https://www.youtube.com/watch?v=0E8LegbfDGQ" target="_blank">Video demo</a>
+						<h4>Python for Data Analysis</h4>
+						<ul>
+							<li>Explored Python basic syntax and data types</li>
+							<li>Created and manipulated regular Python lists</li>
+							<li>Used functions and imported packages</li>
+							<li>Applied variables, loops, and control flows</li>
+							<li>Built Numpy arrays, and performed calculations</li>
+							<li>Created and customized plots on real data</li>
+							<li>Utilized the Pandas DataFrame</li>
+							<li>Explored Matplotlib and Seaborn visualizations</li>
+						</ul>
 						<br>
-						<a href="https://github.com/LRS4/aptitude-test-project" target="_blank">Code</a>
+						<a href="https://www.edx.org/course/introduction-to-python-for-data-science" target="_blank">Course Overview</a>
+						<br>
+						<a href="https://courses.edx.org/certificates/b7fe1ea6b0cd44958aae53eddb6a71a7" target="_blank">Certificate</a>
+					</div>
+				</div>
+			</div>
+			<div class="column data">
+				<div class="content" id="sql">
+					<img src="assets/database.png" alt="Databases" style="width:100%">
+					<div class="overlay">
+						<h4>Querying SQL Databases</h4>
+						<ul>
+							<li>Created Transact-SQL SELECT queries</li>
+							<li>Worked with data types and NULL</li>
+							<li>Queried multiple tables with JOIN</li>
+							<li>Used functions and aggregated data</li>
+							<li>Worked with sub-queries and APPLY</li>
+							<li>Grouped sets and pivot data</li>
+							<li>Implemented error handling and transactions</li>
+						</ul>
+						<br>
+							<a href="https://www.edx.org/course/querying-data-with-transact-sql-0" target="_blank">Course Overview</a>
+							<br>
+							<a href="https://courses.edx.org/certificates/e6608793a0984dab947902ea2a860a00" target="_blank">Certificate</a>
+					</div>
+				</div>
+			</div>
+			<div class="column data">
+				<div class="content">
+				<img src="assets/excel.png" alt="Excel" style="width:100%">
+					<div class="overlay">
+						<h4>Excel Data Analysis</h4>
+						<ul>
+							<li>Developed databases using DAX and PowerPivot</li>
+							<li>Modelled business information</li>
+							<li>Built interactive dashboards using pivot tables</li>
+							<li>Utilized PowerQuery to ETL data from SQL Server</li>
+							<li>Automated tasks using Macros and VBA</li>
+							<li>Carried out What-If Analysis and Simulations</li>
+							<li>Used the Analysis ToolPak for statistics</li>
+							<li>Dealt with a wide range of formulas</li>
+						</ul>
+						<br>
+						<a href="https://www.edx.org/course/analyzing-and-visualizing-data-with-excel-0" target="_blank">Course Overview</a>
+						<br>
+						<a href="https://courses.edx.org/certificates/2dbb458e36f4455d91341249d38f5f43" target="_blank">Certificate</a>
+					</div>
+				</div>
+			</div>
+			<div class="column data">
+				<div class="content">
+					<img src="assets/spark-logo.png" alt="Spark" style="width:100%">
+					<div class="overlay">
+						<h4>Implementing Predictive Analytics with Spark</h4>
+						<ul>
+							<li>Used Spark to explore big data</li>
+							<li>Deployed models using the Spark ML library</li>
+							<li>Built and modeled recommendation systems</li>
+							<li>Explored data using Python, Scala and SQL</li>
+						</ul>
+						<br>
+						<a href="https://www.edx.org/course/implementing-predictive-analytics-with-spark-in-azure-hdinsight-2" target="_blank">Course Overview</a>
+						<br>
+						<a href="https://courses.edx.org/certificates/bd7d2edbc48541118637b8a7a8b9b219" target="_blank">Certificate</a>
+					</div>
+				</div>
+			</div>
+			<div class="column data">
+					<div class="content">
+					<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Scaled_chi_squared_cdf.svg/300px-Scaled_chi_squared_cdf.svg.png" alt="Nature" style="width:100%">
+						<div class="overlay">
+							<h4>Statistical Analysis</h4>
+							<ul>
+								<li>Sampling</li>
+								<li>Correlation</li>
+								<li>Distribution</li>
+								<li>Probability</li>
+								<li>Equations and Algebra</li>
+								<li>Vectors and Matrices</li>
+								<li>Hypothesis testing</li>
+							</ul>
+							<br>
+							<a href="https://www.edx.org/course/essential-math-for-machine-learning-python-edition" target="_blank">Course Overview</a>
+							<br>
+							<a href="https://courses.edx.org/certificates/63d3161c23cf4d97b4f25d459f733799" target="_blank">Certificate</a>
+						</div>
+					</div>
+			</div>
+			<div class="column data">
+				<div class="content">
+				<img src="assets/sklearn-icon.jpg" alt="Nature" style="width:100%">
+					<div class="overlay">
+						<h4>Machine Learning with Scikit Learn</h4>
+						<ul>   
+							<li>Supervised and Unsupervised.</li>
+							<li>Linear regression, logistic regression,</li>
+							<li>random forests, naive Bayes,</li>
+							<li>decision trees, K-means clustering</li>	
+						</ul>
+						<br>
+						<a href="https://www.edx.org/course/python-principles-machine-learning-3" target="_blank">Course Overview</a>
+						<br>
+						<a href="https://courses.edx.org/certificates/ea9902ae8b8d4085bbc6d99eafa7acb4" target="_blank">Certificate</a>
+						<br>
+						<a href="https://github.com/LRS4/Python-Projects" target="_blank">Projects</a>
+					</div>
+				</div>
+			</div>
+			<div class="column data">
+				<div class="content">
+					<img src="assets/R-logo.png" alt="Mountains" style="width:100%">
+					<div class="overlay">
+						<h4>R for Data Science</h4>
+						<ul>	
+							<li>Basic R syntax</li>
+							<li>R programming; data types, vectors, factors</li>
+							<li>R operations; sorting, wrangling and plotting</li>
+							<li>Used lists and DataFrames to explore data</li>
+							<li>Created visualisations using ggplot2</li>
+							<li>Created web dashboards using Shiny</li>
+							<li>Explored RStudio IDE</li>
+						</ul>
+						<br>
+						<a href="https://www.edx.org/course/r-basics-2" target="_blank">Course Overview</a>
+						<br>
+						<a href="https://www.datacamp.com/statement-of-accomplishment/course/1aee6f1e7c10722f68a23cb737d8725b9db697ed?share=true" target="_blank">Certificate</a>
+						<br>
+						<a href="https://github.com/LRS4/r-data-science" target="_blank">Projects</a>
+					</div>
+				</div>
+			</div>
+			<!-- Software Development -->
+			<div class="column web">
+				<div class="content">
+					<img src="https://winnonapartners.files.wordpress.com/2016/12/html-css-js-winnona-partners.png?w=300" alt="Mountains" style="width:100%">
+					<div class="overlay">
+						<h4>CS50 Web Programming</h4>
+						<ul>
+							<li>HTTP IP/TCP, APIs</li>
+							<li><a href="https://www.sololearn.com/Certificate/1014-7327354/pdf/" target="_blank">HTML</a>, CSS, <a href="https://www.sololearn.com/Certificate/1024-7327354/pdf/" target="_blank">JavaScript</a> and <a href="https://www.sololearn.com/Certificate/1082-7327354/pdf/" target="_blank">jQuery</a></li>
+							<li>PHP, Apache, MySQL</li>
+							<li>Flask, Django and Git</li>
+							<li>Security and Scalability</li>
+						</ul>
+						<br>
+							<a href="https://online-learning.harvard.edu/course/cs50s-web-programming-python-and-javascript" target="_blank">Course Overview</a>
+							<br>
+							<a href="http://cs75.tv/2012/summer/" target="_blank">CS75 Website</a>
+					</div>
+				</div>
+			</div>
+			<div class="column web">
+				<div class="content">
+				<img src="http://adurdesign.co.uk/wp-content/uploads/2016/11/ux.jpg" alt="Lights" style="width:100%">
+					<div class="overlay">
+						<h4>User Experience Design</h4>
+						<ul>
+								<li>User inquiry</li>
+								<li>Rapid prototyping</li>
+								<li>Understanding user tasks</li>
+								<li>Interface design</li>
+								<li>Principles of visual design</li>
+						</ul>
+						<a href="https://www.edx.org/course/design-thinking-advanced-topics" target="_blank">Course Overview</a>
+					</div>
+				</div>
+			</div>
+			<div class="column web">
+				<div class="content">
+				<img src="http://hplinc.com/wp-content/uploads/agile-project-management-cycle.png" alt="Nature" style="width:100%">
+					<div class="overlay">
+						<h4>Agile Software Development</h4>
+						<ul>
+							<li>The key agile ideas</li>
+							<li>Agile principles, roles, practices, and artifacts</li>
+							<li>Pros and cons of the most popular agile methods</li>
+							<li>How to benefit from agile methods in general</li>
+						</ul>
+						<br>
+						<a href="https://www.edx.org/course/agile-software-development-2" target="_blank">Course Overview</a>
+					</div>
+				</div>
+			</div>
+			<div class="column web">
+				<div class="content">
+				<img src="assets/mit.svg" alt="Nature" style="width:100%">
+					<div class="overlay">
+						<h4>Computer Science and Programming using Python</h4>
+						<ul>
+							<li>Understanding computation</li>
+							<li>Deep understanding of Python programming</li>
+							<li>Algorithms</li>
+							<li>Data Structures</li>
+							<li>Testing and debugging</li>
+						</ul>
+						<br>
+						<a href="https://www.edx.org/course/introduction-to-computer-science-and-programming-using-python-2" target="_blank">Course Overview</a>
+					</div>
+				</div>
+			</div>
+			<!-- Business Analysis -->
+			<div class="column business">
+				<div class="content">
+					<img src="http://www.energisezone.com/wp-content/uploads/2014/05/groupmeet-300x300.png" alt="Mountains" style="width:100%">
+					<div class="overlay">
+						<h4>Business Analytics</h4>
+						<ul>
+							<li>Basic data types, sampling methods, surveys, and data visualization</li>
+							<li>Popular descriptive statistics and basic probability concepts</li>
+							<li>Inferential statistics such as confidence intervals and hypothesis testing</li>
+							<li>Basic Excel modeling building for revenue, cost, and profit</li>
+							<li>How to apply fundamental analytics to common business decisions</li>
+						</ul>
+						<a href="https://www.edx.org/course/business-analytics-fundamentals" target="_blank">Course Overview</a>
+					</div>
+				</div>
+			</div>
+			<div class="column business">
+				<div class="content">
+				<img src="http://www.logansimpson.com/wp-content/uploads/2014/05/process-mapping-300x300.png" alt="Lights" style="width:100%">
+					<div class="overlay">
+						<h4>UML Class Diagrams for Software Engineering</h4>
+						<ul>	
+							<li>In-depth understanding of UML</li>
+							<li>Applied UML to model business processes</li>
+							<li>Engineered software design maps to specification</li>
+						</ul>
+						<br>
+						<a href="https://www.edx.org/course/uml-class-diagrams-for-software-engineering-0" target="_blank">Course Overview</a>
+					</div>
+				</div>
+			</div>
+			<!-- Qualifications -->
+			<div class="column qualifications">
+				<div class="content">
+					<img src="assets/microsoft.png" alt="Mountains" style="width:100%">
+					<div class="overlay">
+						<h4>Microsoft Professional Program in Data Science</h4>
+						<ul>	
+							<li>Used Microsoft Excel to explore data</li>
+							<li>Used SQL to query relational databases</li>
+							<li>Created data models using Excel & Power BI</li>
+							<li>Applied statistical methods to data</li>
+							<li>Used Python to explore and transform data</li>
+							<li>Applied a data science methodology</li>
+							<li>Created and validated machine learning models</li>
+							<li>Applied data science techniques</li>
+							<li>Implemented machine learning solutions</li>
+						</ul>
+						<br>
+						<a href="https://academy.microsoft.com/en-us/professional-program/tracks/data-science/" target="_blank">Course Overview</a>
+						<br>
+						<a href="https://academy.microsoft.com/en-us/certificates/0201dc3c-9899-4a5d-97f0-3f436d2625e1/" target="_blank">Certification</a>
+						<br>
+						<a href="https://github.com/LRS4/python-projects" target="_blank">Projects</a>
+					</div>
+				</div>
+			</div>
+			<div class="column qualifications">
+				<div class="content">
+				<img src="assets/hallam.png" alt="Lights" style="width:100%">
+					<div class="overlay">
+						<h4>2:1 BA Criminology and Sociology</h4>
+						<p>
+						Joint Honours Undergraduate Degree over 3 years involving multidisciplinary learning across criminal justice, politics, economics, philosophy, research methods, statistics, history, psychology and industrial relations.
+						<br><br>
+						Final year dissertation focused on statistical and theoretical review of effect on prisoners leaving the criminal justice system and policy research on positive indicators in desisting from criminality.
+						<br/><br/>
+						This has led to positions in business and later a career in the Public Sector alongside a voluntary position of mentoring former offenders to encourage re-integration into the community.
 						</p>
 					</div>
 				</div>
-		  	  </div>
-			  <div class="column projects">
-					<div class="content">
-					<img src="assets/rewind-app.jpg" alt="Rewind-app" style="width:100%">
-						<div class="overlay">
-							<h4>News Rewind Web App</h4>
-							<p>A project I built using HTML, CSS and jQuery to decorate a Google News URL to gather five years worth of a news story to see how it has developed over time. This is very useful in a time of information overload, we are quick to forget key events that happened years ago so this allows a user to review previous articles.<br/><br/>
-							<a href="projects/rewind-app.html" target="_blank">Launch app</a>
-							</p>
-						</div>
-					</div>
-			  </div>
-			  <div class="column projects">
-					<div class="content">
-					<img src="assets/calculator.jpg" alt="Savings-calculator" style="width:100%">
-						<div class="overlay">
-							<h4>Savings Calculator Web App</h4>
-							<p>A project I built using HTML, CSS and JavaScript to forecast how many years it will take to reach x25 your annual expenses, and to show you your savings rate.<br/><br/>
-							I used auto-calculating fields on key-up, HTML DOM, variables, functions, while loops and arithmetic operators and increased my understanding in applying algorithms and <a href="https://www.symbolab.com/solver/step-by-step/solve%20for%20y%2C%20%2011000%20%5Ccdot%5Cfrac%7B%5Cleft(%5Cleft(1.07%5E%7By%7D%5Cright)-1%20%5Cright)%7D%7B1.07%20-%201%7D%20%3D%20150000" target="_blank">equations</a> to problems. <br/><br/>
-							<a href="projects/fi-calculator.html" target="_blank" >Launch app</a>
-							</p>
-						</div>
-					</div>
-			  </div>
-			  <div class="column projects">
-					<div class="content">
-						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Wikipedia-W-bold-in-square.svg/768px-Wikipedia-W-bold-in-square.svg.png" alt="Wikipedia-logo" style="width:100%">
-						<div class="overlay">
-							<h4>Wikipedia API App</h4>
-							<p>
-							Inspired by the challenge at FreeCodeCamp, the app uses the Wikipedia API open search endpoint to pull back requests. The user stories were; I can search Wikipedia entries in a search box, and I can click a button to see a random Wikipedia entry.
-							<br/><br/>
-							I used HTML, CSS, JavaScript, AJAX and JSON and developed knowledge on manipulating URLs and arrays alongside DOM manipulation.
-							<br/><br/>
-							<a href="projects/wikipedia-api-viewer.html" target="_blank">Launch app</a>
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="column projects">
-					<div class="content">
-					<img src="assets/analytics.png" alt="Shiny-app" style="width:100%">
-						<div class="overlay">
-							<h4>Shiny Dashboard - Customer Satisfaction</h4>
-							<p>The project was to create an interactive dashboard which displayed a dataset based upon telephony information (Software company's service center). This would allow insight into demand, customer insight, satisfaction and performance management information.<br/><br/>
-							<a href=" https://www.youtube.com/watch?v=Mel7KZnWLhU" target="_blank">Video demo</a>
-							<br>
-							<a href="https://github.com/LRS4/csat-performance-dashboard" target="_blank">Code</a>
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="column projects">
-						<div class="content">
-						<img src="assets/quotes.jpg" alt="Quote machine" style="width:100%">
-							<div class="overlay">
-								<h4>Random Quotes Machine</h4>
-								<p>A quick project to implement a random programming quotes generator using AJAX to call an open API; credit to <a href="https://github.com/skolakoda/programming-quotes-api" target="_blank">skolakoda</a>.<br/><br/>
-								There are functions for viewing a quote author's Wikipedia page, alongside a decorated URL function to tweet the quote.<br><br>	
-								<a href="projects/quotes-machine.html" target="_blank">Launch app</a>
-								<br>
-								<a href="https://github.com/LRS4/LRS4.github.io/blob/master/projects/quotes-machine.html" target="_blank">Code</a>
-								</p>
-							</div>
-						</div>
-				</div>
-			<!-- / Grid section -->
 			</div>
+			<div class="column qualifications">
+				<div class="content">
+					<img src="https://camo.githubusercontent.com/ddb9cc057ff100e7eae6caa7d7cfc8223b8fb13c/68747470733a2f2f676f6f2e676c2f6d4a774e5543" alt="Mountains" style="width:100%">
+					<div class="overlay">
+						<h4>Introduction to Computer Science CS50</h4>
+						<ul>	
+							<li>Built a broad understanding of programming</li>
+							<li>Applied algorithms to problem solving</li>
+							<li>Programmed in C, Python, SQL, JS</li>
+							<li>Applied variables, loops, and control flows</li>
+							<li>Explored data structures; arrays, linked lists, tries</li>
+							<li>Explored security, networks and AI</li>
+							<li>Software engineering - MVC, MDE, FDD</li>
+							<li>Used JS, jQ and Ajax for web development</li>
+							<li>Earned 90% on 9 programming assignments</li> 
+						</ul>
+						<br>
+						<a href="https://www.edx.org/course/cs50s-introduction-computer-science-harvardx-cs50x" target="_blank">Course Overview</a>
+						<br>
+						<a href="https://www.edx.org/course/cs50s-introduction-computer-science-harvardx-cs50x" target="_blank">Certificate</a>
+						<br>
+						<a href="https://github.com/LRS4/cs50-computer-science" target="_blank">Projects (Psets)</a>
+					</div>
+				</div>
+			</div>
+			<div class="column qualifications">
+				<div class="content">
+				<img src="https://globalmanagementacademy.com/australia/wp-content/uploads/sites/5/2017/07/ILM-Endorsed-Program-300x300.jpg" alt="Nature" style="width:100%">
+					<div class="overlay">
+						<h4>Award in Leadership and Management Level 2</h4>
+						<ul>   
+							<li>Core skills to lead successfully</li>
+							<li>Motivation techniques to lead others</li>
+							<li>Confidence in tackling difficult issues</li>
+							<li>Tools to further develop as a leader</li>
+							<li>Frameworks to assess and improve performance</li>	
+						</ul>
+						<br>
+						<a href="https://www.i-l-m.com/learning-and-development/management/team-leading/8002-level-2-certificate-in-team-leading" target="_blank">Course Overview</a>
+					</div>
+				</div>
+			</div>
+			<!-- Projects -->
+			<div class="column projects">
+				<div class="content">
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQC4BtCrxFJyXLEx0UYS8s2cGQvWB3usVjxEr0bQwpSDCktrrpug" alt="CS50-flask-app" style="width:100%">
+					<div class="overlay">
+						<h4>CS50 Final Project - ML Flask App</h4>
+						<p>The project was to create a machine learning web application which predicts the probability of surviving the famous titanic ship-wreck based upon user input variables and the training dataset from Kaggle. This combined both CS and machine learning skills to deploy a Flask app to Heroku.
+						<br><br>
+						In addition, I built an <a href="https://github.com/LRS4/python-automation/tree/master/auto_web_tester" target="_blank">automated web driver</a> script to speed up testing.
+						<br/><br/>
+						<a href="https://ml-titanic-app.herokuapp.com/" target="_blank">Launch app</a>
+						<br>
+						<a href="https://github.com/LRS4/cs50-final-project" target="_blank">View code</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="column projects">
+				<div class="content">
+				<img src="https://cdn.pixabay.com/photo/2015/08/26/18/20/computer-908893_960_720.png" alt="CS50-website" style="width:100%">
+					<div class="overlay">
+						<h4>Hello, World! Travel Website</h4>
+						<p>A website to present my hobby of traveling, built for CS50 Pset 5. I used mostly HTML, CSS and Bootstrap4 to build this simple mobile-optimised site with a function for the I'm Feeling Lucky random page button using JS and jQuery.<br><br> I used the W3C Markup Validation Service to error check the code as per the <a href="https://docs.cs50.net/2018/fall/psets/5/homepage/homepage.html" target="_blank">specification.</a>
+						<br/><br/>
+						<a href="https://lrs4.cs50.site/" target="_blank" >Launch website</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="column projects">
+				<div class="content">
+				<img src="assets/house.png" alt="House-prices-project" style="width:100%">
+					<div class="overlay">
+						<h4>House Prices Machine Learning</h4>
+						<p>A project completed on Kaggle whilst completing the Microsoft Professional Certificate in Data Science. I built a ML regression model to predict house prices in Aymes, Iowa. I demonstrated CRISP-DM (cross-industry standard practice in data mining) to explore, model and evaluate the solution which scored highly upon submission.
+						<br><br>
+						<a href="https://github.com/LRS4/Python-Projects/blob/master/Housing%20Prices%20Prediction%20Project/Predicting%20House%20Prices.ipynb" target="_blank" >Launch notebook</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="column projects">
+			<div class="content">
+			<img src="assets/pi-small.png" alt="Assessment-app" style="width:100%">
+				<div class="overlay">
+					<h4>Numerical Assessment App</h4>
+					<p>The project was to create a numerical assessment test from printed PDF materials I purchased from Assessment Day a few years ago. This project is for personal use for the purposes of learning.<br/><br/>
+					<a href="https://www.youtube.com/watch?v=0E8LegbfDGQ" target="_blank">Video demo</a>
+					<br>
+					<a href="https://github.com/LRS4/aptitude-test-project" target="_blank">Code</a>
+					</p>
+				</div>
+			</div>
+			</div>
+			<div class="column projects">
+				<div class="content">
+				<img src="assets/rewind-app.jpg" alt="Rewind-app" style="width:100%">
+					<div class="overlay">
+						<h4>News Rewind Web App</h4>
+						<p>A project I built using HTML, CSS and jQuery to decorate a Google News URL to gather five years worth of a news story to see how it has developed over time. This is very useful in a time of information overload, we are quick to forget key events that happened years ago so this allows a user to review previous articles.<br/><br/>
+						<a href="projects/rewind-app.html" target="_blank">Launch app</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="column projects">
+				<div class="content">
+				<img src="assets/calculator.jpg" alt="Savings-calculator" style="width:100%">
+					<div class="overlay">
+						<h4>Savings Calculator Web App</h4>
+						<p>A project I built using HTML, CSS and JavaScript to forecast how many years it will take to reach x25 your annual expenses, and to show you your savings rate.<br/><br/>
+						I used auto-calculating fields on key-up, HTML DOM, variables, functions, while loops and arithmetic operators and increased my understanding in applying algorithms and <a href="https://www.symbolab.com/solver/step-by-step/solve%20for%20y%2C%20%2011000%20%5Ccdot%5Cfrac%7B%5Cleft(%5Cleft(1.07%5E%7By%7D%5Cright)-1%20%5Cright)%7D%7B1.07%20-%201%7D%20%3D%20150000" target="_blank">equations</a> to problems. <br/><br/>
+						<a href="projects/fi-calculator.html" target="_blank" >Launch app</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="column projects">
+				<div class="content">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Wikipedia-W-bold-in-square.svg/768px-Wikipedia-W-bold-in-square.svg.png" alt="Wikipedia-logo" style="width:100%">
+					<div class="overlay">
+						<h4>Wikipedia API App</h4>
+						<p>
+						Inspired by the challenge at FreeCodeCamp, the app uses the Wikipedia API open search endpoint to pull back requests. The user stories were; I can search Wikipedia entries in a search box, and I can click a button to see a random Wikipedia entry.
+						<br/><br/>
+						I used HTML, CSS, JavaScript, AJAX and JSON and developed knowledge on manipulating URLs and arrays alongside DOM manipulation.
+						<br/><br/>
+						<a href="projects/wikipedia-api-viewer.html" target="_blank">Launch app</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="column projects">
+				<div class="content">
+				<img src="assets/analytics.png" alt="Shiny-app" style="width:100%">
+					<div class="overlay">
+						<h4>Shiny Dashboard - Customer Satisfaction</h4>
+						<p>The project was to create an interactive dashboard which displayed a dataset based upon telephony information (Software company's service center). This would allow insight into demand, customer insight, satisfaction and performance management information.<br/><br/>
+						<a href=" https://www.youtube.com/watch?v=Mel7KZnWLhU" target="_blank">Video demo</a>
+						<br>
+						<a href="https://github.com/LRS4/csat-performance-dashboard" target="_blank">Code</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="column projects">
+					<div class="content">
+					<img src="assets/quotes.jpg" alt="Quote machine" style="width:100%">
+						<div class="overlay">
+							<h4>Random Quotes Machine</h4>
+							<p>A quick project to implement a random programming quotes generator using AJAX to call an open API; credit to <a href="https://github.com/skolakoda/programming-quotes-api" target="_blank">skolakoda</a>.<br/><br/>
+							There are functions for viewing a quote author's Wikipedia page, alongside a decorated URL function to tweet the quote.<br><br>	
+							<a href="projects/quotes-machine.html" target="_blank">Launch app</a>
+							<br>
+							<a href="https://github.com/LRS4/LRS4.github.io/blob/master/projects/quotes-machine.html" target="_blank">Code</a>
+							</p>
+						</div>
+					</div>
+			</div>
+		<!-- / Grid section -->
+		</div>
 
-			<!-- Footer -->
-			<footer style="display:none">Copyright &copy; Lewis Spencer</footer>
+		<!-- Footer -->
+		<footer style="display:none">Copyright &copy; Lewis Spencer</footer>
 
 	<!-- / Main section -->
 	</div>
