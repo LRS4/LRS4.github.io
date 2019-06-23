@@ -10,13 +10,22 @@ let d = new Date();
 let year = d.getFullYear();
 $("footer").html("Copyright &copy; " + year + " Lewis Spencer");
 
-// on click of content class, display overlay class
-$(".content").click(function(event) {
-	// reset all the others to hide
-	$(".overlay").css("opacity", "0");
+// function to detect a touch enabled device
+function is_touch_device() {
+	return (('ontouchstart' in window)
+		 || (navigator.MaxTouchPoints > 0)
+		 || (navigator.msMaxTouchPoints > 0));
+}
 
-	// closest overlay class to target change opacity to 1
-	$(event.target).closest('.overlay').css("opacity", "1");
+// on click of content class, if touch enabled device, display overlay class
+$(".content").click(function(event) {
+	if(is_touch_device()) {
+		// reset all the others to hide
+		$(".overlay").css("opacity", "0");
+
+		// closest overlay class to target change opacity to 1
+		$(event.target).closest('.overlay').css("opacity", "1");
+	}
 });
 
 // script for grid image tiles
@@ -66,7 +75,7 @@ for (var i = 0; i < btns.length; i++) {
 
 // script for model
 
-// Get the modal
+// Get the modal element
 var modal = document.getElementById('myModal');
 
 // Get the button that opens the modal
