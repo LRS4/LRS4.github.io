@@ -12,5 +12,6 @@ $("#myTopnav").attr("data-intro", "Finally, here are links to other pages includ
 
 // on click start intro js welcome
 $("#help").click(function() {
+    $("#showAll").trigger("click");
     introJs().start();
 });
