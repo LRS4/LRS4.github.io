@@ -1,273 +1,456 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
-<link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Antu_accessories-calculator.svg/768px-Antu_accessories-calculator.svg.png">
-<style>
-* {
-  box-sizing: border-box;
-}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Antu_accessories-calculator.svg/768px-Antu_accessories-calculator.svg.png">
 
-body {
-  background-color: #gray;
-  font-family: 'Fjalla One', sans-serif;
-  font-size: 23px;
-}
+    <title>Savings Calculator</title>
 
-input {
-  font-size: 20px;
-}
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/dashboard/">
 
-.result_area {
-  font-size: 30px;
-}
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 
-input[type=number], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-}
+    <!-- JS Cookie -->
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js"></script>
 
-label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
-}
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-input[type=button] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  float: right;
-}
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="">
 
-input[type=submit]:hover {
-  background-color: #45a049;
-}
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
 
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
+    <!-- Custom styles and script for this template -->
+    <style>
+        body {
+            font-size: .875rem;
+        }
+        
+        .feather {
+            width: 16px;
+            height: 16px;
+            vertical-align: text-bottom;
+        }
+        /*
+            * Sidebar
+            */
+        
+        .sidebar {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 100;
+            /* Behind the navbar */
+            padding: 48px 0 0;
+            /* Height of navbar */
+            box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+        }
+        
+        .sidebar-sticky {
+            position: relative;
+            top: 0;
+            height: calc(100vh - 48px);
+            padding-top: .5rem;
+            overflow-x: hidden;
+            overflow-y: auto;
+            /* Scrollable contents if viewport is shorter than content. */
+        }
+        
+        @supports ((position: -webkit-sticky) or (position: sticky)) {
+            .sidebar-sticky {
+                position: -webkit-sticky;
+                position: sticky;
+            }
+        }
 
+        #welcomeImg {
+            height: 120px;
+            width: 422px;
+        }
 
-.col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
-}
+        .sidebar-sticky form {
+            padding: 0px 10px;
+        }
+        
+        .sidebar .nav-link {
+            font-weight: 500;
+            color: #333;
+        }
+        
+        .sidebar .nav-link .feather {
+            margin-right: 4px;
+            color: #999;
+        }
+        
+        .sidebar .nav-link.active {
+            color: #007bff;
+        }
+        
+        .sidebar .nav-link:hover .feather,
+        .sidebar .nav-link.active .feather {
+            color: inherit;
+        }
+        
+        .sidebar-heading {
+            font-size: .75rem;
+            text-transform: uppercase;
+        }
+        /*
+            * Content
+            */
+        
+        [role="main"] {
+            padding-top: 48px;
+            /* Space for fixed navbar */
+        }
+        /*
+            * Navbar
+            */
+        
+        .navbar-brand {
+            color: white;
+            font-weight: bold;
+            padding-top: .75rem;
+            padding-bottom: .75rem;
+            font-size: 1rem;
+            background-color: rgba(0, 0, 0, .25);
+            box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+        }
 
-.col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
-}
+        nav a:hover {
+            text-decoration: none;
+            color: white;
+        }
+        
+        .navbar .form-control {
+            padding: .75rem 1rem;
+            border-width: 0;
+            border-radius: 0;
+        }
+        
+        .form-control-dark {
+            color: #fff;
+            background-color: rgba(255, 255, 255, .1);
+            border-color: rgba(255, 255, 255, .1);
+        }
+        
+        .form-control-dark:focus {
+            border-color: transparent;
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+        }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+        .detailed-breakdown {
+            display: none;
+        }
 
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
-  
-  body {
-    font-size: 20px;
-  }
-  
-  input {
-    font-size: 15px;
-  }
-}
-</style>
+        .explainSection {
+            margin-top: 30px;
+            padding: 0px 10px;
+        }
+
+        #myChart {
+            display: none;
+        }
+
+        
+    </style>
+
+    <!-- Feather icons -->
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
 </head>
+
 <body>
+    <nav class="navbar navbar-primary fixed-top bg-primary flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="https://lrs4.github.io/projects/fi-calculator.html">Forecasting Tool</a>
+        <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+                <a class="nav-link" href="#" style="color: white">Help</a>
+            </li>
+        </ul>
+    </nav>
 
-<!-- Things I have learned - auto-calculating fields on key-up, HTML DOM, variables, functions, while loops and arithmetic operators. Also, place variables in order of use and know when actions are firing i.e. on button click. Increased understanding in applying algorithms and equations to problems. Further learning on JS data types and conversion alongside Math library required. -->
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                <div class="sidebar-sticky text-center">
+                    <form>
+                        <div class="form-group">
+                          <label for="age">What is your age?</label>
+                          <input type="number" class="form-control" id="age" placeholder="32" value="28" required>
+                        </div>
+                        <label for="monthlyIncome">What is your take home pay each month?</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">£</span>
+                            </div>
+                            <input type="number" class="form-control" id="monthlyIncome" aria-label="Amount (to the nearest pound)" value="1700" placeholder="1100" required>
+                            <div class="input-group-append">
+                                <span class="input-group-text">.00</span>
+                            </div>
+                        </div>
+                        <label for="monthlySavings">How much can you save each month?</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">£</span>
+                            </div>
+                            <input type="number" class="form-control" id="monthlySavings" aria-label="Amount (to the nearest pound)" value="500" placeholder="150" required>
+                            <div class="input-group-append">
+                                <span class="input-group-text">.00</span>
+                            </div>
+                        </div>
+                        <label for="netWorth">How much do you already have saved?</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">£</span>
+                            </div>
+                            <input type="number" class="form-control" id="netWorth" aria-label="Amount (to the nearest pound)" value="5000" placeholder="5000" required>
+                            <div class="input-group-append">
+                                <span class="input-group-text">.00</span>
+                            </div>
+                        </div>
+                        <label for="annualInterest">Annual interest</label>
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control" id="annualInterest" aria-label="Amount (to the nearest pound)" value="6" required>
+                            <div class="input-group-append">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                        <button id="submitBtn" type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+                      <div class="text-left explainSection">
+                          This tool is for informational purposes only and does not constitute financial advice. Always seek the guidance of a qualified financial advisor before making
+                          any investment decisions.  
+                      </div>
+                </div>
+            </nav>
 
-<h2 align="center">When am I... FI?</h2>
-<p align="center" id="test">Financial independence is all about your savings rate, the higher it is the sooner you become financially free. <a href="" onclick="what_is_fi()">What is FI?</a></p>
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
 
-<div class="container">
-  <form>
-    <div class="row">
-      <div class="col-25">
-        <label for="fname">Current annual income</label>
-      </div>
-      <div class="col-75">
-        <input type="number" id="annual_income"  placeholder="Your take home pay..">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="lname">Current annual savings</label>
-      </div>
-      <div class="col-75">
-        <input type="number" id="annual_savings"  placeholder="What you can save each year.." onkeyup="expenses()" >
-      </div>
-    </div>
-	<div class="row">
-      <div class="col-25">
-        <label for="lname">Current annual expenses</label>
-      </div>
-      <div class="col-75">
-        <input type="number" id="annual_expenses"  placeholder="How much you spend each year.." onkeyup="income()">
-      </div>
-    </div>
-	<div class="row">
-      <div class="col-25">
-        <label for="lname">Current portfolio value</label>
-      </div>
-      <div class="col-75">
-        <input type="number" id="portfolio_value" placeholder="Your current savings or investments..">
-      </div>
-    </div>
-	<div class="row">
-      <div class="col-25">
-        <label for="lname">Annual return (%)</label>
-      </div>
-      <div class="col-75">
-        <input type="number" id="return_interest" placeholder="The % of interest you earn each year..">
-      </div>
-    </div>
-	<br/>
-	 <br/>
-	 
-    <div class="row">
-      <input type="button" value="Get Results" onclick="result()">
-    </div>
-  </form>
-</div>
+                <img id="welcomeImg" src='../assets/arrow.PNG' />
 
-<div class="result_area">
-<p align="center" id="retirement_years"></p>
-<p align="center" id="pot_size"></p>
-<p align="center" id="savings_rate_result"></p>
+                <canvas class="my-4 w-100" id="myChart" width="900" height="380" style="display: none;"></canvas>
 
-<br/>
-<p id="demo"></p>
-</div>
+                <div class="detailed-breakdown">
+                    <div class="table-responsive">
+                        <table id="outputTable" class="table table-striped table-sm">
+                        </table>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
 
 <script>
+    // initialise chart
+    var ctx = document.getElementById("myChart");
+    var myChart = new Chart(ctx, {
+        type: 'bar', 
+        data: {
 
-// function to call on button click to get result
+        },
+        options: {
+            scales: {
+                xAxes: [{
+                    stacked: true
+                }],
+                yAxes: [{
+                    stacked: true,
+                    ticks: {
+                        // Include a dollar sign in the ticks
+                        callback: function(value, index, values) {
+                            return '£' + value;
+                        }
+                    }
+                }]
+            },
+            legend: {
+                display: true,
+            }
+        }
+    })
 
-function result() {
+    // create data structure and calculations
+    $('#submitBtn').click(function(e) {
+        e.preventDefault();
+        
+        let annualInterestRate = parseFloat($('#annualInterest').val() / 100);
+        let age = parseInt($('#age').val());
+        let netWorth = parseInt($('#netWorth').val());
+        let monthlyIncome = parseInt($('#monthlyIncome').val());
+        let monthlySavings = parseInt($('#monthlySavings').val());
+        let monthlyExpenses = monthlyIncome - monthlySavings;
+        let yearlyIncome = monthlyIncome * 12;
+        let yearlySavings = monthlySavings * 12;
+        let yearlyExpenses = monthlyExpenses * 12;
+        let year = new Date().getFullYear();
+        let yearCount = 1;
+        let target = yearlyExpenses * 25;
+        let interest = 0;
 
-// input variables
+        var interestArr = [];
+        var savingsArr = [];
+        var expensesArr = [];
+        var totalNetWorthArr = [];
+        var ageArr = [];
+        var yearArr = [];
+        var yearCountArr = [];
 
-var annual_income = document.getElementById("annual_income").value;
-var annual_savings = document.getElementById("annual_savings").value;
-var annual_expenses = document.getElementById("annual_expenses").value;
-var portfolio_value = document.getElementById("portfolio_value").value;
-var interest_rate = document.getElementById("return_interest").value;
-var interest = Number(interest_rate);
+        while (netWorth < target) {
+            interest = parseFloat((netWorth * annualInterestRate).toFixed(2));
+            netWorth += parseFloat((interest + yearlySavings).toFixed(2)); 
 
-// calculation variables
+            interestArr.push(interest);
+            savingsArr.push(yearlySavings);
+            expensesArr.push(yearlyExpenses);
+            totalNetWorthArr.push(netWorth);
+            ageArr.push(age);
+            yearArr.push(year);
+            yearCountArr.push(yearCount);
 
-var savings_rate = annual_savings / annual_income * 100;
-var interest_d = interest / 100 + 1;
-var netw = Number(portfolio_value);
-var conts = Number(annual_savings);
-var exp = Number(annual_expenses);
-var exp25 = exp * 25;
-var target = exp * 25 - portfolio_value;
+            age++;
+            year++;
+            yearCount++;
+        }
 
-console.log("Portfolio value is: £" + netw);
-console.log("Annual savings are: £" + conts);
-console.log("Expenses x 25 are: £" + exp25);
-console.log("Interest is " + interest + "%");
+        /*
+        console.log(interestArr);
+        console.log(savingsArr);
+        console.log(totalNetWorthArr);
+        console.log(ageArr);
+        console.log(yearArr);
+        */
 
-// use maths to calculate years required to reach the x25 number - principle from - C*(r**y - 1)/(r - 1)
-//https://www.symbolab.com/solver/step-by-step/solve%20for%20y%2C%20%2011000%20%5Ccdot%5Cfrac%7B%5Cleft(%5Cleft(1.07%5E%7By%7D%5Cright)-1%20%5Cright)%7D%7B1.07%20-%201%7D%20%3D%20150000
+        // update assumptions section
+        let assumptions = `
+            <hr />
+            <h5 class="text-center">Assumptions</h5>
+            <ul id="explainList">
+                <li>Your yearly take home income is £${yearlyIncome}</li>
+                <li>Your yearly expenses are £${yearlyExpenses}</li>
+                <li>You can therefore save £${yearlySavings} per year</li>
+                <li>This is ${((yearlySavings / yearlyIncome) * 100).toFixed(0)}% of your take home pay</li>
+                <li>Aiming for a target of 25 times your annual expenses would be £${target}</li>
+                <li>As a 4% return on £${target} would provide £${target * 0.04} per year, or £${(target * 0.04) / 12} per month</li>
+                <li>Assuming a yearly interest return of ${annualInterestRate * 100}%</li>
+                <li>It would take ${yearCount} years to reach the target amount</li>
+                <li>You would be financially independant at age ${age}</li>
+                <li>You would have contributed in total £${savingsArr.reduce((total, value) => total + value)}</li>
+                <li>You would have gained £${(interestArr.reduce((total, value) => total + value)).toFixed(0)} in interest</li>
+            </ul>
+        `;
+        $('.explainSection').html(assumptions);
+        
+        // update chart
+        myChart.data = {
+            labels: yearArr,
+            datasets: [{
+                label: "Total Net Worth",
+                data: totalNetWorthArr,
+                lineTension: 0,
+                backgroundColor: '#17A2B8',
+                borderColor: 'black',
+                borderWidth: 4,
+                pointBackgroundColor: '#007bff'
+            },
+            {
+                label: "Annual Savings",
+                data: savingsArr,
+                lineTension: 0,
+                backgroundColor: 'lightgreen',
+                borderColor: 'black',
+                borderWidth: 4,
+                pointBackgroundColor: '#007bff'
+            },
+            {
+                label: "Annual Expenses",
+                data: expensesArr,
+                lineTension: 0,
+                backgroundColor: '#DC3545',
+                borderColor: 'black',
+                borderWidth: 4,
+                pointBackgroundColor: '#007bff'
+            },
+            {
+                label: "Annual Interest",
+                data: interestArr,
+                lineTension: 0,
+                backgroundColor: '#28A745',
+                borderColor: 'black',
+                borderWidth: 4,
+                pointBackgroundColor: '#007bff'
+            }]
+        }
+        myChart.update();
 
-// times both sides by interest - 1
+        // update table
+        let tableHtml = `
+            <thead>
+                <tr>
+                    <th>Year #</th>
+                    <th>Year</th>
+                    <th>Age</th>
+                    <th>Savings £</th>
+                    <th>Interest £</th>
+                    <th>Net Worth £</th>
+                </tr>
+            </thead>
+            <tbody>
+        `;
 
-var step_1 = Number(target * (interest_d - 1));
-console.log(step_1);
+        for (let i = 0; i < totalNetWorthArr.length; i++) {
+            tableHtml += `
+                <tr>
+                    <td>${yearCountArr[i]}</td>
+                    <td>${yearArr[i]}</td>
+                    <td>${ageArr[i]}</td>
+                    <td>${savingsArr[i]}</td>
+                    <td>${interestArr[i].toFixed(0)}</td>
+                    <td>${totalNetWorthArr[i].toFixed(0)}</td>
+                </tr>
+            `;
+        }
 
-// add annual contributions
+        tableHtml += `
+                <tr>
+                    <td><b>Totals</b></td>
+                    <td><b>${yearArr.reduce((max, value) => Math.max(value))}</b></td>
+                    <td><b>${ageArr.reduce((max, value) => Math.max(value))}</b></td>
+                    <td><b>${(savingsArr.reduce((total, value) => total + value)).toFixed(0)}</b></td>
+                    <td><b>${(interestArr.reduce((total, value) => total + value)).toFixed(0)}</b></td>
+                    <td><b>${(totalNetWorthArr.reduce((max, value) => Math.max(value))).toFixed(0)}</b></td>
+                </tr>   
+            </tbody>
+        `;
 
-var step_2 = (step_1 + conts);
-console.log(step_2);
+        console.log(tableHtml);
 
-// divide by annual contributions
+        $('#outputTable').html(tableHtml);
 
-var step_3 = step_2 / conts;
-console.log(step_3);
+        // show and hide sections
+        $('#welcomeImg').hide();
+        $('#myChart, .detailed-breakdown').show();
+    });
 
-// convert the total(target) and the full rate (e.g. 1.07) to logarithmic scale
-
-var step_4 = Math.log(step_3);
-console.log(step_4);
-
-var rate_log = Math.log(interest_d);
-console.log(rate_log);
-
-// divide total(log) by rate(log)
-
-var year = step_4 / rate_log;
-console.log("Years required: " + year);
-
-document.getElementById("retirement_years").innerHTML = "You are FI in " + year.toFixed(1) + " years";
-
-// formula = P*r**y + C*(r**y - 1)/(r - 1)
-
-var pot_simple = portfolio_value * (interest_d ** year);
-var pot_expo = annual_savings * ((interest_d ** year) - 1) / (interest_d - 1);
-var pot_total = pot_simple + pot_expo;
-
-// output to elements
-
-document.getElementById("savings_rate_result").innerHTML = "Your savings rate is " + Math.round(savings_rate) + "%";
-document.getElementById("pot_size").innerHTML = "Your fund is worth £" + Math.round(pot_total) + "";
-};
-
-// function to auto-calculate expenses
-
-function expenses() {
-  document.getElementById("annual_expenses").value = annual_income.value - annual_savings.value;
-};
-
-// function to auto-calculate income
-
-function income() {
-  document.getElementById("annual_income").value = annual_savings.value*1 + annual_expenses.value*1;
-};
-
-// function to explain FI on click in the header caption
-
-function what_is_fi() {
-  window.alert("FI stands for 'Financial Independence'. Experts generally agree that, to become FI (retired) you need at least 25 times your annual spending so that you can safely withdraw 4% per year.")
-}
-
-// while loop to calculate how many years until annual_savings exceed x25 expenses
-
-//var text = "";
-//var year = 1;
-//var i = netw; 
-
-//while (i < exp25 - netw) {
-  //text += "<br>In year " + year + " = £" + i;
-  //i += conts; year++;
-//}
-
-//document.getElementById("demo").innerHTML = text;
-
+    // formula to calculate years required to reach the x25 number - principle from - C*(r**y - 1)/(r - 1)
+    // https://www.symbolab.com/solver/step-by-step/solve%20for%20y%2C%20%2011000%20%5Ccdot%5Cfrac%7B%5Cleft(%5Cleft(1.07%5E%7By%7D%5Cright)-1%20%5Cright)%7D%7B1.07%20-%201%7D%20%3D%20150000
 </script>
 
-</body>
 </html>
