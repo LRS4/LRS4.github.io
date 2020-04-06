@@ -14,10 +14,12 @@ function createGraph(elementId, branchNames, jobTitle, achievements, skills) {
     var graphContainer = document.getElementById(elementId);
     
     const gitTemplate = GitgraphJS.templateExtend(GitgraphJS.TemplateName.Metro, {
-        colors: ['#999999', '#008FB5', '#F1C109'],
+        //colors: ['#999999', '#008FB5', '#F1C109'],
+        colors: ['black', '#666666', '#008FB5'],
         commit: {
           message: {
-            displayAuthor: false
+            displayAuthor: false,
+            displayHash: false
           },
         },
         branch: {

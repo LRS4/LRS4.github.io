@@ -96,8 +96,8 @@ btn.onclick = function() {
 // When user clicks History, show gitgraph, hide icons
 $graphBtn.click(() => {
 	$('.row').hide();
-	$('#gitgraph').html("");
-	createGraph("gitgraph", ['feature/achievements', 'hotfix/skills'], "2015 - Information Systems Officer", [
+	$('#gitgraph, #gitgraphTwo, #gitgraphThree').html("");
+	createGraph("gitgraph", ['achievements', 'skills'], "2015 - Information Systems Officer", [
 		'Developed ICT system configurations and for defined processes.',
 		"Maintained and developed a range of different systems.",
 		"Used statistical methods to analyse customer trends.",
@@ -105,6 +105,24 @@ $graphBtn.click(() => {
 	], [
 		'Business Analysis', 'Systems Development', 'SQL Databases'
 	]);
+	createGraph("gitgraphTwo", ['achievements', 'skills'], "2017 - Frontend Web Developer", [
+		'APIs',
+		'SQL', 
+		'Test',
+		'Test'
+	], [
+		'HTML, CSS and JavaScript', 'jQuery and AJAX', 'User Interface Development'
+	]);
+	createGraph("gitgraphThree", ['achievements', 'skills'], "2019 - Data Scientist", [
+		'test',
+		'test',
+		'test',
+		'test'
+	], [
+		'Python, Machine Learning and RPA',
+		'C#, ASP.NET Core, Azure and T-SQL',
+		'Modelling and Statistical Analysis'
+	])
 	$('.graphArea').show();
 	$('#subtitle').text('Developer Job History');
 });
