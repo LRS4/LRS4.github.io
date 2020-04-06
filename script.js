@@ -128,11 +128,19 @@ function myFunction() {
 function createGraph() {
 	// Populate Job History Graph
 	var graphContainer = document.getElementById("gitgraph");
-	var gitgraph = GitgraphJS.createGitgraph(graphContainer);
+	var gitgraph = GitgraphJS.createGitgraph(graphContainer, {
+		author: "Lewis Spencer <lrspencer@hotmail.co.uk>",
+	});
 
 	// Simulate git commands with Gitgraph API.
+	// 2016 Information Systems Officer
 	var master = gitgraph.branch("master");
-	master.commit("Initial commit");
+	master.commit({
+		subject: "Initial commit",
+		tag: "2015 - Information Systems Officer"
+	});
+
+	master.commit("test")
 
 	var develop = gitgraph.branch("develop");
 	develop.commit("Add TypeScript");
@@ -143,12 +151,8 @@ function createGraph() {
 	.commit("Make it right")
 	.commit("Make it fast");
 
-	var story = gitgraph.branch('story');
-	story
-	.commit("hello world")
-
 	develop.merge(aFeature);
 	develop.commit("Prepare v1");
 
-	master.merge(develop).tag("v1.0.0");
+	master.merge(develop).tag("2017 - Frontend Developer");
 }
