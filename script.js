@@ -67,6 +67,9 @@ var btncontent = document.getElementById("myBtncontent");
 var btns = btncontent.getElementsByClassName("btn");
 for (var i = 0; i < btns.length; i++) {
 	btns[i].addEventListener("click", function(){
+	$('.graphArea').hide();
+	$('#subtitle').text('Skills and Experience');
+	$('.row').show();
 	var current = document.getElementsByClassName("active");
 	current[0].className = current[0].className.replace(" active", "");
 	this.className += " active";
@@ -80,14 +83,24 @@ var modal = document.getElementById('myModal');
 
 // Get the button that opens the modal
 var btn = document.getElementById("myBtn");
+var $graphBtn = $('#graphBtn');
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal 
+// When the user clicks the button, open the modal, show text
 btn.onclick = function() {
 	modal.style.display = "block";
 }
+
+// When user clicks History, show gitgraph, hide icons
+$graphBtn.click(() => {
+	$('.row').hide();
+	$('#gitgraph').html("");
+	createGraph();
+	$('.graphArea').show();
+	$('#subtitle').text('Developer Job History');
+});
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
@@ -109,4 +122,33 @@ function myFunction() {
 	} else {
 	x.className = "topnav";
 	}
+}
+
+
+function createGraph() {
+	// Populate Job History Graph
+	var graphContainer = document.getElementById("gitgraph");
+	var gitgraph = GitgraphJS.createGitgraph(graphContainer);
+
+	// Simulate git commands with Gitgraph API.
+	var master = gitgraph.branch("master");
+	master.commit("Initial commit");
+
+	var develop = gitgraph.branch("develop");
+	develop.commit("Add TypeScript");
+
+	var aFeature = gitgraph.branch("a-feature");
+	aFeature
+	.commit("Got a front end developer job")
+	.commit("Make it right")
+	.commit("Make it fast");
+
+	var story = gitgraph.branch('story');
+	story
+	.commit("hello world")
+
+	develop.merge(aFeature);
+	develop.commit("Prepare v1");
+
+	master.merge(develop).tag("v1.0.0");
 }

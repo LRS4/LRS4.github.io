@@ -43,6 +43,10 @@ a:active {
 	margin: 10px -16px;
 }
 
+.graphArea {
+	display: none;
+}
+
 /* Add padding BETWEEN each column */
 .row,
 .row > .column {

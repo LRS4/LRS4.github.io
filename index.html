@@ -24,6 +24,9 @@
 	<!-- Intro.js -->
 	<link rel="stylesheet", type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.9.3/introjs.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.9.3/intro.js"></script>
+
+	<!-- GitGraph.js -->
+	<script src="https://cdn.jsdelivr.net/npm/@gitgraph/js@1.3.5/lib/gitgraph.umd.min.js"></script>
 	
 </head>
 
@@ -31,11 +34,13 @@
 	<div class="main">
 		<!-- Navigation bar -->
 		<div class="topnav" id="myTopnav">
-			<a href="#home" id="myBtn"><i class="fa fa-fw fa-user"></i> About Me</a>
+			<a href="#about" id="myBtn"><i class="fa fa-fw fa-user"></i> About Me</a>
+			<a href="#graph" id="graphBtn"><i class="fab fa-fw fa-git-alt
+				"></i> History</a>
 			<a href="https://github.com/LRS4" target="_blank"><i class="fab fa-fw fa-github"></i> GitHub</a>
 			<a href="https://www.dropbox.com/s/0fwuqsx5ni0zs1g/Online%20CV.docx?dl=0" target="_blank"><i class="fa fa-fw fa-file"></i>  CV</a>
 			<a href="mailto:lrspencer@hotmail.co.uk?subject=Re:%20Your%20portfolio"><i class="fa fa-fw fa-envelope"></i> Contact</a>
-			<a href="#" id="help"><i class="fa fa-fw fa-question"></i> Help</a>
+			<a href="#" id="help"><i class="fa fa-fw fa-directions"></i> Tour</a>
 			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
 			<i class="fa fa-bars"></i>
 			</a>
@@ -43,7 +48,7 @@
 		<h1 id="title">Portfolio</h1>
 		<hr>
 
-		<h2>Skills and Experience</h2>
+		<h2 id="subtitle">Skills and Experience</h2>
 		
 		<!-- Filter buttons -->
 		<div id="myBtncontent">
@@ -59,7 +64,6 @@
 		<div id="loadingSection">
 			<img id="loading" alt="loading-gif" src="assets/loading.gif">
 		</div>
-			
 
 		<!-- Portfolio Gallery Grid -->
 		<!-- Images should be 300x300 pixels -->
@@ -656,32 +660,35 @@
 		<!-- / Grid section -->
 		</div>
 
+		<!-- Gitgraph Developer History -->
+		<div class="graphArea">
+			<div id="gitgraph"></div>
+		</div>
+
 		<!-- Footer -->
 		<footer style="display:none">Copyright &copy; Lewis Spencer</footer>
-
+		
 	<!-- / Main section -->
 	</div>
-
-	<!-- Modal -->
+	
+	<!-- Modals -->
 	<div id="myModal" class="modal">
 	  <!-- Modal content -->
 	  <div class="modal-content">
 			<div class="modal-header">
 				<span class="close">&times;</span>
-				<h2>Lewis Spencer</h2>
+				<h2 class="modal-header-content">Lewis Spencer</h2>
 			</div>
 			<div class="modal-body">
 				<p>
-					I have a passion for using technology to make things easier and more efficient. Most of my learning has been self-directed and on the job. 
+					I have a passion for using technology, data and statistics to make things easier and more efficient. Most of my learning has been self-directed and on the job. 
 					I have also achieved qualifications with EdX in Data Science and Computer Science, alongside auditing other online courses with the help
-					of a <a href="http://blog.agupieware.com/2014/06/online-learning-intensive-bachelors.html" target="_blank">curriculum</a>.
-				</p>
-				<p>
-					For the last 4 years I have worked in a large organisation developing data-driven web applications and information systems, but I am now transitioning into a data science role.
+					of a <a href="http://blog.agupieware.com/2014/06/online-learning-intensive-bachelors.html" target="_blank">curriculum</a>. 
+					I am a Data Scientist working in a large organisation, however part of the role requires Full Stack Web Developer skills. 
 				</p>
 			</div>
 			<div class="modal-footer">
-				<p>Last edited: 18/05/2019</p>
+				<p>Last updated: 02/04/2020</p>
 			</div>
 	  </div>
 	</div>
