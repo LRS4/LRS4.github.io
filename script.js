@@ -140,19 +140,46 @@ function createGraph() {
 		tag: "2015 - Information Systems Officer"
 	});
 
-	master.commit("test")
+	master.commit("Developed ICT system configurations and for defined processes.")
 
 	var develop = gitgraph.branch("develop");
-	develop.commit("Add TypeScript");
+	develop.commit("Maintained and developed a range of different systems.");
+	develop.commit("Used statistical methods to analyse customer trends.")
 
-	var aFeature = gitgraph.branch("a-feature");
+	var aFeature = gitgraph.branch("technical");
 	aFeature
-	.commit("Got a front end developer job")
-	.commit("Make it right")
-	.commit("Make it fast");
+	.commit("ICT configurations")
+	.commit("Systems integration")
+	.commit("Utilising APIs");
 
 	develop.merge(aFeature);
 	develop.commit("Prepare v1");
 
 	master.merge(develop).tag("2017 - Frontend Developer");
+	master.commit("next")
+
+	var master = gitgraph.branch("master");
+	master.commit({
+		subject: "Initial commit",
+		tag: "2015 - Information Systems Officer"
+	});
+
+	master.commit("Developed ICT system configurations and for defined processes.")
+
+	var develop = gitgraph.branch("develop");
+	develop.commit("Maintained and developed a range of different systems.");
+	develop.commit("Used statistical methods to analyse customer trends.")
+
+	var aFeature = gitgraph.branch("technical");
+	aFeature
+	.commit("ICT configurations")
+	.commit("Systems integration")
+	.commit("Utilising APIs");
+
+	develop.merge(aFeature);
+	develop.commit("Prepare v1");
+
+	master.merge(develop).tag("2017 - Frontend Developer");
+	master.commit("next")
+	
 }
