@@ -118,7 +118,7 @@ $graphBtn.click(() => {
 	createGraph("gitgraphThree", ['achievements', 'skills'], "2019 - Data Scientist", [
 		'Automated processes to reduce repetition and costs alongside increasing efficiency.',
 		'Utilised machine learning and statistical techniques to create accurate funding models.',
-		'Created complex systems, dashboards, tools, bots and apps to increase productivity.',
+		'Created complex systems, dashboards, tools, bots and web apps to increase productivity.',
 		'Produced in-depth analysis and modelling for data-driven decision making.',
 		'Worked on high profile projects that had significant impact.'
 	], [
