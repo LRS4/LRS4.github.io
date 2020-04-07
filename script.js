@@ -101,27 +101,30 @@ $graphBtn.click(() => {
 		'Developed ICT system configurations and for defined processes.',
 		"Maintained and developed a range of different systems.",
 		"Used statistical methods to analyse customer trends.",
-		"Carried out user research to improve systems design."
+		"Carried out user research to improve systems design.",
+		'Configured inputs including process maps, business rules, triggers, SLA’s, and data sources'
 	], [
 		'Business Analysis', 'Systems Development', 'SQL Databases'
 	]);
 	createGraph("gitgraphTwo", ['achievements', 'skills'], "2017 - Frontend Web Developer", [
-		'APIs',
-		'SQL', 
-		'Test',
-		'Test'
+		'Contributed to development of an enterprise scale website.',
+		"Implemented user interface for the company's online CRM system.", 
+		'Used Agile methods to deliver product backlog items.',
+		'Integrated website to other systems and databases',
+		'Built and maintained online web forms for data capture and case management'
 	], [
-		'HTML, CSS and JavaScript', 'jQuery and AJAX', 'User Interface Development'
+		'HTML, CSS and JavaScript', 'jQuery and AJAX', 'Git and API Integration'
 	]);
 	createGraph("gitgraphThree", ['achievements', 'skills'], "2019 - Data Scientist", [
-		'test',
-		'test',
-		'test',
-		'test'
+		'Automated processes to reduce repetition and costs alongside increasing efficiency.',
+		'Utilised machine learning and statistical techniques to create accurate funding models.',
+		'Created complex systems, dashboards, tools, bots and apps to increase productivity.',
+		'Produced in-depth analysis and modelling for data-driven decision making.',
+		'Worked on high profile projects that had significant impact.'
 	], [
 		'Python, Machine Learning and RPA',
 		'C#, ASP.NET Core, Azure and T-SQL',
-		'Modelling and Statistical Analysis'
+		'Statistical Analysis with R and Power BI'
 	])
 	$('.graphArea').show();
 	$('#subtitle').text('Developer Job History');

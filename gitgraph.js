@@ -51,8 +51,8 @@ function createGraph(elementId, branchNames, jobTitle, achievements, skills) {
 	.commit(skills[1])
 	.commit(skills[2]);
 
-	develop.merge(aFeature);
-	develop.commit(achievements[3]);
+	develop.merge(aFeature, [achievements[3]]);
+	develop.commit(achievements[4]);
 
     master.merge(develop);
 }
