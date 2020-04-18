@@ -3,7 +3,7 @@ setTimeout(function(){
 	$("#loading").css("display", "none");
 	$(".row").fadeIn();
 	$("footer").fadeIn();
-}, 500);
+}, 1500);
 
 // set copyright to current year
 let d = new Date();
