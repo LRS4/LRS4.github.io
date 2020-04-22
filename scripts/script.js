@@ -1,9 +1,5 @@
-// Add timeout for loading gif
-setTimeout(function(){
-	$("#loading").css("display", "none");
-	$(".row").fadeIn();
-	$("footer").fadeIn();
-}, 1500);
+$(".row").fadeIn();
+$("footer").fadeIn();
 
 // set copyright to current year
 let d = new Date();
