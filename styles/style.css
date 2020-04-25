@@ -2,10 +2,31 @@
 	box-sizing: border-box;
 }
 
+/* Main body and inline link styling */
+
 body {
 	background-color: white;
 	padding: 20px;
 	font-family: 'Roboto', sans-serif;
+}
+
+.text-link {
+	font-weight: bold;
+	text-decoration: none;
+	color: black;
+	border-bottom: 2px solid lightgreen;
+}
+
+.text-link:hover {
+	font-weight: bold;
+	text-decoration: none;
+	color: black;
+	border-bottom: 2px solid lightgreen;
+	background-color: lightgreen;
+}
+
+.text-link:active {
+	background-color: rgb(86, 223, 86);
 }
 
 /* Hide contents while loading */
