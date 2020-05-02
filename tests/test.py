@@ -19,7 +19,7 @@ import pytest
 options = webdriver.ChromeOptions()
 options.add_argument("--start-maximized")
 options.add_argument("--headless")
-driver = webdriver.Chrome(options=options)
+driver = webdriver.Chrome("C:\chromedriver.exe", options=options)
 index = os.path.join(pathlib.Path().absolute(), "../index.html")
 
 def test_number():
@@ -39,6 +39,7 @@ def test_links():
         if 'http' in url:
             status = requests.get(url).status_code
             if status != 200:
+                print(url)
                 links_all_valid = False
     assert links_all_valid == True
 
