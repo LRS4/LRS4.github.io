@@ -34,12 +34,14 @@ def test_title():
 def test_links():
     links = driver.find_elements_by_tag_name('a')
     links_all_valid = True
+    headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'} 
     for link in links:
         url = link.get_attribute('href')
         if 'http' in url:
-            status = requests.get(url).status_code
+            session = requests.Session()
+            status = session.get(url, headers=headers).status_code
             if status != 200:
-                print(url)
+                print(f"{url} (Status: {status})")
                 links_all_valid = False
     assert links_all_valid == True
 
