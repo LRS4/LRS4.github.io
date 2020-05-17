@@ -11,7 +11,7 @@ $("#sql").attr("data-intro", "Hover over a panel to view content, or click it on
 $("#myTopnav").attr("data-intro", "Finally, here are links to other pages including my GitHub page and Developer Job History.").attr("data-step", "4").attr("data-scrollTo", "top");
 
 // on click start intro js welcome
-$("#help").click(function() {
+$("#help").click(function () {
     $("#showAll").trigger("click");
     introJs().start();
 });

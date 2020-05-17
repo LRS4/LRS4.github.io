@@ -11,24 +11,24 @@
 
 function createGraph(elementId, branchNames, jobTitle, achievements, skills) {
 	// Populate Job History Graph
-    var graphContainer = document.getElementById(elementId);
-    
-    const gitTemplate = GitgraphJS.templateExtend(GitgraphJS.TemplateName.Metro, {
-        //colors: ['#999999', '#008FB5', '#F1C109'],
-        colors: ['black', '#666666', '#008FB5'],
-        commit: {
-          message: {
-            displayAuthor: false,
-            displayHash: false
-          },
-        },
-        branch: {
-          lineWidth: 8
-        }
-    });
+	var graphContainer = document.getElementById(elementId);
+
+	const gitTemplate = GitgraphJS.templateExtend(GitgraphJS.TemplateName.Metro, {
+		//colors: ['#999999', '#008FB5', '#F1C109'],
+		colors: ['black', '#666666', '#008FB5'],
+		commit: {
+			message: {
+				displayAuthor: false,
+				displayHash: false
+			},
+		},
+		branch: {
+			lineWidth: 8
+		}
+	});
 
 	var gitgraph = GitgraphJS.createGitgraph(graphContainer, {
-        template: gitTemplate
+		template: gitTemplate
 	});
 
 	// Simulate git commands with Gitgraph API.
@@ -47,12 +47,12 @@ function createGraph(elementId, branchNames, jobTitle, achievements, skills) {
 
 	var aFeature = gitgraph.branch(branchNames[1]);
 	aFeature
-	.commit(skills[0])
-	.commit(skills[1])
-	.commit(skills[2]);
+		.commit(skills[0])
+		.commit(skills[1])
+		.commit(skills[2]);
 
 	develop.merge(aFeature, [achievements[3]]);
 	develop.commit(achievements[4]);
 
-    master.merge(develop);
+	master.merge(develop);
 }
