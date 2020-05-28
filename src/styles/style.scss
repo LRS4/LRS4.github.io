@@ -4,6 +4,8 @@
 
 /* Main body and inline link styling */
 
+$linkColor: lightgreen;
+
 body {
 	background-color: white;
 	padding: 20px;
@@ -14,15 +16,12 @@ body {
 	font-weight: bold;
 	text-decoration: none;
 	color: black;
-	border-bottom: 2px solid lightgreen;
+	border-bottom: 2px solid $linkColor;
 }
 
 .text-link:hover {
-	font-weight: bold;
-	text-decoration: none;
-	color: black;
-	border-bottom: 2px solid lightgreen;
-	background-color: lightgreen;
+	@extend .text-link;
+	background-color: $linkColor;
 }
 
 .text-link:active {
