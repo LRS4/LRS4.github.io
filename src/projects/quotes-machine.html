@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+		<!-- HTML Validator: https://validator.w3.org/ -->
+		<!-- JS Validator: https://jshint.com/ -->
+		<!-- Inspiration: https://www.gov.uk/personal-tax-account/sign-in/prove-identity -->
+		<!-- Gif editor: https://ezgif.com/effects/ezgif-3-960a1abf7958.gif -->
+		<!-- Markdown previewer: https://markdownlivepreview.com/ -->
+
+		<!-- Metadata -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="generator" content="Jekyll v3.8.5">
+
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+		<!-- Bootstrap JS-->
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+		<!-- Popper JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+		<!-- Icons -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+		<!-- Custom CSS -->
+        <style>
+            .lead:hover {
+                cursor: pointer;
+            }
+        </style>
+
+		<title>Programming Quotes</title>
+
+    </head>
+
+    <body class="backing">
+        <div class="container text-center" style="margin-top: 100px">
+            <blockquote class="blockquote" style="height: 100%">
+                <p id="quote" class="font-italic"></p>
+                <footer id="author" class="blockquote-footer"></footer>
+            </blockquote>
+            <div id="new" class="lead" style="margin-top: 45px;">
+                New Quote
+            </div>
+            <div>
+                <a class="twitter-share-button" id="twitter" href="https://twitter.com/intent/tweet?text=" target="_blank" style="font-size: 35px;"><i class="fa fa-twitter iconos" aria-hidden="true"></i></a>
+            </div>
+        </div>
+
+        
+        
+        <script>
+            // retrieve new quote on page load
+            randomQuote();
+
+            // retrieve new quote on click
+            $("#new").click(function() {
+                randomQuote();
+            });
+
+            // get quote function
+            function randomQuote() {
+                // uses ajax to retrieve random quote then updates the page
+                var api = "https://programming-quotes-api.herokuapp.com/quotes/random";
+                
+                $.ajax({
+                    type:"GET",
+                    url:api,
+                    async:false,
+                    dataType: "json",
+                    success: function(data){
+                    
+                    // Wipe previous search results
+                    $("blockquote").fadeOut(500, function() {
+                        // API results
+                        console.log(data)
+                        var quote = data["en"];
+                        var author = data["author"];
+
+                        // Update DOM with datas
+                        $("#quote").text(quote);
+                        $("#author").html("<a style=\"text-decoration:none\" href=\"https://en.wikipedia.org/wiki/" + author + " \" target=_blank>" + author +"</a>");    
+                        var twitter = "https://twitter.com/intent/tweet?text=" + quote + " - " + author
+                        $("#twitter").attr("href", twitter)
+                    });
+                    
+                    $("blockquote").fadeIn(500);
+
+                    },
+                    error: function(errorMessage){
+                        alert("Error");
+                    }
+                });
+            }
+        </script>
+    </body>
+</html>
