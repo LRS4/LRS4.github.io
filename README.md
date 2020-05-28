@@ -13,9 +13,17 @@ This site gives an overview of skills, experience and qualifications achieved. I
 * AJAX, APIs
 * Python, Pytest
 
+## Dependencies
+
+* Use `npm install` to install dependencies
+* [gulp-uglify](https://www.npmjs.com/package/gulp-uglify-es)
+* [gulp-imagemin](https://www.npmjs.com/package/gulp-imagemin)
+* [gulp-sass](https://www.npmjs.com/package/gulp-sass)
+* [gulp-concat](https://www.npmjs.com/package/gulp-concat)
+
 ## Tasks
 
-* Run `npm install` to install dependencies
+* Use `gulp` to run all build tasks
 * Minification of scripts, styles and images
 * Script concatenation 
 * Script uglification
@@ -30,12 +38,16 @@ pytest test.py -v -s
 ```
 
 ## References
+
 * [Gulp](https://gulpjs.com/)
 * [jQuery](https://jquery.com/)
 * [pytest](https://docs.pytest.org/en/latest/)
 * [Combining JS Files](https://stackoverflow.com/questions/8410298/one-js-file-for-multiple-pages)
+* [Set .ps1 Execution Policy](https://medium.com/@caiomsouza/fix-for-powershell-script-not-digitally-signed-69f0ed518715)
+* [Running tasks in series](https://github.com/gulpjs/gulp/blob/master/docs/recipes/running-tasks-in-series.md)
 
 ## NPM commands used
+
 ```
 npm install -g gulp
 npm install --save-dev gulp
