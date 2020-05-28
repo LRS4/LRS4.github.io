@@ -23,6 +23,7 @@ This site gives an overview of skills, experience and qualifications achieved. I
 
 ## Tasks
 
+* Use `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` to avoid errors
 * Use `gulp` to run all build tasks
 * Minification of scripts, styles and images
 * Script concatenation 
@@ -31,11 +32,8 @@ This site gives an overview of skills, experience and qualifications achieved. I
 
 ## Testing
 
-Running Selenium UI tests
-```
-cd tests
-pytest test.py -v -s
-```
+* Download ChromeDriver and place in `C:\` directory
+* Use `gulp run-tests` to start automated testing
 
 ## References
 
