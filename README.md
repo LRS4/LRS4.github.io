@@ -15,24 +15,30 @@ This site gives an overview of skills, experience and qualifications achieved. I
 
 ## Dependencies
 
+* Ensure [Node.js and npm](https://nodejs.org/en/download/) are installed
 * Use `npm install` to install dependencies
 * [gulp-uglify](https://www.npmjs.com/package/gulp-uglify-es)
 * [gulp-imagemin](https://www.npmjs.com/package/gulp-imagemin)
 * [gulp-sass](https://www.npmjs.com/package/gulp-sass)
 * [gulp-concat](https://www.npmjs.com/package/gulp-concat)
+* [gulp-shell](https://www.npmjs.com/package/gulp-shell)
 
 ## Tasks
 
-* Use `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` to avoid errors
+* Use `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` to avoid PowerShell errors
 * Use `gulp` to run all build tasks
+* Use `gulp watch` for to watch for changes
 * Minification of scripts, styles and images
 * Script concatenation 
 * Script uglification
+* Script transpilation from ES6
 * Automated tests
 
 ## Testing
 
-* Download ChromeDriver and place in `C:\` directory
+* Download [ChromeDriver](https://chromedriver.chromium.org/downloads) and place in `C:\` directory
+* Ensure [Python](https://www.python.org/downloads/) is installed
+* Use `pip install selenium` to install Selenium
 * Use `gulp run-tests` to start automated testing
 
 ## References
