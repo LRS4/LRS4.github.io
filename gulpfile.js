@@ -27,9 +27,9 @@ gulp.task('images', async () => {
         .pipe(gulp.dest('assets/'));
 });
 
-// Concat and minify JS
+// Concat, transpile and minify JS
 gulp.task('scripts', async () => {
-    console.log('Concatenating and minifying scripts...');
+    console.log('Concatenating, transpiling and minifying scripts...');
     gulp.src('src/scripts/*.js')
         .pipe(concat('bundle.min.js'))
         .pipe(babel({
@@ -39,12 +39,13 @@ gulp.task('scripts', async () => {
         .pipe(gulp.dest('script/'));
 });
 
-// Compile SASS
+// Compile SASS and concat CSS
 gulp.task('sass', async () => {
-    console.log('Compiling SASS...')
+    console.log('Compiling and concatenating SASS...')
     gulp.src('src/styles/*.scss')
         .pipe(sass({outputStyle: 'compressed'})
         .on('error', sass.logError))
+        .pipe(concat('style.css'))
         .pipe(gulp.dest('styles/'));
 });
 
