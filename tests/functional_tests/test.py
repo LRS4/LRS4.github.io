@@ -20,7 +20,7 @@ options = webdriver.ChromeOptions()
 options.add_argument("--start-maximized")
 options.add_argument("--headless")
 driver = webdriver.Chrome(r"C:\chromedriver.exe", options=options)
-index = os.path.join(pathlib.Path().absolute(), "../index.html")
+index = os.path.join(pathlib.Path().absolute(), "../../index.html")
 
 def test_started():
     assert(2 == 2)

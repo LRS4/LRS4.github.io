@@ -58,7 +58,11 @@ gulp.task('html', async () => {
 
 // Run UI smoke tests
 gulp.task('run-tests', shell.task([
-    'pytest test.py -v -s'], options = { cwd: `${process.cwd()}/tests`}));
+    'pytest test.py -v -s'], options = { cwd: `${process.cwd()}/tests/functional_tests`}));
+
+// Run load testing
+gulp.task('run-load-test', shell.task([
+    'locust -f locustfile.py --host=http://lrs4.github.io/'], options = { cwd: `${process.cwd()}/tests/load_tests`}));
 
 // Default task - runs all tasks for build
 gulp.task('default', gulp.series('message', 'html', 'images', 'scripts', 'sass'));
