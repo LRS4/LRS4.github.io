@@ -58,7 +58,7 @@ gulp.task('html', async () => {
 
 // Run UI smoke tests
 gulp.task('run-tests', shell.task([
-    'pytest test.py -v -s'], options = { cwd: `${process.cwd()}/tests`}));
+    'pytest test.py -v -s'], options = { cwd: `${process.cwd()}/tests/functional_tests`}));
 
 // Default task - runs all tasks for build
 gulp.task('default', gulp.series('message', 'html', 'images', 'scripts', 'sass'));

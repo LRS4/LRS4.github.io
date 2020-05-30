@@ -1,5 +1,5 @@
 /node_modules
-/.pytest_cache
-tests/__pycache__
-tests/.pytest_cache
+/functional_tests/.pytest_cache
+tests/functional_tests/__pycache__
+tests/functional_tests/.pytest_cache
 /.vs
