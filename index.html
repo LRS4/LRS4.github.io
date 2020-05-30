@@ -17,8 +17,14 @@
 	
 	<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+	<!-- Custom JS -->
+	<script src="script/bundle.min.js"></script>
 	
 	<!-- CSS -->
+	<noscript>
+		<link rel="stylesheet" type="text/css" href="styles/noscript.css">
+	</noscript>
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
 
 	<!-- Intro.js -->
@@ -52,12 +58,12 @@
 		
 		<!-- Filter buttons -->
 		<div id="myBtncontent">
-			<button id="showAll" class="btn active" onclick="filterSelection('all')"> Show all</button>
-			<button id="test" class="btn" onclick="filterSelection('data')"> Data Science</button>
-			<button class="btn" onclick="filterSelection('web')"> Software Development</button>
-			<button class="btn" onclick="filterSelection('business')"> Business Analysis</button>
-			<button class="btn" onclick="filterSelection('qualifications')"> Qualifications</button>
-			<button class="btn" onclick="filterSelection('projects')"> Projects</button>
+			<button id="all" class="btn active"> Show all</button>
+			<button id="data" class="btn"> Data Science</button>
+			<button id="web" class="btn"> Software Development</button>
+			<button id="business" class="btn"> Business Analysis</button>
+			<button id="qualifications" class="btn"> Qualifications</button>
+			<button id="projects" class="btn"> Projects</button>
 		</div>
 
 		<!-- Portfolio Gallery Grid -->
@@ -750,7 +756,7 @@
 		</div>
 
 		<!-- Footer -->
-		<footer style="display:none">Copyright &copy; Lewis Spencer</footer>
+		<footer id="footer">Copyright &copy; Lewis Spencer</footer>
 		
 	<!-- / Main section -->
 	</div>
@@ -776,9 +782,6 @@
 			</div>
 	  </div>
 	</div>
-
-	<!-- Custom JS -->
-	<script src="script/bundle.min.js"></script>
 
 </body>
 
