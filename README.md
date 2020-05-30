@@ -11,7 +11,7 @@ This site gives an overview of skills, experience and qualifications achieved. I
 * Node.js
 * Gulp Task Runner
 * AJAX, APIs
-* Python, Pytest
+* Python, Pytest, Locust
 
 ## Dependencies
 
@@ -34,19 +34,21 @@ This site gives an overview of skills, experience and qualifications achieved. I
 * Script uglification
 * Script transpilation from ES6
 * Automated tests
+* [Gulp](https://gulpjs.com/)
 
 ## Testing
 
 * Download [ChromeDriver](https://chromedriver.chromium.org/downloads) and place in `C:\` directory
 * Ensure [Python](https://www.python.org/downloads/) is installed
-* Use `pip install selenium` to install Selenium
+* Use `pip install -r requirements.txt` to install packages
 * Use `gulp run-tests` to start automated testing
+* Use `gulp run-load-tests` to start Locust running at http://localhost:8090
+* [pytest](https://docs.pytest.org/en/latest/)
+* [locust](https://docs.locust.io/en/stable/)
 
 ## References
 
-* [Gulp](https://gulpjs.com/)
 * [jQuery](https://jquery.com/)
-* [pytest](https://docs.pytest.org/en/latest/)
 * [Combining JS Files](https://stackoverflow.com/questions/8410298/one-js-file-for-multiple-pages)
 * [Setting PS Execution Policy](https://medium.com/@caiomsouza/fix-for-powershell-script-not-digitally-signed-69f0ed518715)
 * [Changing PS Executing Policy](https://stackoverflow.com/questions/57673913/vsc-powershell-after-npm-updating-packages-ps1-cannot-be-loaded-because-runnin)

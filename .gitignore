@@ -2,4 +2,5 @@
 /functional_tests/.pytest_cache
 tests/functional_tests/__pycache__
 tests/functional_tests/.pytest_cache
+tests/load_tests/__pycache__
 /.vs
