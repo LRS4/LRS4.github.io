@@ -22,6 +22,7 @@ This site gives an overview of skills, experience and qualifications achieved. I
 * [gulp-sass](https://www.npmjs.com/package/gulp-sass)
 * [gulp-concat](https://www.npmjs.com/package/gulp-concat)
 * [gulp-shell](https://www.npmjs.com/package/gulp-shell)
+* [gulp-babel](https://www.npmjs.com/package/gulp-babel)
 
 ## Tasks
 
