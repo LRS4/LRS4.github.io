@@ -1,6 +1,3 @@
-$(".row").fadeIn();
-$("footer").fadeIn();
-
 // set copyright to current year
 let d = new Date();
 let year = d.getFullYear();

@@ -48,7 +48,8 @@ This site gives an overview of skills, experience and qualifications achieved. I
 * [jQuery](https://jquery.com/)
 * [pytest](https://docs.pytest.org/en/latest/)
 * [Combining JS Files](https://stackoverflow.com/questions/8410298/one-js-file-for-multiple-pages)
-* [Set .ps1 Execution Policy](https://medium.com/@caiomsouza/fix-for-powershell-script-not-digitally-signed-69f0ed518715)
+* [Setting PS Execution Policy](https://medium.com/@caiomsouza/fix-for-powershell-script-not-digitally-signed-69f0ed518715)
+* [Changing PS Executing Policy](https://stackoverflow.com/questions/57673913/vsc-powershell-after-npm-updating-packages-ps1-cannot-be-loaded-because-runnin)
 * [Running tasks in series](https://github.com/gulpjs/gulp/blob/master/docs/recipes/running-tasks-in-series.md)
 
 ## NPM commands used

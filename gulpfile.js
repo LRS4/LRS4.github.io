@@ -4,6 +4,7 @@ const uglify = require('gulp-uglify-es').default;
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
 const shell = require('gulp-shell');
+const babel = require('gulp-babel');
 
 /*
  *  -- TOP LEVEL FUNCTIONS --
@@ -31,6 +32,9 @@ gulp.task('scripts', async () => {
     console.log('Concatenating and minifying scripts...');
     gulp.src('src/scripts/*.js')
         .pipe(concat('bundle.min.js'))
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
         .pipe(uglify())
         .pipe(gulp.dest('script/'));
 });
