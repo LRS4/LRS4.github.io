@@ -40,13 +40,12 @@
 	<div class="main">
 		<!-- Navigation bar -->
 		<div class="topnav" id="myTopnav">
-			<a href="#about" id="myBtn"><i class="fa fa-fw fa-user"></i> About Me</a>
-			<a href="#graph" id="graphBtn"><i class="fab fa-fw fa-git-alt
-				"></i> History</a>
-			<a href="https://github.com/LRS4" target="_blank"><i class="fab fa-fw fa-github"></i> GitHub</a>
-			<a href="https://www.dropbox.com/s/0fwuqsx5ni0zs1g/Online%20CV.docx?dl=0" target="_blank"><i class="fa fa-fw fa-file"></i>  CV</a>
-			<a href="mailto:lrspencer@hotmail.co.uk?subject=Re:%20Your%20portfolio"><i class="fa fa-fw fa-envelope"></i> Contact</a>
-			<a href="#" id="help"><i class="fa fa-fw fa-directions"></i> Tour</a>
+			<a href="#about" class="nav-btn" id="myBtn"><i class="fa fa-fw fa-user"></i> About Me</a>
+			<a href="#graph" class="nav-btn" id="graphBtn"><i class="fab fa-fw fa-git-alt"></i> History</a>
+			<a href="https://github.com/LRS4" class="nav-btn" target="_blank"><i class="fab fa-fw fa-github"></i> GitHub</a>
+			<a href="https://www.dropbox.com/s/0fwuqsx5ni0zs1g/Online%20CV.docx?dl=0" class="nav-btn" target="_blank"><i class="fa fa-fw fa-file"></i>  CV</a>
+			<a href="mailto:lrspencer@hotmail.co.uk?subject=Re:%20Your%20portfolio" class="nav-btn"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+			<a href="#" id="help" class="nav-btn"><i class="fa fa-fw fa-directions"></i> Tour</a>
 			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
 			<i class="fa fa-bars"></i>
 			</a>
@@ -791,7 +790,7 @@
 	  <!-- Modal content -->
 	  <div class="modal-content">
 			<div class="modal-header">
-				<span class="close">&times;</span>
+				<span class="close" tabindex="0">&times;</span>
 				<h2 class="modal-header-content">Lewis Spencer</h2>
 			</div>
 			<div class="modal-body">
@@ -803,7 +802,14 @@
 				</p>
 			</div>
 			<div class="modal-footer">
-				<p>Last updated: 02/04/2020</p>
+				<div class="ls-row">
+					<div class="ls-col-6">
+						<p>Last updated: 02/04/2020</p>
+					</div>
+					<div class="ls-col-6">
+						<p class="pull-right">Press ESC to close this window</p>
+					</div>
+				</div>
 			</div>
 	  </div>
 	</div>

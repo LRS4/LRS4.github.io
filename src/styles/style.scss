@@ -118,6 +118,10 @@ h1 {
 	cursor: pointer;
 }
 
+.btn:focus, .nav-btn:focus {
+	border: 1px solid black;
+}
+
 .constant_button {
 	border: none;
 	outline: none;
@@ -209,6 +213,10 @@ h1 {
 	opacity: 1;
 }
 
+.content:focus-within .overlay {
+	opacity: 1;
+}
+
 	/* ABOUT ME MODEL POP UP */
 	
 /* The Modal (background) */
@@ -239,6 +247,20 @@ h1 {
 	-webkit-animation-duration: 0.4s;
 	animation-name: animatetop;
 	animation-duration: 0.4s
+}
+
+/* Custom row and columns template */
+.ls-col-6 {
+	float: left;
+	width: 50%;
+  }
+  
+/* Clear floats after the columns */
+.ls-row:after {
+	content: "";
+	display: table;
+	clear: both;
+	padding: 0px;
 }
 
 /* Add Animation */

@@ -136,6 +136,13 @@ $(document).ready(function () {
 		modal.style.display = "none";
 	}
 
+	// When the user clicks ESC, close the model
+	window.onkeyup = function (event) {
+		if(event.key === "Escape") {
+			modal.style.display = "none";
+		}
+	}
+
 	// When the user clicks anywhere outside of the modal, close it
 	window.onclick = function (event) {
 		if (event.target == modal) {
