@@ -5,6 +5,7 @@ const sass = require('gulp-sass');
 const concat = require('gulp-concat');
 const shell = require('gulp-shell');
 const babel = require('gulp-babel');
+const nunjucksRender = require('gulp-nunjucks-render');
 
 /*
  *  -- TOP LEVEL FUNCTIONS --
@@ -66,6 +67,16 @@ gulp.task('run-load-test', shell.task([
 
 // Default task - runs all tasks for build
 gulp.task('default', gulp.series('message', 'html', 'images', 'scripts', 'sass'));
+
+// Convert nunjucks files to HTML
+gulp.task('nunjucks', async () => {
+    console.log("Converting nunjucks files to HTML...")
+    gulp.src('src/pages/**/*.+(html|nunjucks)')
+    .pipe(nunjucksRender({
+        path: ['src/templates']
+    }))
+    .pipe(gulp.dest('src/output'));
+});
 
 // Watch task automatically runs tasks on changes
 gulp.task('watch', async () => {
