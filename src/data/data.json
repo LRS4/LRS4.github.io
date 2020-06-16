@@ -1,0 +1,248 @@
+[
+    {
+        "title": "Python for Data Science",
+        "paragraph": "",
+        "listItems": [
+            "Explored Python basic syntax and data types",
+            "Created and manipulated regular Python lists",
+            "Used functions and imported packages",
+            "Applied variables, loops, and control flows",
+            "Built Numpy arrays, and performed calculations",
+            "Created and customized plots on real data",
+            "Utilized the Pandas DataFrame",
+            "Explored Matplotlib and Seaborn visualizations"
+        ],
+        "imageUrl": "assets/python-logo.png",
+        "imageAlt": "Python",
+        "category": "data",
+        "buttons": [
+            {
+                "class": "info-btn",
+                "url": "https://www.edx.org/course/introduction-to-python-for-data-science",
+                "title": "View course info",
+                "icon": "fa fa-fw fa-external-link-alt"
+            }
+        ]
+    },
+    {
+        "title": "Querying SQL Databases",
+        "id": "sql",
+        "listItems": [
+            "Explored Python basic syntax and data types",
+            "Created and manipulated regular Python lists",
+            "Used functions and imported packages",
+            "Applied variables, loops, and control flows",
+            "Built Numpy arrays, and performed calculations",
+            "Created and customized plots on real data",
+            "Utilized the Pandas DataFrame",
+            "Explored Matplotlib and Seaborn visualizations"
+        ],
+        "imageUrl": "assets/database.png",
+        "imageAlt": "SQL Databases",
+        "category": "data",
+        "buttons": [
+            {
+                "class": "info-btn",
+                "url": "https://www.edx.org/course/querying-data-with-transact-sql-0",
+                "title": "View course info",
+                "icon": "fa fa-fw fa-external-link-alt"
+            },
+            {
+                "class": "info-btn",
+                "url": "https://courses.edx.org/certificates/e6608793a0984dab947902ea2a860a00",
+                "title": "View course info",
+                "icon": "fa fa-fw fa-graduation-cap"
+            }
+        ]
+    },
+    {
+        "title": "Excel Data Analysis",
+        "paragraph": "",
+        "listItems": [
+            "Developed databases using DAX and PowerPivot",
+            "Modelled business information",
+            "Built interactive dashboards using pivot tables",
+            "Utilized PowerQuery to ETL data from SQL Server",
+            "Automated tasks using Macros and VBA",
+            "Carried out What-If Analysis and Simulations",
+            "Used the Analysis ToolPak for statistics",
+            "Dealt with a wide range of formulas"
+        ],
+        "imageUrl": "assets/excel.png",
+        "imageAlt": "Excel",
+        "category": "data",
+        "buttons": [
+            {
+                "class": "info-btn",
+                "url": "https://www.edx.org/course/analyzing-and-visualizing-data-with-excel-0",
+                "title": "View course info",
+                "icon": "fa fa-fw fa-external-link-alt"
+            },
+            {
+                "class": "info-btn",
+                "url": "https://courses.edx.org/certificates/2dbb458e36f4455d91341249d38f5f43",
+                "title": "View certificate",
+                "icon": "fa fa-fw fa-graduation-cap"
+            }
+        ]
+    },
+    {
+        "title": "Implementing Predictive Analytics with Spark",
+        "paragraph": "",
+        "listItems": [
+            "Used Spark to explore big data",
+            "Deployed models using the Spark ML library",
+            "Built and modeled recommendation systems",
+            "Explored data using Python, Scala and SQL"
+        ],
+        "imageUrl": "assets/spark-logo.png",
+        "imageAlt": "Spark",
+        "category": "data",
+        "buttons": [
+            {
+                "class": "info-btn",
+                "url": "https://www.edx.org/course/implementing-predictive-analytics-with-spark-in-azure-hdinsight-2",
+                "title": "View course info",
+                "icon": "fa fa-fw fa-external-link-alt"
+            },
+            {
+                "class": "info-btn",
+                "url": "https://www.edx.org/course/implementing-predictive-analytics-with-spark-in-azure-hdinsight-2",
+                "title": "View certificate",
+                "icon": "fa fa-fw fa-graduation-cap"
+            }
+        ]
+    },
+    {
+        "title": "Statistical Analysis",
+        "paragraph": "",
+        "listItems": [
+            "Sampling",
+            "Correlation",
+            "Distribution",
+            "Probability",
+            "Equations and Algebra",
+            "Vectors and Matrices",
+            "Hypothesis testing"
+        ],
+        "imageUrl": "http://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Scaled_chi_squared_cdf.svg/300px-Scaled_chi_squared_cdf.svg.png",
+        "imageAlt": "Statistical Analysis",
+        "category": "data",
+        "buttons": [
+            {
+                "class": "info-btn",
+                "url": "https://www.edx.org/course/essential-math-for-machine-learning-python-edition",
+                "title": "View course info",
+                "icon": "fa fa-fw fa-external-link-alt"
+            },
+            {
+                "class": "info-btn",
+                "url": "https://courses.edx.org/certificates/63d3161c23cf4d97b4f25d459f733799",
+                "title": "View certificate",
+                "icon": "fa fa-fw fa-graduation-cap"
+            }
+        ]
+    },
+    {
+        "title": "Power BI Data Analysis",
+        "paragraph": "",
+        "listItems": [
+            "Created real-time dashboards",
+            "Used the Query Editor for ETL",
+            "Automated ETL processes",
+            "Utilised DAX to create measures",
+            "Used PBI Embedded within a C# application",
+            "Explored a range of visualisations",
+            "Developed custom visuals using TypeScript",
+            "Utilised bookmarks and drillthroughs",
+            "Designed custom tooltips",
+            "Created solutions using URL filter query parameters"
+        ],
+        "imageUrl": "assets/powerbi.png",
+        "imageAlt": "Power BI",
+        "category": "data",
+        "buttons": [
+            {
+                "class": "info-btn",
+                "url": "https://www.edx.org/course/analyzing-and-visualizing-data-with-power-bi-3",
+                "title": "View course info",
+                "icon": "fa fa-fw fa-external-link-alt"
+            },
+            {
+                "class": "info-btn",
+                "url": "https://www.youtube.com/watch?v=WjEZMZcWYZE",
+                "title": "View project",
+                "icon": "fa fa-fw fa-tasks"
+            }
+        ]
+    },
+    {
+        "title": "R for Data Science",
+        "paragraph": "",
+        "listItems": [
+            "Basic R syntax",
+            "R programming; data types, vectors, factors",
+            "R operations; sorting, wrangling and plotting",
+            "Used lists and DataFrames to explore data",
+            "Created visualisations using ggplot2",
+            "Created web dashboards using Shiny",
+            "Explored RStudio IDE"
+        ],
+        "imageUrl": "assets/R-logo.png",
+        "imageAlt": "R for Data Science",
+        "category": "data",
+        "buttons": [
+            {
+                "class": "info-btn",
+                "url": "https://www.edx.org/course/r-basics-2",
+                "title": "View course info",
+                "icon": "fa fa-fw fa-external-link-alt"
+            },
+            {
+                "class": "info-btn",
+                "url": "https://www.datacamp.com/statement-of-accomplishment/course/1aee6f1e7c10722f68a23cb737d8725b9db697ed?share=true",
+                "title": "View certificate",
+                "icon": "fa fa-fw fa-graduation-cap"
+            },
+            {
+                "class": "info-btn",
+                "url": "https://github.com/LRS4/r-data-science",
+                "title": "View projects",
+                "icon": "fa fa-fw fa-tasks"
+            }
+        ]
+    },
+    {
+        "title": "Machine Learning with Scikit Learn",
+        "paragraph": "",
+        "listItems": [
+            "Supervised and Unsupervised.",
+            "Linear regression, logistic regression,",
+            "random forests, naive Bayes,",
+            "decision trees, K-means clustering"
+        ],
+        "imageUrl": "assets/sklearn-icon.jpg",
+        "imageAlt": "Machine Learning",
+        "category": "data",
+        "buttons": [
+            {
+                "class": "info-btn",
+                "url": "https://www.edx.org/course/python-principles-machine-learning-3",
+                "title": "View course info",
+                "icon": "fa fa-fw fa-external-link-alt"
+            },
+            {
+                "class": "info-btn",
+                "url": "https://courses.edx.org/certificates/ea9902ae8b8d4085bbc6d99eafa7acb4",
+                "title": "View certificate",
+                "icon": "fa fa-fw fa-graduation-cap"
+            },
+            {
+                "class": "info-btn",
+                "url": "https://github.com/LRS4/Python-Projects",
+                "title": "View projects",
+                "icon": "fa fa-fw fa-tasks"
+            }
+        ]
+    }
+]
