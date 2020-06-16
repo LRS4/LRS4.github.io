@@ -9,6 +9,7 @@ This site gives an overview of skills, experience and qualifications achieved. I
 * HTML, CSS
 * JavaScript, jQuery
 * Node.js
+* Nunjucks
 * Gulp Task Runner
 * AJAX, APIs
 * Python, Pytest, Locust
@@ -23,6 +24,10 @@ This site gives an overview of skills, experience and qualifications achieved. I
 * [gulp-concat](https://www.npmjs.com/package/gulp-concat)
 * [gulp-shell](https://www.npmjs.com/package/gulp-shell)
 * [gulp-babel](https://www.npmjs.com/package/gulp-babel)
+* [gulp-format-html](https://www.npmjs.com/package/gulp-format-html)
+* [gulp-nunjucks-render](https://www.npmjs.com/package/gulp-nunjucks-render)
+* [gulp-data](https://www.npmjs.com/package/gulp-data)
+* [gulp-json-concat](https://www.npmjs.com/package/gulp-json-concat)
 
 ## Tasks
 
@@ -54,6 +59,7 @@ This site gives an overview of skills, experience and qualifications achieved. I
 * [Setting PS Execution Policy](https://medium.com/@caiomsouza/fix-for-powershell-script-not-digitally-signed-69f0ed518715)
 * [Changing PS Executing Policy](https://stackoverflow.com/questions/57673913/vsc-powershell-after-npm-updating-packages-ps1-cannot-be-loaded-because-runnin)
 * [Running tasks in series](https://github.com/gulpjs/gulp/blob/master/docs/recipes/running-tasks-in-series.md)
+* [Nunjucks Whitespace Control](https://mozilla.github.io/nunjucks/templating.html#whitespace-control)
 
 ## NPM commands used
 
