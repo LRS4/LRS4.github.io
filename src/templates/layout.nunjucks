@@ -38,7 +38,8 @@
 
 <body>
 	<div class="main">
-        {% block content %} {% endblock %}
+        {% block content %} {% endblock %}	
+		<footer id="footer">Copyright &copy; Lewis Spencer</footer>
     </div>
 </body>
 
