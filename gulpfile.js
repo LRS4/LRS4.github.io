@@ -3,9 +3,13 @@ const imagemin = require('gulp-imagemin');
 const uglify = require('gulp-uglify-es').default;
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
+var jsonConcat = require('gulp-json-concat');
 const shell = require('gulp-shell');
 const babel = require('gulp-babel');
 const nunjucksRender = require('gulp-nunjucks-render');
+const formatHtml = require('gulp-format-html');
+var data = require('gulp-data');
+var fs = require('fs');
 
 /*
  *  -- TOP LEVEL FUNCTIONS --
@@ -44,8 +48,8 @@ gulp.task('scripts', async () => {
 gulp.task('sass', async () => {
     console.log('Compiling and concatenating SASS...')
     gulp.src('src/styles/*.scss')
-        .pipe(sass({outputStyle: 'compressed'})
-        .on('error', sass.logError))
+        .pipe(sass({ outputStyle: 'compressed' })
+            .on('error', sass.logError))
         .pipe(concat('style.css'))
         .pipe(gulp.dest('styles/'));
 });
@@ -57,26 +61,40 @@ gulp.task('html', async () => {
         .pipe(gulp.dest('projects/'));
 });
 
-// Run UI smoke tests
-gulp.task('run-tests', shell.task([
-    'pytest test.py -v -s'], options = { cwd: `${process.cwd()}/tests/functional_tests`}));
-
-// Run load testing
-gulp.task('run-load-test', shell.task([
-    'locust -f locustfile.py --host=http://lrs4.github.io/'], options = { cwd: `${process.cwd()}/tests/load_tests`}));
-
-// Default task - runs all tasks for build
-gulp.task('default', gulp.series('message', 'html', 'images', 'scripts', 'sass'));
+// Concatenates all JSON files
+gulp.task('json', async () => {
+    console.log("Concatenating JSON files...");
+    gulp.src('src/data/*.json')
+        .pipe(jsonConcat('db.json', function (data) {
+            return new Buffer.from(JSON.stringify(data));
+        }))
+        .pipe(gulp.dest('src/data/dist'));
+});
 
 // Convert nunjucks files to HTML
 gulp.task('nunjucks', async () => {
-    console.log("Converting nunjucks files to HTML...")
+    console.log("Converting nunjucks files to formatted HTML...");
     gulp.src('src/pages/**/*.+(html|nunjucks)')
-    .pipe(nunjucksRender({
-        path: ['src/templates']
-    }))
-    .pipe(gulp.dest('src/output'));
+        .pipe(data(function (file) {
+            return JSON.parse(fs.readFileSync('./src/data/dist/db.json'));
+        }))
+        .pipe(nunjucksRender({
+            path: ['src/templates']
+        }))
+        .pipe(formatHtml())
+        .pipe(gulp.dest('./'));
 });
+
+// Run UI smoke tests
+gulp.task('run-tests', shell.task([
+    'pytest test.py -v -s'], options = { cwd: `${process.cwd()}/tests/functional_tests` }));
+
+// Run load testing
+gulp.task('run-load-test', shell.task([
+    'locust -f locustfile.py --host=http://lrs4.github.io/'], options = { cwd: `${process.cwd()}/tests/load_tests` }));
+
+// Default task - runs all tasks for build
+gulp.task('default', gulp.series('message', 'html', 'images', 'scripts', 'sass'));
 
 // Watch task automatically runs tasks on changes
 gulp.task('watch', async () => {
@@ -84,4 +102,5 @@ gulp.task('watch', async () => {
     gulp.watch('src/styles/*.scss', gulp.series('sass'));
     gulp.watch('src/assets/*', gulp.series('images'));
     gulp.watch('src/projects/*.html', gulp.series('html'));
+    gulp.watch('src/data/*json', gulp.series('json'));
 });
