@@ -159,4 +159,8 @@ $(document).ready(function () {
 			x.className = "topnav";
 		}
 	}
+
+	$("#expand").click(() => {
+		myFunction();
+	});
 });
