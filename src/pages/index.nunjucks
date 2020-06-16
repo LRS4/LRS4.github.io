@@ -1,46 +1,54 @@
 {% extends "layout.nunjucks" %}
 {% block content %}
-  <h1>This is the index page</h1>
+  {% include "partials/navigation.nunjucks" %}
 
-  {% include "partials/navigation.nunjucks" -%}
+  <h1 id="title">Portfolio</h1>
+  <hr>
+  <h2 id="subtitle">Skills and Experience</h2>
 
-  {% set categories = [data, software] -%}
+  {% include "partials/filters.nunjucks" %}
 
-  {% for category in categories -%}
-    {% for skill in category -%}
-      <div class="column {{ skill.category }}">
-        <div class="content">
-          <img src="{{ skill.imageUrl }}" alt="{{ skill.imageAlt }}" style="width:100%">
-          <div class="overlay">
-            <h4>{{ skill.title }}</h4>
-            {%- if skill.paragraph %}
-              <p>{{ skill.paragraph -}}</p>
-            {%- endif %}
-            <ul>
-              {% for item in skill.listItems -%}
-                <li>{{ item -}}</li>
-              {%- endfor %}
-            </ul>
-            <div class="buttons-row">
-              {% for button in skill.buttons -%}
-              <a class="{{ button.class }}" 
-                href="{{ button.url }}" 
-                title="{{ button.title }}" 
-                target="_blank">
-                  {% if button.type == 'course' -%}
-                    <i class="fa fa-fw fa-external-link-alt"></i>
-                  {% elif button.class == 'link' -%}
-                    <i class="fa fa-fw fa-external-link-alt"></i>
-                  {% else -%}
-                    <i class="fa fa-fw fa-graduation-cap"></i>
-                  {% endif -%}
-              </a>
-              {%- endfor %}
+  {% set categories = [data, software, business, qualifications, projects] -%}
+
+  <!-- Portfolio Gallery Grid -->
+	<!-- Images should be 300x300 pixels -->
+  <div class="row">
+    {% for category in categories -%}
+      {% for skill in category -%}
+        <div class="column {{ skill.category }}">
+          <div class="content" {%- if skill.id -%} id="{{- skill.id -}}" {%- endif %}>
+            <img src="{{ skill.imageUrl }}" alt="{{ skill.imageAlt }}" style="width:100%">
+            <div class="overlay">
+              <h4>{{ skill.title }}</h4>
+              {%- if skill.paragraph %}
+                <p>{{ skill.paragraph | safe -}}</p>
+              {%- endif %}
+              {%- if skill.listItems | length > 0 %}
+                <ul>
+                  {% for item in skill.listItems -%}
+                    <li>{{ item | safe -}}</li>
+                  {%- endfor %}
+                </ul>
+              {% endif -%}
+              <div class="buttons-row">
+                {% for button in skill.buttons -%}
+                <a class="{{ button.class }}" 
+                  href="{{ button.url }}" 
+                  title="{{ button.title }}" 
+                  target="_blank">
+                    <i class="{{ button.icon }}"></i>
+                </a>
+                {%- endfor %}
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    {%- endfor -%}
-  {%- endfor %}
+      {%- endfor -%}
+    {%- endfor %}
+  </div>
+
+  {% include 'partials/history.nunjucks' %}
+
+  {% include 'partials/about.nunjucks' -%}
 
 {%- endblock -%}
