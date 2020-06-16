@@ -1,0 +1,6 @@
+<!-- Gitgraph Developer History -->
+<div class="graphArea">
+    <div id="gitgraphThree"></div>
+    <div id="gitgraphTwo"></div>
+    <div id="gitgraph"></div>
+</div>
