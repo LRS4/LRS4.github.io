@@ -1,0 +1,169 @@
+[
+    {
+        "title": "Microsoft Professional Program in Data Science",
+        "paragraph": "",
+        "listItems": [
+            "Used Microsoft Excel to explore data",
+            "Used SQL to query relational databases",
+            "Created data models using Excel & Power BI",
+            "Applied statistical methods to data",
+            "Used Python to explore and transform data",
+            "Applied a data science methodology",
+            "Created and validated machine learning models",
+            "Applied data science techniques",
+            "Implemented machine learning solutions"
+        ],
+        "imageUrl": "assets/microsoft.png",
+        "imageAlt": "Microsoft Data Science Program",
+        "category": "qualifications",
+        "buttons": [
+            {
+                "class": "info-btn",
+                "url": "https://academy.microsoft.com/en-us/professional-program/tracks/data-science/",
+                "title": "View course info",
+                "icon": "fa fa-fw fa-external-link-alt"
+            },
+            {
+                "class": "info-btn",
+                "url": "https://academy.microsoft.com/en-us/certificates/0201dc3c-9899-4a5d-97f0-3f436d2625e1/",
+                "title": "View certificate",
+                "icon": "fa fa-fw fa-graduation-cap"
+            },
+            {
+                "class": "info-btn",
+                "url": "https://github.com/LRS4/python-projects",
+                "title": "View projects",
+                "icon": "fa fa-fw fa-tasks"
+            }
+        ]
+    },
+    {
+        "title": "2:1 BA Criminology and Sociology",
+        "paragraph": "Joint Honours Undergraduate Degree over 3 years involving multidisciplinary learning across criminal justice, politics, economics, philosophy, research methods, statistics, history, psychology and industrial relations. Final year dissertation focused on statistical and theoretical review of effect on prisoners leaving the criminal justice system and policy research on positive indicators in desisting from criminality. <br /><br /> This has led to positions in business and later a career in the Public Sector alongside a voluntary position of mentoring former offenders to encourage re-integration into the community.",
+        "listItems": [],
+        "imageUrl": "assets/hallam.png",
+        "imageAlt": "BA Criminology and Sociology",
+        "category": "qualifications",
+        "buttons": [
+            {
+                "class": "info-btn",
+                "url": "http://lineardigressions.com/episodes/2020/6/14/criminology-and-data-science/",
+                "title": "Listen to Data Science and Criminology talk",
+                "icon": "fa fa-fw fa-podcast"
+            }
+        ]
+    },
+    {
+        "title": "Introduction to Computer Science CS50",
+        "listItems": [
+            "Built a broad understanding of programming",
+            "Applied algorithms to problem solving",
+            "Programmed in C, Python, SQL, JS",
+            "Applied variables, loops, and control flows",
+            "Explored data structures; arrays, linked lists, tries",
+            "Explored security, networks and AI",
+            "Software engineering - MVC, MDE, FDD",
+            "Used JS, jQ and Ajax for web development",
+            "Earned 90% on 9 programming assignments"
+        ],
+        "imageUrl": "assets/cs50.png",
+        "imageAlt": "CS50 Computer Science",
+        "category": "qualifications",
+        "buttons": [
+            {
+                "class": "info-btn",
+                "url": "https://www.edx.org/course/cs50s-introduction-computer-science-harvardx-cs50x",
+                "title": "View course info",
+                "icon": "fa fa-fw fa-external-link-alt"
+            },
+            {
+                "class": "info-btn",
+                "url": "https://courses.edx.org/certificates/7450e881b9974f7eb5476ae1e71da888",
+                "title": "View certificate",
+                "icon": "fa fa-fw fa-graduation-cap"
+            },
+            {
+                "class": "info-btn",
+                "url": "https://github.com/LRS4/cs50-computer-science",
+                "title": "View projects",
+                "icon": "fa fa-fw fa-tasks"
+            }
+        ]
+    },
+    {
+        "title": "Award in Leadership and Management Level 2",
+        "listItems": [
+            "Core skills to lead successfully",
+            "Motivation techniques to lead others",
+            "Confidence in tackling difficult issues",
+            "Tools to further develop as a leader",
+            "Frameworks to assess and improve performance"
+        ],
+        "imageUrl": "assets/ilm-icon.png",
+        "imageAlt": "ILM",
+        "category": "qualifications",
+        "buttons": [
+            {
+                "class": "info-btn",
+                "url": "https://www.i-l-m.com/learning-and-development/management/team-leading/8002-level-2-certificate-in-team-leading",
+                "title": "View course info",
+                "icon": "fa fa-fw fa-external-link-alt"
+            }
+        ]
+    },
+    {
+        "title": "freeCodeCamp Developer Certification",
+        "listItems": [
+            "Modules representing 300 hours of coursework.",
+            "JS Algorithms and Data Structures course.",
+            "ES6, Regular Expressions, Debugging.",
+            "Object Oriented and Functional Programming.",
+            "Algorithm Scripting."
+        ],
+        "imageUrl": "assets/fcc-logo.png",
+        "imageAlt": "freeCodeCamp Developer Certification",
+        "category": "qualifications",
+        "buttons": [
+            {
+                "class": "info-btn",
+                "url": "https://www.freecodecamp.org/learn",
+                "title": "View course info",
+                "icon": "fa fa-fw fa-external-link-alt"
+            },
+            {
+                "class": "info-btn",
+                "url": "https://www.freecodecamp.org/certification/fcc1ad59468-f378-4e8b-bef4-0f37058226c3/javascript-algorithms-and-data-structures",
+                "title": "View certificate",
+                "icon": "fa fa-fw fa-graduation-cap"
+            },
+            {
+                "class": "info-btn",
+                "url": "https://github.com/LRS4/js-algorithms-and-data-structures",
+                "title": "View projects",
+                "icon": "fa fa-fw fa-tasks"
+            }
+        ]
+    },
+    {
+        "title": "Government Statistical Service (GSS)",
+        "paragraph": "The GSS is a community working in the collection, production and communication of official statistics to help government, business and the public make informed decisions. The GSS is made up of statisticians, data scientists, researchers, economists, policy experts, business support teams, data journalists, data visualisation experts, methodologists, media experts etc. <br /> <br /> The GSG is made up of the statisticians and data scientists working in government who have passed a GSG badging exercise. This can be done as part of the interview process or you can “go through badging” when you are already working in the GSS.",
+        "listItems": [],
+        "imageUrl": "assets/gss.jpg",
+        "imageAlt": "Government Statistical Service (GSS)",
+        "category": "qualifications",
+        "buttons": [
+            {
+                "class": "info-btn",
+                "url": "https://gss.civilservice.gov.uk/careers/the-gss-government-professions-and-analysis-function/",
+                "title": "View more info",
+                "icon": "fa fa-fw fa-external-link-alt"
+            },
+            {
+                "class": "info-btn",
+                "url": "https://gss.civilservice.gov.uk/policy-store/competency-framework-for-the-government-statistician-group-gsg",
+                "title": "View GSG Competency Framework",
+                "icon": "fa fa-fw fa-tasks"
+            }
+        ]
+    }
+]
