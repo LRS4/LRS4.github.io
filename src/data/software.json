@@ -56,7 +56,7 @@
       },
       {
         "class": "info-btn",
-        "url": "hhttps://codepen.io/LRS4/pen/abvVMrj",
+        "url": "https://codepen.io/LRS4/pen/abvVMrj",
         "title": "View React calculator",
         "icon": "fa fa-fw fa-calculator"
       },
@@ -64,7 +64,7 @@
         "class": "info-btn",
         "url": "https://codepen.io/LRS4/full/ZEbvvoj",
         "title": "View React pomodoro clock",
-        "icon": "a fa-fw fa-clock"
+        "icon": "fa fa-fw fa-clock"
       }
     ]
   },

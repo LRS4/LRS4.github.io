@@ -21,6 +21,12 @@
                 "url": "https://www.edx.org/course/introduction-to-python-for-data-science",
                 "title": "View course info",
                 "icon": "fa fa-fw fa-external-link-alt"
+            },
+            {
+                "class": "info-btn",
+                "url": "https://courses.edx.org/certificates/b7fe1ea6b0cd44958aae53eddb6a71a7",
+                "title": "View certificate",
+                "icon": "fa fa-fw fa-graduation-cap"
             }
         ]
     },
@@ -50,7 +56,7 @@
             {
                 "class": "info-btn",
                 "url": "https://courses.edx.org/certificates/e6608793a0984dab947902ea2a860a00",
-                "title": "View course info",
+                "title": "View certificate",
                 "icon": "fa fa-fw fa-graduation-cap"
             }
         ]
