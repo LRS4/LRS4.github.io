@@ -103,4 +103,6 @@ gulp.task('watch', async () => {
     gulp.watch('src/assets/*', gulp.series('images'));
     gulp.watch('src/projects/*.html', gulp.series('html'));
     gulp.watch('src/data/*json', gulp.series('json'));
+    gulp.watch('src/pages/*', gulp.series('nunjucks'));
+    gulp.watch('src/templates/**', gulp.series('nunjucks'));
 });
