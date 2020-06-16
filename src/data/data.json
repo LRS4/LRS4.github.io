@@ -34,14 +34,13 @@
         "title": "Querying SQL Databases",
         "id": "sql",
         "listItems": [
-            "Explored Python basic syntax and data types",
-            "Created and manipulated regular Python lists",
-            "Used functions and imported packages",
-            "Applied variables, loops, and control flows",
-            "Built Numpy arrays, and performed calculations",
-            "Created and customized plots on real data",
-            "Utilized the Pandas DataFrame",
-            "Explored Matplotlib and Seaborn visualizations"
+            "Created Transact-SQL SELECT queries",
+            "Worked with data types and NULL",
+            "Queried multiple tables with JOIN",
+            "Used functions and aggregated data",
+            "Worked with sub-queries and APPLY",
+            "Grouped sets and pivot data",
+            "Implemented error handling and transactions"
         ],
         "imageUrl": "assets/database.png",
         "imageAlt": "SQL Databases",
