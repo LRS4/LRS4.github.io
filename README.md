@@ -7,10 +7,11 @@ This site gives an overview of skills, experience and qualifications achieved. I
 ## Tools used
 
 * HTML, CSS
-* JavaScript, jQuery
+* JavaScript ES6, jQuery
 * Node.js
 * Nunjucks
 * Gulp Task Runner
+* Webpack and Babel
 * AJAX, APIs
 * Python, Pytest, Locust
 
@@ -35,7 +36,7 @@ This site gives an overview of skills, experience and qualifications achieved. I
 * Use `gulp` to run all build tasks
 * Use `gulp watch` for to watch for changes
 * Minification of scripts, styles and images
-* Script concatenation 
+* Script bundling and minification
 * Script uglification
 * Script transpilation from ES6
 * Automated tests
@@ -61,10 +62,13 @@ This site gives an overview of skills, experience and qualifications achieved. I
 * [Running tasks in series](https://github.com/gulpjs/gulp/blob/master/docs/recipes/running-tasks-in-series.md)
 * [Nunjucks Whitespace Control](https://mozilla.github.io/nunjucks/templating.html#whitespace-control)
 * [Bundling modules with webpack](https://webpack.js.org/guides/integrations/#gulp)
+* [Using Gulp, Babel and Webpack together](https://medium.com/@dzhurovivan/es6-development-environment-made-easy-with-babel-gulp-and-webpack-a4017bd96c30)
 
 ## NPM commands used
 
 ```
 npm install -g gulp
 npm install --save-dev gulp
+npm install @babel/core babel-loader @babel/preset-env
+
 ```
