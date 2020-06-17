@@ -1,5 +1,7 @@
 const gulp = require('gulp');
+const webpack = require('webpack-stream');
 const imagemin = require('gulp-imagemin');
+const htmlmin = require('gulp-htmlmin');
 const uglify = require('gulp-uglify-es').default;
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
@@ -32,15 +34,11 @@ gulp.task('images', async () => {
         .pipe(gulp.dest('assets/'));
 });
 
-// Concat, transpile and minify JS
+// Bundle, transpile and minify JS
 gulp.task('scripts', async () => {
-    console.log('Concatenating, transpiling and minifying scripts...');
-    gulp.src('src/scripts/*.js')
-        .pipe(concat('bundle.min.js'))
-        .pipe(babel({
-            presets: ['@babel/env']
-        }))
-        .pipe(uglify())
+    console.log('Bundling, transpiling and minifying scripts...');
+    gulp.src('src/scripts/script.js')
+        .pipe(webpack( require('./webpack.config') ))
         .pipe(gulp.dest('script/'));
 });
 
@@ -82,6 +80,7 @@ gulp.task('nunjucks', async () => {
             path: ['src/templates']
         }))
         .pipe(formatHtml())
+        .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(gulp.dest('./'));
 });
 
