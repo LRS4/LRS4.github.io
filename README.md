@@ -29,6 +29,7 @@ This site gives an overview of skills, experience and qualifications achieved. I
 * [gulp-nunjucks-render](https://www.npmjs.com/package/gulp-nunjucks-render)
 * [gulp-data](https://www.npmjs.com/package/gulp-data)
 * [gulp-json-concat](https://www.npmjs.com/package/gulp-json-concat)
+* [webpack-stream](https://www.npmjs.com/package/webpack-stream)
 
 ## Tasks
 
