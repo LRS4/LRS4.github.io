@@ -60,6 +60,7 @@ This site gives an overview of skills, experience and qualifications achieved. I
 * [Changing PS Executing Policy](https://stackoverflow.com/questions/57673913/vsc-powershell-after-npm-updating-packages-ps1-cannot-be-loaded-because-runnin)
 * [Running tasks in series](https://github.com/gulpjs/gulp/blob/master/docs/recipes/running-tasks-in-series.md)
 * [Nunjucks Whitespace Control](https://mozilla.github.io/nunjucks/templating.html#whitespace-control)
+* [Bundling modules with webpack](https://webpack.js.org/guides/integrations/#gulp)
 
 ## NPM commands used
 
