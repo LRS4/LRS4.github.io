@@ -5,6 +5,7 @@ import Modal from './modal';
 import GridEventsHandler from './gridevents';
 import GitGraphFactory from './gitgraph';
 import Messages from './messages';
+import ForceDirectedChart from './visual';
 
 $(document).ready(function () {
 	const deviceHandler = new DeviceHandler();
@@ -12,7 +13,7 @@ $(document).ready(function () {
 	const modal = new Modal();
 	const gridEvents = new GridEventsHandler();
 	const gitGraph = new GitGraphFactory();
-
+	
 	Messages.startIntroJS();
 	
 	DateSetter.setCopyrightToCurrentYear();
@@ -23,6 +24,7 @@ $(document).ready(function () {
 	gridEvents.startImageFilterListener();
 	buttonEvents.addActiveClassToSelectedButton();
 	gitGraph.showGitGraphSection();
+	ForceDirectedChart.createChart();
 
 	Messages.confirmStarted();
 });
