@@ -12,13 +12,14 @@ class Modal {
         this.btn.onclick = function () {
             self.modal.style.height = "100%";
             $("body").addClass("stop-scrolling");
-            
+            $("body").bind('touchmove', (e) => e.preventDefault())
         }
 
         // When the user clicks on <span> (x), close the modal, enable scroll
         this.span.onclick = function () {
             self.modal.style.height = "0%";
             $("body").removeClass("stop-scrolling");
+            $("body").unbind("touchmove");
         }
 
         // When the user clicks ESC, close the model, enable scroll
@@ -26,6 +27,7 @@ class Modal {
             if(event.key === "Escape") {
                 self.modal.style.height = "0%";
                 $("body").removeClass("stop-scrolling");
+                $("body").unbind("touchmove");
             }
         }
      }
