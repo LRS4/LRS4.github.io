@@ -51,4 +51,6 @@
 
   {% include 'partials/about.nunjucks' -%}
 
+  {% include 'partials/visual.nunjucks' -%}
+
 {%- endblock -%}
