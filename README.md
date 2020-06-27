@@ -64,6 +64,8 @@ This site gives an overview of skills, experience and qualifications achieved. I
 * [Nunjucks Whitespace Control](https://mozilla.github.io/nunjucks/templating.html#whitespace-control)
 * [Bundling modules with webpack](https://webpack.js.org/guides/integrations/#gulp)
 * [Using Gulp, Babel and Webpack together](https://medium.com/@dzhurovivan/es6-development-environment-made-easy-with-babel-gulp-and-webpack-a4017bd96c30)
+* [Force simulation with D3](https://github.com/BlastWind/D3.js-Tutorial/blob/master/d3.js%20tutorial/Part%205/starting_code.html)
+* [Force simulation highlighting](https://bl.ocks.org/almsuarez/4333a12d2531d6c1f6f22b74f2c57102)
 
 ## NPM commands used
 
