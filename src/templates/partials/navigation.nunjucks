@@ -6,7 +6,7 @@
     <a href="https://www.dropbox.com/s/0fwuqsx5ni0zs1g/Online%20CV.docx?dl=0" class="nav-btn" target="_blank"><i class="fa fa-fw fa-file"></i>  CV</a>
     <a href="mailto:lrspencer@hotmail.co.uk?subject=Re:%20Your%20portfolio" class="nav-btn"><i class="fa fa-fw fa-envelope"></i> Contact</a>
     <a href="#" id="help" class="nav-btn"><i class="fa fa-fw fa-directions"></i> Tour</a>
-    <a href="javascript:void(0);" id="expand" class="icon">
+    <a href="#" id="expand" class="icon">
         <i class="fa fa-bars"></i>
     </a>
 </div>

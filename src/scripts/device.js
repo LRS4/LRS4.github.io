@@ -1,5 +1,7 @@
 class DeviceHandler {
-    costructor() { }
+    constructor() {
+        this.topNav = document.getElementById("myTopnav");
+     }
     
 	isTouchEnabledDevice() {
 		return (('ontouchstart' in window)
@@ -26,11 +28,11 @@ class DeviceHandler {
     }
 
     toggleResponsiveTopNav() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-            x.className += " responsive";
+        let self = this;
+        if (self.topNav.className === "topnav") {
+            self.topNav.className += " responsive";
         } else {
-            x.className = "topnav";
+            self.topNav.className = "topnav";
         }
     }
 

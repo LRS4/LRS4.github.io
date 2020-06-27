@@ -17,6 +17,7 @@ $(document).ready(function () {
 	
 	DateSetter.setCopyrightToCurrentYear();
 	deviceHandler.startTouchListener();
+	deviceHandler.addExpandMobileNavListener();
 	modal.addEventListeners();
 	gridEvents.filterSelection("all");
 	gridEvents.startImageFilterListener();
