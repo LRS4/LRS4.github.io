@@ -2,7 +2,7 @@ export default class Messages {
     constructor() { }
 
     static confirmStarted() {
-        console.log("Application running...")
+        console.log("Application running...");
     }
 
     static startIntroJS() {
