@@ -1,28 +1,24 @@
-<!-- About me modal -->
+<!-- The overlay -->
 <div id="myModal" class="modal">
-    <!-- Modal content -->
-    <div class="modal-content">
-        <div class="modal-header">
-            <span class="close" tabindex="0">&times;</span>
-            <h2 class="modal-header-content">Lewis Spencer</h2>
-        </div>
-        <div class="modal-body">
-            <p>
-                I have a passion for using technology, data and statistics to make things easier and more efficient. Most of my learning has been self-directed and on the job. 
-                I have also achieved qualifications with EdX in Data Science and Computer Science, alongside auditing other online courses with the help
-                of a <a href="http://blog.agupieware.com/2014/06/online-learning-intensive-bachelors.html" target="_blank">curriculum</a>. 
-                I am a Data Scientist working in a large organisation, however part of the role requires Full Stack Web Developer skills. 
-            </p>
-        </div>
-        <div class="modal-footer">
-            <div class="ls-row">
-                <div class="ls-col-6">
-                    <p>Last updated: 02/04/2020</p>
-                </div>
-                <div class="ls-col-6">
-                    <p class="pull-right">Press ESC to close this window</p>
-                </div>
-            </div>
-        </div>
-    </div>
+
+  <!-- Button to close the overlay navigation -->
+  <a href="#" class="closeModal">&times;</a>
+
+  <!-- Overlay content -->
+  <div class="modal-content">
+        <p>
+          Data Scientist, Full-Stack Web Developer and general Problem Solver.
+        </p>
+        <p>
+          I have a passion for using technology, data and statistics to make things easier and more efficient. Most of my learning has been self-directed and on the job. 
+          I have also achieved qualifications with EdX in Data Science and Computer Science, alongside auditing other online courses to improve my skills.
+        </p>
+        <p>
+          I am a Data Scientist working in a large organisation. I build analytical and automation tools, business intelligence solutions and full-stack web applications
+          to enable better decision making and predictive capabilities. 
+        </p>
+        <p class="pressEscapeToCloseModal">
+          Press ESC to close
+        </p>
+  </div>
 </div>
