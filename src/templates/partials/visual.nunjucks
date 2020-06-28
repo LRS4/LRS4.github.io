@@ -1,1 +1,3 @@
-<svg width="960" height="600"></svg>
+<div class="svg-container" style="display: none;">
+    <svg width="960" height="600" style="margin-left: 10%;"></svg>
+</div>
