@@ -30,11 +30,12 @@ class ForceDirectedChart {
                 console.log(graph);
 
                 const svg = d3.select('svg'),
-                    width = +svg.attr('width'),
+                    width = $(".main").width(),
                     height = +svg.attr('height');
-
-                //  const width = 960;
-                //   const height = 700;
+                
+                svg
+                    .attr("width", width)
+                    .attr("height", height)
 
                 const simulation = d3.forceSimulation()
                     .nodes(graph.nodes)
@@ -199,6 +200,7 @@ class ForceDirectedChart {
         $(self.$visualBtn).click(function() {
             $(".row").hide();
             $(".graphArea").hide();
+            $("#subtitle").text("Skills Visualisation")
             $(self.$container).show();
 
             if (!this.chartInitialised) {
