@@ -8,6 +8,7 @@ class ButtonEvents {
         for (var i = 0; i < this.btns.length; i++) {
             this.btns[i].addEventListener("click", function () {
                 $('.graphArea').hide();
+                $('.svg-container').hide();
                 $('#subtitle').text('Skills and Experience');
                 $('.row').show();
                 var current = document.getElementsByClassName("active");
