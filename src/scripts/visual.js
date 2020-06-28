@@ -29,7 +29,7 @@ class ForceDirectedChart {
             .then(graph => {
                 console.log(graph);
 
-                const svg = d3.select('svg'),
+                const svg = d3.select('#forceChart'),
                     width = $(".main").width(),
                     height = +svg.attr('height');
                 
@@ -201,7 +201,7 @@ class ForceDirectedChart {
             $(".row").hide();
             $(".graphArea").hide();
             $("#subtitle").text("Skills Visualisation")
-            $(self.$container).show();
+            $(self.$container).fadeIn();
 
             if (!this.chartInitialised) {
                 self.createChart();

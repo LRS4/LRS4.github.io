@@ -10,7 +10,7 @@ class ButtonEvents {
                 $('.graphArea').hide();
                 $('.svg-container').hide();
                 $('#subtitle').text('Skills and Experience');
-                $('.row').show();
+                $('.row').fadeIn();
                 var current = document.getElementsByClassName("active");
                 current[0].className = current[0].className.replace(" active", "");
                 this.className += " active";

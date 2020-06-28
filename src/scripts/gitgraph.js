@@ -98,7 +98,7 @@ class GitGraphFactory {
 				'C#, ASP.NET Core, Azure and T-SQL',
 				'Statistical Analysis with R and Power BI'
 			])
-			$('.graphArea').show();
+			$('.graphArea').fadeIn();
 			$('#subtitle').text('Developer Job History');
 		});
 	}
