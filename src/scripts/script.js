@@ -13,6 +13,7 @@ $(document).ready(function () {
 	const modal = new Modal();
 	const gridEvents = new GridEventsHandler();
 	const gitGraph = new GitGraphFactory();
+	const forceDirectedChart = new ForceDirectedChart();
 	
 	Messages.startIntroJS();
 	
@@ -24,7 +25,7 @@ $(document).ready(function () {
 	gridEvents.startImageFilterListener();
 	buttonEvents.addActiveClassToSelectedButton();
 	gitGraph.showGitGraphSection();
-	ForceDirectedChart.createChart();
+	forceDirectedChart.addShowChartListener();
 
 	Messages.confirmStarted();
 });
