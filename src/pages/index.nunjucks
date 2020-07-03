@@ -4,7 +4,19 @@
 
   <h1 id="title">Portfolio</h1>
   <hr>
-  <h2 id="subtitle">Skills and Experience</h2>
+  <div class="ls-row">
+    <div class="ls-col-6">
+      <h2 id="subtitle">Skills and Experience</h2>
+    </div>
+    <div class="ls-col-6" id="toggleImagesCheckbox" style="display:none">
+      <div class="toggleImagesInputGroup">
+        <label class="toggleImagesContainer">Show images
+          <input id="toggleImages" type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+    </div>
+  </div>
 
   {% include "partials/filters.nunjucks" %}
 
