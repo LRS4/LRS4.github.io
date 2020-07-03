@@ -202,7 +202,7 @@
         "title": "Wikipedia API App",
         "paragraph": "Inspired by the challenge at FreeCodeCamp, the app uses the Wikipedia API open search endpoint to pull back requests. The user stories were; I can search Wikipedia entries in a search box, and I can click a button to see a random Wikipedia entry. <br /><br /> I used HTML, CSS, JavaScript, AJAX and JSON and developed knowledge on manipulating URLs and arrays alongside DOM manipulation.",
         "listItems": [],
-        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Wikipedia-W-bold-in-square.svg/768px-Wikipedia-W-bold-in-square.svg.png",
+        "imageUrl": "assets/wikipedia.png",
         "imageAlt": "Wikipedia Search App",
         "category": "projects",
         "buttons": [
