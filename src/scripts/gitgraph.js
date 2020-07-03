@@ -68,6 +68,7 @@ class GitGraphFactory {
 		this.$graphBtn.click(() => {
 			$('.row').hide();
 			$(".svg-container").hide();
+			$("#toggleImagesCheckbox").hide();
 			$('#gitgraph, #gitgraphTwo, #gitgraphThree').html("");
 			this.createGraph("gitgraph", ['achievements', 'skills'], "2015 - Information Systems Officer", [
 				'Developed ICT system configurations and for defined processes.',

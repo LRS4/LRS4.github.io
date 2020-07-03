@@ -9,6 +9,7 @@ class ButtonEvents {
             this.btns[i].addEventListener("click", function () {
                 $('.graphArea').hide();
                 $('.svg-container').hide();
+                $("#toggleImagesCheckbox").hide();
                 $('#subtitle').text('Skills and Experience');
                 $('.row').fadeIn();
                 var current = document.getElementsByClassName("active");
