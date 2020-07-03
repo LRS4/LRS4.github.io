@@ -35,6 +35,11 @@
                 "title": "View projects",
                 "icon": "fa fa-fw fa-tasks"
             }
+        ],
+        "linkedSkills": [
+            "Python for Data Science",
+            "Querying SQL Databases",
+            "Statistical Analysis"
         ]
     },
     {
@@ -88,6 +93,11 @@
                 "title": "View projects",
                 "icon": "fa fa-fw fa-tasks"
             }
+        ],
+        "linkedSkills": [
+            "Hello, World! Travel Website",
+            "Pyflix Movie App",
+            "News Rewind Web App"
         ]
     },
     {
@@ -109,6 +119,9 @@
                 "title": "View course info",
                 "icon": "fa fa-fw fa-external-link-alt"
             }
+        ],
+        "linkedSkills": [
+            "Business Analysis"
         ]
     },
     {
@@ -142,6 +155,13 @@
                 "title": "View projects",
                 "icon": "fa fa-fw fa-tasks"
             }
+        ],
+        "linkedSkills": [
+            "Wikipedia API App",
+            "Random Quotes Machine",
+            "Numerical Assessment App",
+            "UK Almanac Dashboard",
+            "Savings Calculator Web App"
         ]
     },
     {
