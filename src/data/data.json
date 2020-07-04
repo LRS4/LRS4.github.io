@@ -28,6 +28,10 @@
                 "title": "View certificate",
                 "icon": "fa fa-fw fa-graduation-cap"
             }
+        ],
+        "linkedSkills": [
+            "Machine Learning with Scikit Learn",
+            "Help Me Apply - NLP"
         ]
     },
     {
@@ -89,6 +93,9 @@
                 "title": "View certificate",
                 "icon": "fa fa-fw fa-graduation-cap"
             }
+        ],
+        "linkedSkills": [
+            "Power BI Data Analysis"
         ]
     },
     {
@@ -116,6 +123,9 @@
                 "title": "View certificate",
                 "icon": "fa fa-fw fa-graduation-cap"
             }
+        ],
+        "linkedSkills": [
+            "Querying SQL Databases"
         ]
     },
     {
@@ -130,7 +140,7 @@
             "Vectors and Matrices",
             "Hypothesis testing"
         ],
-        "imageUrl": "http://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Scaled_chi_squared_cdf.svg/300px-Scaled_chi_squared_cdf.svg.png",
+        "imageUrl": "assets/chi-squared.png",
         "imageAlt": "Statistical Analysis",
         "category": "data",
         "buttons": [
@@ -146,6 +156,14 @@
                 "title": "View certificate",
                 "icon": "fa fa-fw fa-graduation-cap"
             }
+        ],
+        "linkedSkills": [
+            "R for Data Science",
+            "Python for Data Science",
+            "Power BI Data Analysis",
+            "Excel Data Analysis",
+            "Government Statistical Service (GSS)",
+            "2:1 BA Criminology and Sociology"
         ]
     },
     {
@@ -179,6 +197,9 @@
                 "title": "View project",
                 "icon": "fa fa-fw fa-tasks"
             }
+        ],
+        "linkedSkills": [
+            "Querying SQL Databases"
         ]
     },
     {
@@ -215,6 +236,9 @@
                 "title": "View projects",
                 "icon": "fa fa-fw fa-tasks"
             }
+        ],
+        "linkedSkills": [
+            "Shiny Dashboard - Customer Satisfaction"
         ]
     },
     {
@@ -248,6 +272,9 @@
                 "title": "View projects",
                 "icon": "fa fa-fw fa-tasks"
             }
+        ],
+        "linkedSkills": [
+            "House Prices Machine Learning"
         ]
     }
 ]

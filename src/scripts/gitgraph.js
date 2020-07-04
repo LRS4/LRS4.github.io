@@ -67,6 +67,8 @@ class GitGraphFactory {
 	showGitGraphSection() {
 		this.$graphBtn.click(() => {
 			$('.row').hide();
+			$(".svg-container").hide();
+			$("#toggleImagesCheckbox").hide();
 			$('#gitgraph, #gitgraphTwo, #gitgraphThree').html("");
 			this.createGraph("gitgraph", ['achievements', 'skills'], "2015 - Information Systems Officer", [
 				'Developed ICT system configurations and for defined processes.',
@@ -97,7 +99,7 @@ class GitGraphFactory {
 				'C#, ASP.NET Core, Azure and T-SQL',
 				'Statistical Analysis with R and Power BI'
 			])
-			$('.graphArea').show();
+			$('.graphArea').fadeIn();
 			$('#subtitle').text('Developer Job History');
 		});
 	}

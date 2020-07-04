@@ -21,6 +21,9 @@
                 "title": "View course info",
                 "icon": "fa fa-fw fa-external-link-alt"
             }
+        ],
+        "linkedSkills": [
+            "Statistical Analysis"
         ]
 }
 ]

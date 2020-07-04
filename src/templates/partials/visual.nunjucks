@@ -1,0 +1,3 @@
+<div class="svg-container" style="display: none;">
+    <svg id="forceChart" width="960" height="600"></svg>
+</div>

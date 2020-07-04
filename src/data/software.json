@@ -25,6 +25,15 @@
         "title": "View CS75 site",
         "icon": "fa fa-fw fa-window-restore"
       }
+    ],
+    "linkedSkills": [
+      "Gulp Task Runner",
+      "Frontend Libraries",
+      "C# and ASP.NET Core",
+      "Ruby on Rails",
+      "theDataLog Django Website",
+      "Introduction to Computer Science CS50",
+      "Help Me Apply - NLP"
     ]
   },
   {
@@ -66,6 +75,9 @@
         "title": "View React pomodoro clock",
         "icon": "fa fa-fw fa-clock"
       }
+    ],
+    "linkedSkills": [
+      "freeCodeCamp Developer Certification"
     ]
   },
   {
@@ -95,6 +107,9 @@
         "title": "View certificate",
         "icon": "fa fa-fw fa-graduation-cap"
       }
+    ],
+    "linkedSkills": [
+      "Azure DevOps"
     ]
   },
   {
@@ -152,6 +167,9 @@
         "title": "View code",
         "icon": "fa fa-fw fa-tasks"
       }
+    ],
+    "linkedSkills": [
+      "CS50 Web Programming"
     ]
   },
   {
@@ -220,6 +238,11 @@
         "title": "View course info",
         "icon": "fa fa-fw fa-external-link-alt"
       }
+    ],
+    "linkedSkills": [
+      "Azure DevOps",
+      "C# and ASP.NET Core",
+      "User Experience Design"
     ]
   },
   {
