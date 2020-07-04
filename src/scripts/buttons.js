@@ -2,6 +2,7 @@ class ButtonEvents {
     constructor() { 
         this.btncontent = document.getElementById("myBtncontent");
         this.btns = this.btncontent.getElementsByClassName("btn");
+        this.$scrollTopBtn = $("#scrollTopBtn");
     }
 
     addActiveClassToSelectedButton() {
@@ -18,6 +19,28 @@ class ButtonEvents {
             });
         }
     }
+
+    showScrollToTopButton(pixelsFromTop) {
+        $(document).scroll(() => {
+            if (document.body.scrollTop > pixelsFromTop || document.documentElement.scrollTop > 20) {
+                this.$scrollTopBtn.css("display", "block");
+            } else {
+                this.$scrollTopBtn.css("display", "none");
+            }
+        });
+    }
+
+    scrollToDocumentTopOnClick() {
+        this.$scrollTopBtn.click(function() {
+            $('html, body').animate({ scrollTop: 0 }, 1000); 
+        });
+    }
+
+    addScrollToTopListener() {
+        this.showScrollToTopButton(20);
+        this.scrollToDocumentTopOnClick();
+    }
+
 }
 
 export default ButtonEvents;

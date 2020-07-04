@@ -24,6 +24,7 @@ $(document).ready(function () {
 	gridEvents.filterSelection("all");
 	gridEvents.startImageFilterListener();
 	buttonEvents.addActiveClassToSelectedButton();
+	buttonEvents.addScrollToTopListener();
 	gitGraph.showGitGraphSection();
 	forceDirectedChart.addShowChartListener();
 

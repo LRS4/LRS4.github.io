@@ -43,7 +43,10 @@
 
 <body>
 	<div class="main">
-        {% block content %} {% endblock %}	
+        {% block content %} {% endblock %}
+		<button id="scrollTopBtn" title="Go to top">
+			<i class="fa fa-fw fa-arrow-up"></i> Back to top
+		</button>	
 		<footer id="footer">Copyright &copy; Lewis Spencer</footer>
     </div>
 </body>
