@@ -115,3 +115,10 @@ div.tooltip {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
+/* With mobile screen, hide visual entry */
+@media screen and (max-width: 600px) {
+	#visualBtn {
+    display: none;
+  }
+}
