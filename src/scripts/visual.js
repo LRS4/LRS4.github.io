@@ -31,6 +31,20 @@ class ForceDirectedChart {
         return graph;
     }
 
+    addToggleImageListener(image) {
+        $("#toggleImages").change(function () {
+            if ($(this).is(':checked')) {
+                image.transition()
+                    .duration(300)
+                    .style("opacity", .8);
+            } else {
+                image.transition()
+                    .duration(300)
+                    .style("opacity", 0);
+            }
+        });
+    }
+
     createChart() {
         var graph = this.setupNodesAndLinks();
 
@@ -158,21 +172,7 @@ class ForceDirectedChart {
             .attr("height", 50)
             .attr("width", 50)
 
-        function addToggleImageListener() {
-            $("#toggleImages").change(function () {
-                if ($(this).is(':checked')) {
-                    image.transition()
-                        .duration(300)
-                        .style("opacity", .8);
-                } else {
-                    image.transition()
-                        .duration(300)
-                        .style("opacity", 0);
-                }
-            });
-        }
-
-        addToggleImageListener();
+        this.addToggleImageListener(image);
 
         node.on('mouseover.tooltip', function (d) {
             tooltip.transition()
