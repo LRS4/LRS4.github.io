@@ -77,7 +77,8 @@
       }
     ],
     "linkedSkills": [
-      "freeCodeCamp Developer Certification"
+      "freeCodeCamp Developer Certification",
+      "Interview Club MERN App"
     ]
   },
   {
@@ -142,30 +143,38 @@
     ]
   },
   {
-    "title": "Computer Science and Programming using Python",
+    "title": "Angular",
     "paragraph": "",
     "listItems": [
-      "Computational thinking",
-      "Algorithms",          
-      "Data Structures",
-      "Object Oriented Programming",
-      "Testing and debugging"
+      "Introduction to building Angular SPAs",
+      "Subscribed to an ASP.NET Core Web API",
+      "Scaffolded components using the CLI",
+      "Used event emitters for child components",
+      "Implemented a service layer and used DI",
+      "Configured the Angular Router for routes",
+      "Wrangled data using map, reduce and filter"
     ],
-    "imageUrl": "assets/mit.png",
-    "imageAlt": "MIT Computer Science",
+    "imageUrl": "assets/angular.png",
+    "imageAlt": "Angular dashboard app",
     "category": "web",
     "buttons": [
       {
         "class": "info-btn",
-        "url": "https://www.edx.org/course/introduction-to-computer-science-and-programming-using-python-2",
-        "title": "View course info",
-        "icon": "fa fa-fw fa-external-link-alt"
+        "url": "https://res.cloudinary.com/dayqxxsip/image/upload/v1595152329/App%20Screenshots/Angular_dashboard_qtwdbp.png",
+        "title": "View app screenshot",
+        "icon": "fa fa-fw fa-camera"
       },
       {
         "class": "info-btn",
-        "url": "https://github.com/LRS4/mit-6.00.1x",
-        "title": "View code",
-        "icon": "fa fa-fw fa-tasks"
+        "url": "https://github.com/LRS4/angular-dashboard",
+        "title": "View Angular app code",
+        "icon": "fa fa-fw fa-code"
+      },
+      {
+        "class": "info-btn",
+        "url": "https://github.com/LRS4/dashboard-metrics-api",
+        "title": "View API code",
+        "icon": "fa fa-fw fa-code"
       }
     ],
     "linkedSkills": [
@@ -243,6 +252,37 @@
       "Azure DevOps",
       "C# and ASP.NET Core",
       "User Experience Design"
+    ]
+  },
+  {
+    "title": "Computer Science and Programming using Python",
+    "paragraph": "",
+    "listItems": [
+      "Computational thinking",
+      "Algorithms",
+      "Data Structures",
+      "Object Oriented Programming",
+      "Testing and debugging"
+    ],
+    "imageUrl": "assets/mit.png",
+    "imageAlt": "MIT Computer Science",
+    "category": "web",
+    "buttons": [
+      {
+        "class": "info-btn",
+        "url": "https://www.edx.org/course/introduction-to-computer-science-and-programming-using-python-2",
+        "title": "View course info",
+        "icon": "fa fa-fw fa-external-link-alt"
+      },
+      {
+        "class": "info-btn",
+        "url": "https://github.com/LRS4/mit-6.00.1x",
+        "title": "View code",
+        "icon": "fa fa-fw fa-tasks"
+      }
+    ],
+    "linkedSkills": [
+      "CS50 Web Programming"
     ]
   },
   {

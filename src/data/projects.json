@@ -16,9 +16,21 @@
         "buttons": [
             {
                 "class": "info-btn",
-                "url": "https://thedatalog.co.uk/",
-                "title": "View app",
-                "icon": "fa fa-fw fa-external-link-alt"
+                "url": "https://res.cloudinary.com/dayqxxsip/image/upload/v1595152330/App%20Screenshots/TheDataLog_home_page_xxyt3x.png",
+                "title": "View app screenshot home",
+                "icon": "fa fa-fw fa-camera"
+            },
+            {
+                "class": "info-btn",
+                "url": "https://res.cloudinary.com/dayqxxsip/image/upload/v1595152329/App%20Screenshots/TheDataLog_courses_page_i8mnnk.png",
+                "title": "View app screenshot home",
+                "icon": "fa fa-fw fa-camera"
+            },
+            {
+                "class": "info-btn",
+                "url": "https://res.cloudinary.com/dayqxxsip/image/upload/v1595152329/App%20Screenshots/TheDataLog_skills_tracker_qkxmqw.png",
+                "title": "View app screenshot skills tracker",
+                "icon": "fa fa-fw fa-camera"
             }
         ]
     },
@@ -39,6 +51,35 @@
             {
                 "class": "info-btn",
                 "url": "https://github.com/LRS4/cs50-final-project/",
+                "title": "View code",
+                "icon": "fa fa-fw fa-code"
+            }
+        ]
+    },
+    {
+        "title": "Interview Club MERN App",
+        "paragraph": "A project to find and share answers to interview questions. Built using MongoDB, React, Express and Node.js",
+        "listItems": [
+            "JWT authentication and user login",
+            "Built backend API using Express",
+            "Used React and Redux for component state",
+            "Implemented protected routes with React Router",
+            "Persistance layer built with NoSQL MongoDB",
+            "Integrated to controller / ODM using Mongoose"
+        ],
+        "imageUrl": "assets/mern.png",
+        "imageAlt": "Help Me Apply",
+        "category": "projects",
+        "buttons": [
+            {
+                "class": "info-btn",
+                "url": "https://interviewclub.herokuapp.com/",
+                "title": "View app",
+                "icon": "fa fa-fw fa-external-link-alt"
+            },
+            {
+                "class": "info-btn",
+                "url": "https://github.com/LRS4/interview-club-app",
                 "title": "View code",
                 "icon": "fa fa-fw fa-code"
             }
