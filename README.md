@@ -35,6 +35,7 @@ This site gives an overview of skills, experience and qualifications achieved. I
 
 * Use `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` to avoid PowerShell errors
 * Use `gulp` to run all build tasks
+* Use `gulp nunjucks` to produce final index.html
 * Use `gulp watch` for to watch for changes
 * Minification of scripts, styles and images
 * Script bundling and minification
