@@ -1,7 +1,7 @@
 [
     {
         "title": "theDataLog Django Website",
-        "paragraph": "A course and blog website built using Django, Python and PostgreSQL. Deployed using a Linode Ubuntu Linux container. Features include:",
+        "paragraph": "A course and blog website built using Django, Python and PostgreSQL. Deployed using a Linode Ubuntu Linux container. Features included:",
         "listItems": [
             "Security and user login",
             "HTTPS Let's Encrypt",
@@ -120,12 +120,6 @@
         "imageAlt": "Almanac Dashboard",
         "category": "projects",
         "buttons": [
-            {
-                "class": "info-btn",
-                "url": "http://uk-almanac.herokuapp.com/",
-                "title": "View app",
-                "icon": "fa fa-fw fa-external-link-alt"
-            },
             {
                 "class": "info-btn",
                 "url": "https://github.com/LRS4/almanac-app",
