@@ -85,12 +85,13 @@
     "title": "C# and ASP.NET Core",
     "paragraph": "",
     "listItems": [
-      "Object Oriented Programming",
-      "Encapsulation and Polymorphism",
-      "SOLID Principles",
-      "Entity Framework and LINQ",
-      "CRUD Operations",
-      "Built MVC web applications"
+      "Built professional ASP.NET Core MVC apps",
+      "Applied OOP, SOLID and MVC design patterns",
+      "Created backend APIs for CRUD operations",
+      "Implemented a service layer and used DI",
+      "Used Entity Framework Core and LINQ",
+      "Deployed to Azure App Service using CI/CD",
+      "Integrated Nuget packages"
     ],
     "imageUrl": "assets/c_net_logo.png",
     "imageAlt": "C# and ASP.NET Core",
@@ -98,8 +99,8 @@
     "buttons": [
       {
         "class": "info-btn",
-        "url": "https://www.edx.org/course/server-side-application-asp-net",
-        "title": "View course info",
+        "url": "https://github.com/LRS4/library-management-app",
+        "title": "View .NET Core app code",
         "icon": "fa fa-fw fa-external-link-alt"
       },
       {
@@ -111,35 +112,6 @@
     ],
     "linkedSkills": [
       "Azure DevOps"
-    ]
-  },
-  {
-    "title": "Ruby on Rails",
-    "paragraph": "",
-    "listItems": [
-      "Object Oriented Programming",  
-      "Applying the MVC design pattern",
-      "Scaffolding models",
-      "Intepolating data within views",
-      "Integrating Gem packages",
-      "Built job board web app with Stripe payments"
-    ],
-    "imageUrl": "assets/rails.png",
-    "imageAlt": "Rails",
-    "category": "web",
-    "buttons": [
-      {
-        "class": "info-btn",
-        "url": "https://github.com/LRS4/rails-job-board",
-        "title": "View code",
-        "icon": "fa fa-fw fa-code"
-      },
-      {
-        "class": "info-btn",
-        "url": "https://www.sololearn.com/Certificate/1081-7327354/pdf",
-        "title": "View certificate",
-        "icon": "fa fa-fw fa-graduation-cap"
-      }
     ]
   },
   {
@@ -179,6 +151,68 @@
     ],
     "linkedSkills": [
       "CS50 Web Programming"
+    ]
+  },
+  {
+    "title": "Java and Spring Boot",
+    "paragraph": "",
+    "listItems": [
+      "Introduction to building Spring Boot apps",
+      "Created a backend API for CRUD operations",
+      "Utilised Maven build tool",
+      "Implemented a service layer and used DI",
+      "Used Spring Data JPA to persist and modify data",
+      "Deployed to AWS Elastic Beanstalk using CI/CD",
+      "Developed an Angular frontend app to showcase"
+    ],
+    "imageUrl": "assets/spring-boot.png",
+    "imageAlt": "Java Spring Boot app",
+    "category": "web",
+    "buttons": [
+      {
+        "class": "info-btn",
+        "url": "http://monsters-env.eba-d73ppi3s.eu-west-1.elasticbeanstalk.com/",
+        "title": "View Monsters app",
+        "icon": "fa fa-fw fa-external-link-alt"
+      },
+      {
+        "class": "info-btn",
+        "url": "https://github.com/LRS4/witcher-monsters-api",
+        "title": "View Monsters API code",
+        "icon": "fa fa-fw fa-code"
+      }
+    ],
+    "linkedSkills": [
+      "CS50 Web Programming"
+    ]
+  },
+  {
+    "title": "Ruby on Rails",
+    "paragraph": "",
+    "listItems": [
+      "Introduction to building Ruby on Rails apps",
+      "Applied OOP and MVC design patterns",
+      "Scaffolded models",
+      "Intepolated data within views",
+      "Integrated Gem packages",
+      "Built job board web app with Stripe payments"
+    ],
+    "imageUrl": "assets/rails.png",
+    "imageAlt": "Rails",
+    "category": "web",
+    "buttons": [
+      {
+        "class": "info-btn",
+        "url": "https://github.com/LRS4/rails-job-board",
+        "title": "View code",
+        "icon": "fa fa-fw fa-code"
+      },
+      {
+        "class": "info-btn",
+        "url": "https://www.sololearn.com/Certificate/1081-7327354/pdf",
+        "title": "View certificate",
+        "icon": "fa fa-fw fa-graduation-cap"
+      }
     ]
   },
   {
@@ -250,8 +284,7 @@
     ],
     "linkedSkills": [
       "Azure DevOps",
-      "C# and ASP.NET Core",
-      "User Experience Design"
+      "C# and ASP.NET Core"
     ]
   },
   {
@@ -283,28 +316,6 @@
     ],
     "linkedSkills": [
       "CS50 Web Programming"
-    ]
-  },
-  {
-    "title": "User Experience Design",
-    "paragraph": "Experience with both Gulp and Grunt to automate:",
-    "listItems": [
-      "User inquiry",
-      "Rapid prototyping",
-      "Understanding user tasks",
-      "Interface design",
-      "Principles of visual design"
-    ],
-    "imageUrl": "assets/ux.jpg",
-    "imageAlt": "Agile",
-    "category": "web",
-    "buttons": [
-      {
-        "class": "info-btn",
-        "url": "https://www.edx.org/course/design-thinking-advanced-topics/",
-        "title": "View course info",
-        "icon": "fa fa-fw fa-external-link-alt"
-      }
     ]
   }
 ]
