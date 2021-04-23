@@ -7,21 +7,26 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Antu_accessories-calculator.svg/768px-Antu_accessories-calculator.svg.png">
+    <link rel="icon"
+        href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Antu_accessories-calculator.svg/768px-Antu_accessories-calculator.svg.png">
 
     <title>Savings Calculator</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/dashboard/">
 
     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
 
     <!-- JS Cookie -->
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js"></script>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -35,16 +40,17 @@
         body {
             font-size: .875rem;
         }
-        
+
         .feather {
             width: 16px;
             height: 16px;
             vertical-align: text-bottom;
         }
+
         /*
             * Sidebar
             */
-        
+
         .sidebar {
             position: fixed;
             top: 0;
@@ -56,7 +62,7 @@
             /* Height of navbar */
             box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
         }
-        
+
         .sidebar-sticky {
             position: relative;
             top: 0;
@@ -66,7 +72,7 @@
             overflow-y: auto;
             /* Scrollable contents if viewport is shorter than content. */
         }
-        
+
         @supports ((position: -webkit-sticky) or (position: sticky)) {
             .sidebar-sticky {
                 position: -webkit-sticky;
@@ -82,42 +88,44 @@
         .sidebar-sticky form {
             padding: 0px 10px;
         }
-        
+
         .sidebar .nav-link {
             font-weight: 500;
             color: #333;
         }
-        
+
         .sidebar .nav-link .feather {
             margin-right: 4px;
             color: #999;
         }
-        
+
         .sidebar .nav-link.active {
             color: #007bff;
         }
-        
+
         .sidebar .nav-link:hover .feather,
         .sidebar .nav-link.active .feather {
             color: inherit;
         }
-        
+
         .sidebar-heading {
             font-size: .75rem;
             text-transform: uppercase;
         }
+
         /*
             * Content
             */
-        
+
         [role="main"] {
             padding-top: 48px;
             /* Space for fixed navbar */
         }
+
         /*
             * Navbar
             */
-        
+
         .navbar-brand {
             color: white;
             font-weight: bold;
@@ -132,19 +140,19 @@
             text-decoration: none;
             color: white;
         }
-        
+
         .navbar .form-control {
             padding: .75rem 1rem;
             border-width: 0;
             border-radius: 0;
         }
-        
+
         .form-control-dark {
             color: #fff;
             background-color: rgba(255, 255, 255, .1);
             border-color: rgba(255, 255, 255, .1);
         }
-        
+
         .form-control-dark:focus {
             border-color: transparent;
             box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
@@ -154,16 +162,20 @@
             display: none;
         }
 
-        .explainSection {
+        .explainSection,
+        .detailsSection {
             margin-top: 30px;
+            padding: 0px 10px;
+        }
+
+        .disclaimerSection {
+            margin-top: 200px;
             padding: 0px 10px;
         }
 
         #myChart {
             display: none;
         }
-
-        
     </style>
 
     <!-- Feather icons -->
@@ -172,10 +184,11 @@
 
 <body>
     <nav class="navbar navbar-primary fixed-top bg-primary flex-md-nowrap p-0 shadow">
-        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="https://lrs4.github.io/projects/fi-calculator.html">Forecasting Tool</a>
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="https://lrs4.github.io/projects/fi-calculator.html">FI
+            Forecasting Tool</a>
         <ul class="navbar-nav px-3">
             <li class="nav-item text-nowrap">
-                <a class="nav-link" href="#" style="color: white">Help</a>
+                <!-- <a class="nav-link" href="#" style="color: white">Help</a> -->
             </li>
         </ul>
     </nav>
@@ -184,54 +197,75 @@
         <div class="row">
             <nav class="col-md-2 d-none d-md-block bg-light sidebar">
                 <div class="sidebar-sticky text-center">
-                    <form>
-                        <div class="form-group">
-                          <label for="age">What is your age?</label>
-                          <input type="number" class="form-control" id="age" placeholder="30" required>
-                        </div>
-                        <label for="monthlyIncome">What is your take home pay each month?</label>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">£</span>
+                    <div class="detailsSection">
+                        <h5 class="text-center">Details</h5>
+                        <form>
+                            <div class="form-group">
+                                <label for="age">What is your age?</label>
+                                <input type="number" class="form-control" id="age" placeholder="30" required>
                             </div>
-                            <input type="number" class="form-control" id="monthlyIncome" aria-label="Amount (to the nearest pound)" placeholder="1000" required>
-                            <div class="input-group-append">
-                                <span class="input-group-text">.00</span>
+                            <label for="monthlyIncome">What is your take home pay each month?</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">£</span>
+                                </div>
+                                <input type="number" class="form-control" id="monthlyIncome"
+                                    aria-label="Amount (to the nearest pound)" placeholder="1000" required>
+                                <div class="input-group-append">
+                                    <span class="input-group-text">.00</span>
+                                </div>
                             </div>
-                        </div>
-                        <label for="monthlySavings">How much can you save each month?</label>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">£</span>
+                            <label for="monthlySavings">How much can you save each month?</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">£</span>
+                                </div>
+                                <input type="number" class="form-control" id="monthlySavings"
+                                    aria-label="Amount (to the nearest pound)" placeholder="400" required>
+                                <div class="input-group-append">
+                                    <span class="input-group-text">.00</span>
+                                </div>
                             </div>
-                            <input type="number" class="form-control" id="monthlySavings" aria-label="Amount (to the nearest pound)" placeholder="400" required>
-                            <div class="input-group-append">
-                                <span class="input-group-text">.00</span>
+                            <label for="netWorth">How much do you already have saved?</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">£</span>
+                                </div>
+                                <input type="number" class="form-control" id="netWorth"
+                                    aria-label="Amount (to the nearest pound)" placeholder="5000" required>
+                                <div class="input-group-append">
+                                    <span class="input-group-text">.00</span>
+                                </div>
                             </div>
-                        </div>
-                        <label for="netWorth">How much do you already have saved?</label>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">£</span>
+                            <label for="annualInterest">Annual interest</label>
+                            <div class="input-group mb-3">
+                                <input type="number" class="form-control" id="annualInterest"
+                                    aria-label="Amount (to the nearest pound)" value="6" required>
+                                <div class="input-group-append">
+                                    <span class="input-group-text">%</span>
+                                </div>
                             </div>
-                            <input type="number" class="form-control" id="netWorth" aria-label="Amount (to the nearest pound)" placeholder="5000" required>
-                            <div class="input-group-append">
-                                <span class="input-group-text">.00</span>
+                            <label for="annualInvestmentFeeRate">Annual investment fee</label>
+                            <div class="input-group mb-3">
+                                <input type="number" class="form-control" step="0.25" id="annualInvestmentFeeRate"
+                                    aria-label="Amount (to the nearest pound)" value="0.5" required>
+                                <div class="input-group-append">
+                                    <span class="input-group-text">%</span>
+                                </div>
                             </div>
-                        </div>
-                        <label for="annualInterest">Annual interest</label>
-                        <div class="input-group mb-3">
-                            <input type="number" class="form-control" id="annualInterest" aria-label="Amount (to the nearest pound)" value="6" required>
-                            <div class="input-group-append">
-                                <span class="input-group-text">%</span>
-                            </div>
-                        </div>
-                        <button id="submitBtn" type="submit" class="btn btn-primary">Submit</button>
-                      </form>
-                      <div class="text-left explainSection">
-                          This tool is for informational purposes only and does not constitute financial advice. Always seek the guidance of a qualified financial advisor before making
-                          any investment decisions.  
-                      </div>
+                            <button id="submitBtn" type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                    <div class="text-left explainSection"></div>
+                    <div class="text-left disclaimerSection">
+                        <h5 class="text-center">Disclaimer</h5>
+                        <p>
+                            This tool is for informational purposes only and does not constitute financial advice.
+                            Always seek the guidance of a
+                            qualified financial advisor before making
+                            any investment decisions.
+                        </p>
+                    </div>
                 </div>
             </nav>
 
@@ -255,14 +289,16 @@
 <!-- Bootstrap core JavaScript
     ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
 
 <script>
     // initialise chart
     var ctx = document.getElementById("myChart");
     var myChart = new Chart(ctx, {
-        type: 'bar', 
+        type: 'bar',
         data: {
 
         },
@@ -275,7 +311,7 @@
                     stacked: true,
                     ticks: {
                         // Include a dollar sign in the ticks
-                        callback: function(value, index, values) {
+                        callback: function (value, index, values) {
                             return '£' + value;
                         }
                     }
@@ -288,10 +324,11 @@
     })
 
     // create data structure and calculations
-    $('#submitBtn').click(function(e) {
+    $('#submitBtn').click(function (e) {
         e.preventDefault();
-        
+
         let annualInterestRate = parseFloat($('#annualInterest').val() / 100);
+        let annualInvestmentFeeRate = parseFloat($('#annualInvestmentFeeRate').val() / 100);
         let age = parseInt($('#age').val());
         let netWorth = parseInt($('#netWorth').val());
         let monthlyIncome = parseInt($('#monthlyIncome').val());
@@ -308,16 +345,19 @@
         var interestArr = [];
         var savingsArr = [];
         var expensesArr = [];
+        var feeArr = [];
         var totalNetWorthArr = [];
         var ageArr = [];
         var yearArr = [];
         var yearCountArr = [];
 
         while (netWorth < target) {
+            let feeAmount = netWorth * annualInvestmentFeeRate;
             interest = parseFloat((netWorth * annualInterestRate).toFixed(2));
-            netWorth += parseFloat((interest + yearlySavings).toFixed(2)); 
+            netWorth += parseFloat(((interest + yearlySavings).toFixed(2)) - feeAmount);
 
             interestArr.push(interest);
+            feeArr.push(feeAmount);
             savingsArr.push(yearlySavings);
             expensesArr.push(yearlyExpenses);
             totalNetWorthArr.push(netWorth);
@@ -340,7 +380,6 @@
 
         // update assumptions section
         let assumptions = `
-            <hr />
             <h5 class="text-center">Assumptions</h5>
             <ul id="explainList">
                 <li>Your yearly take home income is £${yearlyIncome}</li>
@@ -349,21 +388,27 @@
                 <li>This is ${((yearlySavings / yearlyIncome) * 100).toFixed(0)}% of your take home pay</li>
                 <li>Aiming for a target of 25 times your annual expenses would be £${target}</li>
                 <li>As a 4% return on £${target} would provide £${target * 0.04} per year, or £${(target * 0.04) / 12} per month</li>
-                <li>Assuming a yearly interest return of ${annualInterestRate * 100}%</li>
+                <li>Assuming an annual return of ${annualInterestRate * 100}% and an annual investment fee of ${annualInvestmentFeeRate * 100}%</li>
                 <li>It would take ${yearCount} years to reach the target amount</li>
                 <li>You would be financially independant at age ${age}</li>
                 <li>You would have contributed in total £${savingsArr.reduce((total, value) => total + value)}</li>
                 <li>You would have gained £${(interestArr.reduce((total, value) => total + value)).toFixed(0)} in interest</li>
+                <li>You would have spent £${(feeArr.reduce((total, value) => total + value)).toFixed(0)} in fees</li>
             </ul>
+            <div class="text-center">
+                <button id="retryBtn" class="btn btn-primary">Amend details</button>
+            </div>
         `;
+
+        $('.detailsSection').hide();
         $('.explainSection').html(assumptions);
-        
+
         // update chart
         myChart.data = {
             labels: yearArr,
             datasets: [{
                 label: "Total Net Worth",
-                data: totalNetWorthArr,
+                data: totalNetWorthArr.map(value => value.toFixed(2)),
                 lineTension: 0,
                 backgroundColor: '#17A2B8',
                 borderColor: 'black',
@@ -383,7 +428,7 @@
                 label: "Annual Expenses",
                 data: expensesArr,
                 lineTension: 0,
-                backgroundColor: '#DC3545',
+                backgroundColor: '#ffcccb',
                 borderColor: 'black',
                 borderWidth: 4,
                 pointBackgroundColor: '#007bff'
@@ -393,6 +438,15 @@
                 data: interestArr,
                 lineTension: 0,
                 backgroundColor: '#28A745',
+                borderColor: 'black',
+                borderWidth: 4,
+                pointBackgroundColor: '#007bff'
+            },
+            {
+                label: "Annual Fee",
+                data: feeArr.map(value => value.toFixed(2)),
+                lineTension: 0,
+                backgroundColor: '#DC3545',
                 borderColor: 'black',
                 borderWidth: 4,
                 pointBackgroundColor: '#007bff'
@@ -409,6 +463,7 @@
                     <th>Age</th>
                     <th>Savings £</th>
                     <th>Interest £</th>
+                    <th>Fee £</th>
                     <th>Net Worth £</th>
                 </tr>
             </thead>
@@ -423,6 +478,7 @@
                     <td>${ageArr[i]}</td>
                     <td>${savingsArr[i]}</td>
                     <td>${interestArr[i].toFixed(0)}</td>
+                    <td>${feeArr[i].toFixed(0)}</td>
                     <td>${totalNetWorthArr[i].toFixed(0)}</td>
                 </tr>
             `;
@@ -435,18 +491,24 @@
                     <td><b>${ageArr.reduce((max, value) => Math.max(value))}</b></td>
                     <td><b>${(savingsArr.reduce((total, value) => total + value)).toFixed(0)}</b></td>
                     <td><b>${(interestArr.reduce((total, value) => total + value)).toFixed(0)}</b></td>
+                    <td><b>${(feeArr.reduce((total, value) => total + value)).toFixed(0)}</b></td>
                     <td><b>${(totalNetWorthArr.reduce((max, value) => Math.max(value))).toFixed(0)}</b></td>
                 </tr>   
             </tbody>
         `;
 
-        console.log(tableHtml);
+        // console.log(tableHtml);
 
         $('#outputTable').html(tableHtml);
 
         // show and hide sections
         $('#welcomeImg').hide();
-        $('#myChart, .detailed-breakdown').show();
+        $('#myChart, .detailed-breakdown, .explainSection').show();
+    });
+
+    $(document).on("click", "#retryBtn", function () {
+        $('.explainSection').hide();
+        $('.detailsSection').show();
     });
 
     // formula to calculate years required to reach the x25 number - principle from - C*(r**y - 1)/(r - 1)
