@@ -159,7 +159,7 @@ class ForceDirectedChart {
                         return '#b2df8a';
                     case ("web"):
                         return '#33a02c';
-                    case ("business"):
+                    case ("devops"):
                         return '#fb9a99';
                 }
             });
@@ -258,7 +258,7 @@ class ForceDirectedChart {
             };
         }
         var sequentialScale = d3.scaleOrdinal(d3.schemeSet3)
-            .domain(["Data", "Projects", "Qualifications", "Software", "Business"])
+            .domain(["Data", "Projects", "Qualifications", "Software", "Devops"])
             .range(["#a6cee3", "#1f78b4", "#b2df8a", "#33a02c", "#fb9a99"]);
 
 
