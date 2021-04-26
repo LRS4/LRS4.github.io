@@ -20,7 +20,7 @@
 
   {% include "partials/filters.nunjucks" %}
 
-  {% set categories = [data, software, business, qualifications, projects] -%}
+  {% set categories = [data, software, devops, qualifications, projects] -%}
 
   <!-- Portfolio Gallery Grid -->
 	<!-- Images should be 300x300 pixels -->

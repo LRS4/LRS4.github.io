@@ -3,7 +3,7 @@
     <button id="all" class="btn active"> Show all</button>
     <button id="data" class="btn"> Data Science</button>
     <button id="web" class="btn"> Software Development</button>
-    <button id="business" class="btn"> Business Analysis</button>
+    <button id="devops" class="btn"> DevOps</button>
     <button id="qualifications" class="btn"> Qualifications</button>
     <button id="projects" class="btn"> Projects</button>
 </div>
