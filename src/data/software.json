@@ -216,30 +216,6 @@
     ]
   },
   {
-    "title": "Azure DevOps",
-    "paragraph": "",
-    "listItems": [
-      "Used Azure Repos to collaborate with others",
-      "Practised agile using Azure Boards",
-      "Practised BDD and TDD",
-      "Developed build pipelines for CI/CD",
-      "Integrated automated testing",
-      "Created releases pipelines for deployment",
-      "Improved full-stack development workflow"
-    ],
-    "imageUrl": "assets/azure-devops.png",
-    "imageAlt": "MIT Computer Science",
-    "category": "web",
-    "buttons": [
-      {
-        "class": "info-btn",
-        "url": "https://azure.microsoft.com/en-gb/services/devops",
-        "title": "View Azure DevOps info",
-        "icon": "fa fa-fw fa-external-link-alt"
-      }
-    ]
-  },
-  {
     "title": "Gulp Task Runner",
     "paragraph": "Experience with both Gulp and Grunt to automate:",
     "listItems": [
@@ -284,7 +260,9 @@
     ],
     "linkedSkills": [
       "Azure DevOps",
-      "C# and ASP.NET Core"
+      "C# and ASP.NET Core",
+      "Docker & Containers",
+      "Cloud Computing"
     ]
   },
   {

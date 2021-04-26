@@ -1,0 +1,72 @@
+[
+    {
+        "title": "Cloud Computing",
+        "paragraph": "",
+        "listItems": [
+            "Deployed apps to Azure App Service and AWS Elastic Beanstalk",
+            "Managed provision and scaling of cloud SQL databases",
+            "Created storage accounts in Azure Blob Storage, AWS S3 and Google Firebase",
+            "Enabled secrets management using Azure KeyVault and AWS KMS",
+            "Deployed FaaS using Azure Functions and AWS Lambda",
+            "Deployed Docker images using AWS Elastic Registry"
+        ],
+        "imageUrl": "assets/cloud-computing.png",
+        "imageAlt": "Cloud computing",
+        "category": "devops",
+        "buttons": [
+            {
+                "class": "info-btn",
+                "url": "https://en.wikipedia.org/wiki/Cloud_computing",
+                "title": "View Cloud Computing info",
+                "icon": "fa fa-fw fa-external-link-alt"
+            }
+        ]
+    },
+    {
+        "title": "Docker & Containers",
+        "paragraph": "",
+        "listItems": [
+            "Introduction to Docker and Containers",
+            "Used Docker CLI and Docker Desktop to run containers",
+            "Set up dockerfile and base images",
+            "Utilised volumes to share data between containers & host",
+            "Explored caching and layers while building images",
+            "Deployed image to AWS ECR - a Docker (container) registry"
+        ],
+        "imageUrl": "assets/docker.png",
+        "imageAlt": "Docker and containers",
+        "category": "devops",
+        "buttons": [
+            {
+                "class": "info-btn",
+                "url": "https://www.youtube.com/watch?v=p28piYY_wv8",
+                "title": "View Docker course information",
+                "icon": "fa fa-fw fa-external-link-alt"
+            }
+        ]
+    },
+    {
+        "title": "Azure DevOps",
+        "paragraph": "",
+        "listItems": [
+            "Used Azure Repos to collaborate with others",
+            "Practised agile using Azure Boards",
+            "Practised BDD and TDD",
+            "Developed build pipelines for CI/CD",
+            "Integrated automated testing",
+            "Created releases pipelines for deployment",
+            "Improved full-stack development workflow"
+        ],
+        "imageUrl": "assets/azure-devops.png",
+        "imageAlt": "Azure DevOps",
+        "category": "devops",
+        "buttons": [
+            {
+                "class": "info-btn",
+                "url": "https://azure.microsoft.com/en-gb/services/devops",
+                "title": "View Azure DevOps info",
+                "icon": "fa fa-fw fa-external-link-alt"
+            }
+        ]
+    }
+]
