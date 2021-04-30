@@ -4,7 +4,6 @@
     <a href="#history" class="nav-btn" id="graphBtn"><i class="fab fa-fw fa-git-alt"></i> History</a>
     <a href="#analyse" class="nav-btn" id="visualBtn"><i class="fa fa-fw fa-bar-chart"></i> Visualise</a>
     <a href="https://github.com/LRS4" class="nav-btn" target="_blank"><i class="fab fa-fw fa-github"></i> GitHub</a>
-    <a href="https://www.dropbox.com/s/0fwuqsx5ni0zs1g/Online%20CV.docx?dl=0" class="nav-btn" target="_blank"><i class="fa fa-fw fa-file"></i>  CV</a>
     <a href="mailto:lrspencer@hotmail.co.uk?subject=Re:%20Your%20portfolio" class="nav-btn"><i class="fa fa-fw fa-envelope"></i> Contact</a>
     <a href="#" id="help" class="nav-btn"><i class="fa fa-fw fa-directions"></i> Tour</a>
     <a href="#" id="expand" class="icon">
