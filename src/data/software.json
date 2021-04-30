@@ -199,7 +199,7 @@
       "Enabled user authentication using Laravel UI",
       "Integrated a MySQL database with Eloquent models"
     ],
-    "imageUrl": "assets/php-laravel.png",
+    "imageUrl": "assets/php-laravel.PNG",
     "imageAlt": "PHP Laravel logo",
     "category": "web",
     "buttons": [
