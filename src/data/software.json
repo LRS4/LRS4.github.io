@@ -187,6 +187,42 @@
     ]
   },
   {
+    "title": "PHP and Laravel",
+    "paragraph": "",
+    "listItems": [
+      "Introduction to building PHP Laravel apps",
+      "Built a micro order management system",
+      "Used XAMPP for local development server",
+      "Used Artisan CLI for rapid development",
+      "Created dynamic templates using Blade",
+      "Enabled user authentication using Laravel UI",
+      "Integrated a MySQL database with Eloquent models"
+    ],
+    "imageUrl": "assets/php-laravel.png",
+    "imageAlt": "PHP Laravel logo",
+    "category": "web",
+    "buttons": [
+      {
+        "class": "info-btn",
+        "url": "https://github.com/LRS4/laravel-order-manager",
+        "title": "View project code",
+        "icon": "fa fa-fw fa-code"
+      },
+      {
+        "class": "info-btn",
+        "url": "https://www.youtube.com/watch?v=pWG7ajC_OVo&list=PL4cUxeGkcC9gksOX3Kd9KPo-O68ncT05o",
+        "title": "View PHP course",
+        "icon": "fa fa-fw fa-external-link-alt"
+      },
+      {
+        "class": "info-btn",
+        "url": "https://www.youtube.com/watch?v=zckH4xalOns&list=PL4cUxeGkcC9hL6aCFKyagrT1RCfVN4w2Q",
+        "title": "View Laravel course",
+        "icon": "fa fa-fw fa-external-link-alt"
+      }
+    ]
+  },
+  {
     "title": "Ruby on Rails",
     "paragraph": "",
     "listItems": [
